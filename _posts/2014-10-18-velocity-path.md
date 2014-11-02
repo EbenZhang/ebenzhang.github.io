@@ -4,6 +4,7 @@ title:  Velocity模板加载方式
 date:   2014/10/18 00:00:00 
 category: velocity
 tag: velocity
+description: 这是描述
 ---
 
 ##概述

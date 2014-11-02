@@ -4,20 +4,33 @@ title: 首页
 ---
 
 {% for post in paginator.posts %}
- <div class="blog-post">
-	<h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<div class="blog-post">
+  <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	
+  
+  {% if post.thumbnail != nil %}
+  <div class="row">
+  <div class="col-sm-6">
+    <p><a href="{{ post.url }}"><img src="{{ post.thumbnail }}" width="300" height="400" alt="{{ post.description }}" /></a></p>
+  </div>
+  <div class="col-sm-6">
+      <div class="blog-post-content">{{post.excerpt }}   
+      </div> 
+  </div>
+  </div>
 
-	<div class="blog-post-content">{{post.excerpt }}
+  {% else %}
+    <div class="blog-post-content">{{post.excerpt }} </div>  
+    
+  {% endif %}
 
-       <p> <a href="{{ post.url }}" class="more-link"><span class="readmore">阅读全文 &raquo; </span></a></p>
 
-  </div> 
+ <p> <a href="{{ post.url }}" class="more-link"><span class="readmore">阅读全文 &raquo; </span></a></p>
 
    {% if forloop.last %}
    {% else %}
                 <hr>
-            {% endif %}
+   {% endif %}
   <p class="blog-post-meta">日期：{{ post.date |date: "%Y-%m-%d"}}|分类： {{ post.category }}</p>
 
   

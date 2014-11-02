@@ -4,6 +4,7 @@ title:  AbstractCollection
 date:   2014/09/04 20:23:14 
 category: life
 tag: life
+thumbnail: /images/java-collction-framework.jpg
 ---
 
 > 此类提供 Collection 接口的骨干实现，以最大限度地减少了实现此接口所需的工作。
@@ -19,9 +20,8 @@ tag: life
 > java自带的集合是一个常用数据结构的集合，也是在平常用得比较多的地方，相当于一个比较常用的数据结构，自带框架设计思想，实现思路都非常具有参考思想。
 
 
+
 集合框架主要的类和接口如下图所示（来自于百度百科）：
-
-
 
 <!--![Alt text]({{ BASE_PATH }}/images/java-collction-framework.jpg "java集合框架图")-->
 <img src="{{ BASE_PATH }}/images/java-collction-framework.jpg" width="950" hight="970">
