@@ -33,9 +33,16 @@ tags : MySQL
 
 ###授权给从数据库服务器192.168.1.12
 
-```mysql> GRANT REPLICATION SLAVE ON *.* to 'root'@'192.168.1.12' IDENTIFIED BY 'password_123';```
 
-```mysql> GRANT FILE ON *.* TO 'root'@'192.168.1.12' IDENTIFIED BY 'password_123';```
+{% highlight sql %}
+
+
+mysql> GRANT REPLICATION SLAVE ON *.* to 'root'@'192.168.1.12' IDENTIFIED BY 'password_123';
+
+mysql> GRANT FILE ON *.* TO 'root'@'192.168.1.12' IDENTIFIED BY 'password_123';
+
+
+{% endhighlight %}
 
 
 ###查询主数据库状态:
@@ -55,25 +62,35 @@ log-bin=mysql-bin，重新启动服务再次查看即可。也可以参考http:/
 
 ###配置server-id以及要实行主从复制的库：
 
-```
+
+{% highlight sql %}
+
+
 server-id=1
 innodb_flush_log_at_trx_commit=1
 sync_binlog=1
 binlog-do-db=test
 binlog_ignore_db=mysql
 binlog_ignore_db=information_schema
-```
+
+
+{% endhighlight %}
 
 
 ###配置从服务器
 
-```server-id=10
+
+{% highlight sql %}
+
+server-id=10
 innodb_flush_log_at_trx_commit=1
 sync_binlog=1
 replicate-do-db=test   //要主从复制的数据库
 replicate-ignore-db=mysql  //不需要主从复制的数据库
 replicate-ignore-db=information_schema//不需要主从复制的数据库
-```
+
+{% endhighlight %}
+
 
 ###启动mysql服务
 
@@ -82,14 +99,19 @@ replicate-ignore-db=information_schema//不需要主从复制的数据库
 
 ###执行同步SQL语句
 
-```
+{% highlight sql %}
+
+
 mysql> change master to
 master_host=’192.168.1.5’,
 master_user=’rep1’,
 master_password=’password’,
 master_log_file=’mysql-bin.000002’,
 master_log_pos=582;
-```
+
+
+{% endhighlight %}
+
 
 ###正确执行后启动Slave同步进程
 
@@ -97,7 +119,12 @@ master_log_pos=582;
 
 ###主从同步检查
 
-```mysql> show slave status\G```
+
+{% highlight sql %}
+
+
+mysql> show slave status\G
+
 
 ==============================================
 **************** 1. row *******************
@@ -117,6 +144,10 @@ Replicate_Do_DB:
 ……………省略若干……………
 Master_Server_Id: 1
 1 row in set (0.01 sec)
+
+
+{% endhighlight %}
+
 
 ```其中Slave_IO_Running 与 Slave_SQL_Running 的值都必须为YES，才表明状态正常。
 ```
@@ -145,6 +176,10 @@ Query Ok, 1 row affected (0.00 sec)
 
 ###在从服务器上查看
 
+
+{% highlight sql %}
+
+
 mysql> show databases;
 =============================
 +--------------------+
@@ -159,13 +194,21 @@ mysql> show databases;
 5 rows in set (0.01 sec)
 =============================
 
+
+{% endhighlight %}
+
+
 ###数据库first_db已经自动生成
 
-```mysql> use first_db
-Database chaged
-```
 
-```mysql> show tables;```
+{% highlight sql %}
+
+mysql> use first_db
+
+Database chaged
+
+mysql> show tables;
+
 =============================
 +--------------------+
 | Tables_in_first_db |
@@ -175,9 +218,16 @@ Database chaged
 1 row in set (0.02 sec)
 =============================
 
+
+{% endhighlight %}
+
+
 ###数据库表first_tb也已经自动创建
 
-```mysql> select * from first_tb;```
+{% highlight sql %}
+
+
+mysql> select * from first_tb;
 
 =============================
 +------+------+
@@ -187,6 +237,10 @@ Database chaged
 +------+------+
 1 rows in set (0.00 sec)
 =============================
+
+{% endhighlight %}
+
+
 记录也已经存在
 
 
@@ -196,25 +250,32 @@ Database chaged
 
 ###主数据库：
 
-```server-id=1
+{% highlight sql %}
+
+server-id=1
 innodb_flush_log_at_trx_commit=1
 sync_binlog=1
 binlog-do-db=test
 binlog_ignore_db=mysql
 binlog_ignore_db=information_schema
-````
+
+
+{% endhighlight %}
 
 - 2:从数据库：
 
-```server-id=10
+
+{% highlight sql %}
+
+server-id=10
 innodb_flush_log_at_trx_commit=1
 sync_binlog=1
 replicate-do-db=test
 replicate-ignore-db=mysql
 replicate-ignore-db=information_schema
-```
 
 
+{% endhighlight %}
 
 
 
