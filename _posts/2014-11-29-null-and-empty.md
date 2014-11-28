@@ -101,5 +101,5 @@ public static void main(String[] args) {
 
   {% endhighlight %}
 
-
+ 
   顺便提问一个问题：idea中的maven artifact search的快捷键在哪里？我让他出现的方式是：直接写类名，然后使用option+enter键，在弹出的菜单中选择add Maven Dependncy，这样太麻烦了，有没有快捷方式
