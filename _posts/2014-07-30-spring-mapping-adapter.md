@@ -132,9 +132,11 @@ debug：
 
 可以看到并没有映射到test2.因为没有在上面注解@Controller，而是通过BeanNameUrlHandlerMapping来实现的。而具体的处理方法是通过AnnotationMethodHandlerAdapter适配器来访问的。
 
-当使用了mvc-annotation-driver的时候，使用了默认的DefaultAnnotationMapping和AnnotationAdapter，前者会将请求映射到使用@Controller的处理器，后者将会将注解了@RequestMapping的方法处理业务逻辑，并返回ModelAndView给DispatchServlet来进行渲染，在3.2中，则会使用RequestMethodMapping和RequestMthodAdapter来替代上面的两个类。
+当使用了mvc-annotation-driver的时候，使用了默认的DefaultAnnotationMapping和AnnotationAdapter，前者会将请求映射到使用@Controller的处理器，后者将会将注解了@RequestMapping的方法处理业务逻辑，并返回ModelAndView给DispatchServlet来进行渲染，在3.2中，则会使用RequestMethodMapping和RequestMthodAdapter来替代上面的两个类。(```上面这句话有错误```)
 
 ###```11月29日修改```
+
+前面说的3.2中替代的类有错误，应该如下：
 
 在3.2中，则会使用```org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping```和```org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter```来替代上面的两个类。
 
