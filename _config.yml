@@ -8,12 +8,11 @@ twitter: https://twitter.com/liuyiyoucool
 facebook: https://www.facebook.com/liu.yiyou.35
 
 #语法高亮
+highlighter: pygments
 pygments: true
 
 #首先概要显示分隔符
 excerpt_separator: "\n\n\n"
-
-markdown: kramdown
 
 #分页
 paginate: 5

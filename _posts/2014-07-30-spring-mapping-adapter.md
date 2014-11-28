@@ -134,3 +134,40 @@ debug：
 
 当使用了mvc-annotation-driver的时候，使用了默认的DefaultAnnotationMapping和AnnotationAdapter，前者会将请求映射到使用@Controller的处理器，后者将会将注解了@RequestMapping的方法处理业务逻辑，并返回ModelAndView给DispatchServlet来进行渲染，在3.2中，则会使用RequestMethodMapping和RequestMthodAdapter来替代上面的两个类。
 
+###```11月29日修改```
+
+在3.2中，则会使用```org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping```和```org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter```来替代上面的两个类。
+
+在使用```mvc-annotation-driver```的时候，有时候会出现中文乱码，如果下面代码和该注解一起使用的时候可能会出现覆盖情况（暂时未测试，共存的时候以及顺序不同的时候，返回的结果编码方式是否有影响）
+
+
+###Spring 3.2
+
+{% highlight xml %}    
+
+ <bean class="org.springframework.web.servlet.mvc.method.annotation. RequestMappingHandlerMapping">
+       
+    </bean>
+
+    <bean
+            class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean
+                        class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+                <ref bean="mappingJacksonHttpMessageConverter"/>
+                <!-- json转换器 -->
+            </list>
+        </property>
+
+    </bean>
+
+
+{% endhighlight %}
+
