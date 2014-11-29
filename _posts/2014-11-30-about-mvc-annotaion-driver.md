@@ -7,7 +7,7 @@ tags : spring
 ---
 
 ##概述
-mvc-annotation-driven的实现类是：org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser。需要注意的是在这个类不是public的，所以无法直接import，如果使用import的快捷键，会导入``` org.springframework.scheduling.config.AnnotationDrivenBeanDefinitionParser``` 这个类
+mvc-annotation-driven的实现类是：org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser。需要注意的是在这个类不是public的，所以无法直接import，如果使用import的快捷键，会导入``` org.springframework.scheduling.config.AnnotationDrivenBeanDefinitionParser``` 这个类，不过可以使用command+鼠标找到该注解的说明，然后点击idea左上角的那个像靶子一样的东西快速定位到该类
 
 通过parse方法主要向工厂注册了以下类：
 
