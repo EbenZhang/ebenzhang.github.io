@@ -4,7 +4,7 @@ title:  MyBatis--配置文件
 date:   2014/11/02 01:00:00 
 category: mybatis
 tag: mybatis
-thumbnail: images/mybatis2.png
+thumbnail: /images/mybatis2.png
 ---
 
 ##概述

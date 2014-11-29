@@ -1,8 +1,8 @@
 ---
 layout: post
-category : tools
-date: 2014/11/29 00:00:00 
-title: commons-lang.jar中isNotEmpty和isNotBlank的区别以及Map和JSONObject的toString方法
+category : javabasic
+date: 2014/11/28 00:00:00 
+title: isNotEmpty和isNotBlank的区别以及Map和JSONObject的toString方法
 tags : javabasic
 ---
 

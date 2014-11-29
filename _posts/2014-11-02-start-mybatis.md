@@ -4,7 +4,7 @@ title:  MyBatis--环境搭建
 date:   2014/11/02 00:00:00 
 category: mybatis
 tag: mybatis
-thumbnail: images/mybatis1.png
+thumbnail: /images/mybatis1.png
 ---
 
 ##概述

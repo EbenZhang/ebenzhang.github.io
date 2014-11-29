@@ -3,23 +3,17 @@
  {% include head.html %}
 <body>
 
-<div class="blog-masthead">
-    <div class="container">
-        {% include navbar.html %}
-    </div>
-</div>
-
+{% include navbar.html %}
+ 
 <div class="container">
-    <div class="blog-header">
-        
-    </div>
+    <div class="blog-header"> </div>
     <div class="row">
 
         <div class="col-sm-12 blog-main">
 
             <div class="blog-post">
              <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-<p class="blog-post-meta">{{ page.date | date_to_string }}</p>
+<p class="blog-post-meta">{{ post.date |date: "%Y-%m-%d"}}</p>
 <div class="blog-post-content">{{ content }}</div> 
             </div><!-- /.blog-post -->
         </div><!-- /.blog-main -->
@@ -39,8 +33,6 @@
 </ul>
 
 {% include comments.html %}
-
-
 
     </div><!-- /.row -->
 
