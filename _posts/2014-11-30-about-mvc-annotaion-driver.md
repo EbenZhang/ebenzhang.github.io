@@ -2,9 +2,11 @@
 layout: post
 category : Spring
 date: 2014/11/30 00:00:00 
-title: 关于mvc-annotation-driven注解详解
+title: 关于mvc-annotation-driven实现原理
 tags : spring
 ---
+
+原文地址：<a href="http://liuyiyou.cn/posts/about-mvc-annotaion-driver/">查看原文</a>
 
 ##概述
 mvc-annotation-driven的实现类是：org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser。需要注意的是在这个类不是public的，所以无法直接import，如果使用import的快捷键，会导入``` org.springframework.scheduling.config.AnnotationDrivenBeanDefinitionParser``` 这个类，不过可以使用command+鼠标找到该注解的说明，然后点击idea左上角的那个像靶子一样的东西快速定位到该类
@@ -179,11 +181,14 @@ public StringHttpMessageConverter() {
 {% endhighlight %}
 
 
-所以，为什么只要加入使用```<mvc-annotation-driver>```和jakson包之后@ResponseBody就能支持直接返回json而不报406错误的原因。
+所以，为什么只要加入```<mvc-annotation-driver>```和jakson包之后@ResponseBody就能支持直接返回json而不报406错误的原因。
 
-解决方案有如下两种：
+针对中文乱码，主要有以下两种解决方案：
 
 1. 控制器中加上``` @RequestMapping(value="/jsonString",produces="text/plain;charset=UTF-8")```后面即可。
+
+这个需要验证：如果加上这句后，直接通过@ResponseBody返回Map的的时候，响应头是text/plain还是 application/json？
+
 2. 在后台配置：
 
 {% highlight xml %}
@@ -213,7 +218,15 @@ public StringHttpMessageConverter() {
     </bean>
 
     <bean id="mappingJacksonHttpMessageConverter"
-          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+
+          <!--这个的重点不是中文乱码，而是解决ie下出现的下载问题，在ie8中，如果通过jquery.form.js提交mutipart/form表单，返回的json数据会不会alert出来，而是弹出一个下载框，原因是ie下，文件上传是通过一个iframe来进行的。返回的文件头是text/html，而这个和application/json冲突-->
+            <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                        </list>
+            </property>
+    </bean>
 
 
 {% endhighlight %}
