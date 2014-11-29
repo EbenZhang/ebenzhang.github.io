@@ -1,8 +1,8 @@
 ---
 layout: post
-category : skill
+category : Spring
 date: 2014/11/30 00:00:00 
-title: ```<mvc-annotation-driven>```注解详解
+title: 关于mvc-annotation-driven注解详解
 tags : spring
 ---
 
