@@ -6,7 +6,6 @@ title: 关于mvc-annotation-driven实现原理
 tags : spring
 ---
 
-原文地址：<a href="http://liuyiyou.cn/posts/about-mvc-annotaion-driver/">查看原文</a>
 
 ##概述
 mvc-annotation-driven的实现类是：org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser。需要注意的是在这个类不是public的，所以无法直接import，如果使用import的快捷键，会导入``` org.springframework.scheduling.config.AnnotationDrivenBeanDefinitionParser``` 这个类，不过可以使用command+鼠标找到该注解的说明，然后点击idea左上角的那个像靶子一样的东西快速定位到该类
@@ -35,6 +34,8 @@ mvc-annotation-driven的实现类是：org.springframework.web.servlet.config.An
 1. 后台只配置了```<mvc-annotation-driver>```其他的没有配置
 
 2. 返回的是String类型
+
+3. ajax请求中没有写dataType:'json'
 
 使用Ajax通过@ResponseBody返回String数据，请求头和响应头如下所示：
 
@@ -189,6 +190,27 @@ public StringHttpMessageConverter() {
 
 这个需要验证：如果加上这句后，直接通过@ResponseBody返回Map的的时候，响应头是text/plain还是 application/json？
 
+## ```验证结果```
+如果前端使用Ajax提交并返回通过@ResponseBody返回Map，上面如果写text/html。则会报406异常。经过调试```AnnotationMethodHandlerAdapter#getModelAndView()```方法中说：如果有@ResponseBody，则调用handleResponseBody方法，在这个方法中，```getMessageConverters（）```只能是：application/json和application/*+json在，所以虽然写了produces但是没用
+
+解决方案：
+
+
+{% highlight xml %}
+
+
+ <mvc:annotation-driven>
+        <mvc:message-converters >
+            <ref bean="mappingJacksonHttpMessageConverter"></ref>
+            <ref bean="stringHttpMessageConverter"></ref>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+{% endhighlight %}
+
+
+
 2. 在后台配置：
 
 {% highlight xml %}
@@ -259,9 +281,42 @@ Transfer-Encoding:chunked
 
 至于出现406的原因：缺少jakson包，而返回的却是Map，Spring无法使用已有的messageConvertes无法解析json协议
 
-在Spring3.2中，MappingJacksonHttpMessageConverter默认的编码不再是iso-8859-1而是UTF-8。也就是说，如果是使用Spring3.2的版本，在后台是不需要配置MappingJacksonHttpMessageConverter的。```（更正：不是不要配置，而是mvc-annotation-driven在扫描class的时候发现已经有了该依赖包，所以直接加mappingjacksonHttpMessageConvertes加入到messageConvertes中）```
+在Spring3.2中，MappingJacksonHttpMessageConverter默认的编码不再是iso-8859-1而是UTF-8。也就是说，如果是使用Spring3.2的版本，在后台是不需要配置MappingJacksonHttpMessageConverter的。```（更正：1：3.2之前也不是iso-8859-1。2：不是不要配置，而是mvc-annotation-driven在扫描class的时候发现已经有了该依赖包，所以直接加mappingjacksonHttpMessageConvertes加入到messageConvertes中）```
 
 
 最后一个问题：mvc-annotaiton-driven的简写方式和详细配置方式能一起使用吗？ 与使用顺序有关吗？
 
+可以使用如下配置即可：
+
+{% highlight xml %}
+
+
+    <mvc:annotation-driven>
+        <mvc:message-converters >
+            <ref bean="mappingJacksonHttpMessageConverter"></ref>
+            <ref bean="stringHttpMessageConverter"></ref>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <bean id="stringHttpMessageConverter"
+            class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+
+        <property name="supportedMediaTypes">
+        <list>
+            <value>text/html;charset=UTF-8</value>
+        </list>
+        </property>
+     </bean>
+
+{% endhighlight %}
 
