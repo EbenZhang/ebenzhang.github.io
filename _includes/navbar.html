@@ -1,84 +1,93 @@
- <div class="blog-masthead">
     <div class="container">
-         <nav class="blog-nav">
-    
-    {% if page.url ==  "/archive.html" %}
-    <a class="blog-nav-item" href="/">首页</a>
-    <a class="blog-nav-item active" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item " href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item " href="{{'/about.html'}}">关于我</a>
-    {% elsif page.url ==  "/categories.html" %}
-    <a class="blog-nav-item" href="/">首页</a>
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item active" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item " href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item " href="{{'/about.html'}}">关于我</a>
-    {% elsif page.url ==  "/tags.html" %}
-    <a class="blog-nav-item" href="/">首页</a>
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item active" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item " href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item" href="{{'/about.html'}}">关于我</a>
-    {% elsif page.url ==  "/project.html" %}
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item " href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item" href="{{'/about.html'}}">关于我</a>
-    {% elsif page.url ==  "/about.html" %}
-    <a class="blog-nav-item" href="/">首页</a>
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item " href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item active" href="{{'/about.html'}}">关于我</a>
-    {% elsif page.url ==  "/books.html" %}
-    <a class="blog-nav-item" href="/">首页</a>
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item active" href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item " href="{{'/about.html'}}">关于我</a>
-    {% else %}
-    <a class="blog-nav-item active" href="/">首页</a>
-    <a class="blog-nav-item" href="{{ '/archive.html' }}">归档</a>
-    <a class="blog-nav-item" href="{{'/categories.html'}}">类目</a>
-    <a class="blog-nav-item" href="{{'/tags.html'}}">标签</a>
-    <a class="blog-nav-item" href="{{'/books.html'}}">书单</a>
-    <a class="blog-nav-item" href="{{'/about.html'}}">关于我</a>
-    {% endif %}
-    </ul>
-</nav>  
-</div>
-</div>
-<!--
- <div id="header" class="header header--fixed hide-from-print slide slide--reset headroom--top" role="banner">
 
-    <nav class="nav-wrapper">
-    <ul class="nav">
-        <li class="nav__item ">
-            <a class="header__link subdued" href="/">首页</a>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Index</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navgator<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ '/archive.html' }}">Archive</a></li>
+             <li class="divider"></li>
+            <li><a href="{{'/categories.html'}}">Categoryies</a></li>
+             <li class="divider"></li>
+            <li><a  href="{{'/tags.html'}}">Tags</a></li>
+             <li class="divider"></li>
+            <li><a href="{{'/books.html'}}">Books</a></li>
+             <li class="divider"></li>
+            <li><a href="{{'/about.html'}}">AboutMe</a></li>
+          </ul>
         </li>
-        <li class="nav__item ">
-            <a class="header__link subdued" href="{{ '/archive.html' }}">归档</a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Framework<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{'/spring.html'}}">Spring</a></li>
+            <li class="divider"></li>
+            <li><a href="{{'/mybatis.html'}}">Mybatis</a></li>
+            <li><a href="#"></a></li>
+            <li class="divider"></li>
+            <li><a href="{{'/hibernate.html'}}">Hibernate</a></li>
+            <li class="divider"></li>
+            <li><a href="{{/'jquery.html'}}">jQuery</a></li>
+          </ul>
         </li>
-        <li class="nav__item ">
-            <a class="header__link subdued" href="{{'/categories.html'}}">类目</a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{'/datastruts.html'}}">Data Structures</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Algorithm</a></li>
+            <li class="divider"></li>
+            <li><a href="{{'/database.html'}}">DataBase</a></li>
+            <li class="divider"></li>
+            <li><a href="{{'/design-pattern.html'}}">Design Pattern</a></li>
+            <li class="divider"></li>
+            <li><a href="#">OS</a></li>
+          </ul>
         </li>
-        <li class="nav__item ">
-             <a class="header__link subdued" href="{{'/tags.html'}}">标签</a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">YiBlog</a></li>
+            <li class="divider"></li>
+            <li><a href="#">YiShop</a></li>
+            <li class="divider"></li>
+            <li><a href="#">YiNote</a></li>
+          </ul>
         </li>
-        <li class="nav__item ">
-             <a class="header__link subdued" href="{{'/books.html'}}">书单</a>
+
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
         </li>
-         <li class="nav__item ">
-             <a class="header__link subdued " href="{{'/about.html'}}">关于我</a>
-        </li>
-    </ul>
-    </nav>  
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 </div>
--->
