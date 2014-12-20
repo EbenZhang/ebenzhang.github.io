@@ -14,7 +14,7 @@ layout: page
 
 {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
 {% if this_word == 'spring'%}
- <h4 id="{{ this_word | cgi_escape }}">{{ this_word }}</h4>
+  <h2 style="text-align:center" id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   {% for post in site.categories[this_word] %}{% if post.title != null %}
   
 
