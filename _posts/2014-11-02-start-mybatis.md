@@ -23,6 +23,48 @@ Mybatis是什么，干嘛的，这些就不说了，参考资料主要是MyBatis
 
 ##步骤
 
+###maven依赖
+
+```pom.xml```
+
+{% highlight xml %}
+
+
+ <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.18</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 增加这个包，则会自动引入commons-pool -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+
+{% endhighlight %}
+
+
 ###配置文件
 ```mybatis-config.xml```
 
@@ -50,7 +92,16 @@ Mybatis是什么，干嘛的，这些就不说了，参考资料主要是MyBatis
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mapper/UserMapper.xml"/>
+        <!--   使用package之后，不需要针对每个实体类都写一个mapper了,
+        不过包名需要与mapper在同一级目录下，
+        如果在idea中，则要在resources中建立一个同名的包目录           -->
+       <package name="cn.liuyiyou.mybatis.mapper"></package>
+       <!--   使用package之后，不需要针对每个实体类都写一个mapper了，
+       而且映射文件可以随便放   right
+       <mapper resource="mapper/UserMapper.xml"/>  -->
+        <!--   而使用resource,url,classes 则不行
+        <mapper resource="mapper/*.xml"/>
+         -->
     </mappers>
  </configuration>
 
