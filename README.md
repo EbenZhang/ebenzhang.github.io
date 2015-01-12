@@ -116,50 +116,50 @@
 
 <span class="regex">\b\w{6}\b</span> 匹配<span class="desc">刚好6个字符的单词</span>。
 
-    <table cellspacing="0">
-        <caption>表1.常用的元字符</caption>
-        <thead>
-            <tr>
-                <th scope="col">代码</th>
+<table cellspacing="0">
+    <caption>表1.常用的元字符</caption>
+    <thead>
+        <tr>
+            <th scope="col">代码</th>
 
-                <th scope="col">说明</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="code">.</span></td>
-                <td><span class="desc">匹配除换行符以外的任意字符</span></td>
+            <th scope="col">说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">.</span></td>
+            <td><span class="desc">匹配除换行符以外的任意字符</span></td>
 
-            </tr>
-            <tr>
-                <td><span class="code">\w</span></td>
-                <td><span class="desc">匹配字母或数字或下划线或汉字</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">\s</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\w</span></td>
+            <td><span class="desc">匹配字母或数字或下划线或汉字</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\s</span></td>
 
-                <td><span class="desc">匹配任意的空白符</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">\d</span></td>
-                <td><span class="desc">匹配数字</span></td>
-            </tr>
-            <tr>
+            <td><span class="desc">匹配任意的空白符</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\d</span></td>
+            <td><span class="desc">匹配数字</span></td>
+        </tr>
+        <tr>
 
-                <td><span class="code">\b</span></td>
-                <td><span class="desc">匹配单词的开始或结束</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">^</span></td>
-                <td><span class="desc">匹配字符串的开始</span></td>
-            </tr>
+            <td><span class="code">\b</span></td>
+            <td><span class="desc">匹配单词的开始或结束</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">^</span></td>
+            <td><span class="desc">匹配字符串的开始</span></td>
+        </tr>
 
-            <tr>
-                <td><span class="code">$</span></td>
-                <td><span class="desc">匹配字符串的结束</span></td>
-            </tr>
-        </tbody>
-    </table>
+        <tr>
+            <td><span class="code">$</span></td>
+            <td><span class="desc">匹配字符串的结束</span></td>
+        </tr>
+    </tbody>
+</table>
 
 正则表达式引擎通常会提供一个“测试指定的字符串是否匹配一个正则表达式”的方法，如JavaScript里的RegExp.test()方法或.NET里的Regex.IsMatch()方法。这里的匹配是指是字符串里有没有符合表达式规则的部分。如果不使用<span class="code">^</span>和<span class="code">$</span>的话，对于<span class="regex">\d{5,12}</span>而言，使用这样的方法就只能保证字符串里<span class="desc">包含5到12连续位数字</span>，而不是整个字符串就是5到12位数字。
 
@@ -421,13 +421,13 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 要包含注释的话，最好是启用“忽略模式里的空白符”选项，这样在编写表达式时能任意的添加空格，Tab，换行，而实际使用时这些都将被忽略。启用这个选项后，在#后面到这一行结束的所有文本都将被当成注释忽略掉。例如，我们可以前面的一个表达式写成这样：
 
-    <pre class="regex">      (?&lt;=    # 断言要匹配的文本的前缀
-      &lt;(\w+)&gt; # 查找尖括号括起来的字母或数字(即HTML/XML标签)
-      )       # 前缀结束
-      .*      # 匹配任意文本
-      (?=     # 断言要匹配的文本的后缀
-      &lt;\/\1&gt;  # 查找尖括号括起来的内容：前面是一个"/"，后面是先前捕获的标签
-      )       # 后缀结束</pre>
+<pre class="regex">      (?&lt;=    # 断言要匹配的文本的前缀
+  &lt;(\w+)&gt; # 查找尖括号括起来的字母或数字(即HTML/XML标签)
+  )       # 前缀结束
+  .*      # 匹配任意文本
+  (?=     # 断言要匹配的文本的后缀
+  &lt;\/\1&gt;  # 查找尖括号括起来的内容：前面是一个"/"，后面是先前捕获的标签
+  )       # 后缀结束</pre>
 
 ## 贪婪与懒惰
 
@@ -537,19 +537,19 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 我们需要做的是每碰到了左括号，就在压入一个"Open",每碰到一个右括号，就弹出一个，到了最后就看看堆栈是否为空－－如果不为空那就证明左括号比右括号多，那匹配就应该失败。正则表达式引擎会进行回溯(放弃最前面或最后面的一些字符)，尽量使整个表达式得到匹配。
 
-    <pre class="regex">&lt;                         #最外层的左括号
-    [^&lt;&gt;]*                #最外层的左括号后面的不是括号的内容
+<pre class="regex">&lt;                         #最外层的左括号
+[^&lt;&gt;]*                #最外层的左括号后面的不是括号的内容
+(
     (
-        (
-            (?'Open'&lt;)    #碰到了左括号，在黑板上写一个"Open"
-            [^&lt;&gt;]*       #匹配左括号后面的不是括号的内容
-        )+
-        (
-            (?'-Open'&gt;)   #碰到了右括号，擦掉一个"Open"
-            [^&lt;&gt;]*        #匹配右括号后面不是括号的内容
-        )+
-    )*
-    (?(Open)(?!))         #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的"Open"；如果还有，则匹配失败
+        (?'Open'&lt;)    #碰到了左括号，在黑板上写一个"Open"
+        [^&lt;&gt;]*       #匹配左括号后面的不是括号的内容
+    )+
+    (
+        (?'-Open'&gt;)   #碰到了右括号，擦掉一个"Open"
+        [^&lt;&gt;]*        #匹配右括号后面不是括号的内容
+    )+
+)*
+(?(Open)(?!))         #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的"Open"；如果还有，则匹配失败
 
 &gt;                         #最外层的右括号</pre>
 
@@ -701,19 +701,6 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 *   [关于.Net下的平衡组的详细讨论（英文）](http://weblogs.asp.net/whaggard/archive/2005/02/20/377025.aspx)
 
 ## 更新纪录
-
-    <div class="ad">
-        <script type="text/javascript"><!--
-    //<![CDATA[
-    google_ad_client = "ca-pub-1134642721173543";
-    /* Regex middle */
-    google_ad_slot = "4700826168";
-    google_ad_width = 300;
-    google_ad_height = 250;
-    //]]>
-        </script>
-        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-    </div>
 
 1.  2006-3-27 第一版
 2.  2006-10-12 第二版
