@@ -179,60 +179,47 @@
 
 ## 重复
 
-    <div class="ad">
-        <script type="text/javascript"><!--
-            //<![CDATA[
-            google_ad_client = "ca-pub-1134642721173543";
-            /* Regex middle */
-            google_ad_slot = "4700826168";
-            google_ad_width = 300;
-            google_ad_height = 250;
-            //]]>
-        </script>
-        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-    </div>
-
 你已经看过了前面的<span class="code">*</span>,<span class="code">+</span>,<span class="code">{2}</span>,<span class="code">{5,12}</span>这几个匹配重复的方式了。下面是正则表达式中所有的限定符(指定数量的代码，例如*,{5,12}等)：
 
-    <table cellspacing="0">
-        <caption>表2.常用的限定符</caption>
-        <thead>
-            <tr>
-                <th scope="col">代码/语法</th>
-                <th scope="col">说明</th>
-            </tr>
+<table cellspacing="0">
+    <caption>表2.常用的限定符</caption>
+    <thead>
+        <tr>
+            <th scope="col">代码/语法</th>
+            <th scope="col">说明</th>
+        </tr>
 
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="code">*</span></td>
-                <td><span class="desc">重复零次或更多次</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">+</span></td>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">*</span></td>
+            <td><span class="desc">重复零次或更多次</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">+</span></td>
 
-                <td><span class="desc">重复一次或更多次</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">?</span></td>
-                <td><span class="desc">重复零次或一次</span></td>
-            </tr>
-            <tr>
+            <td><span class="desc">重复一次或更多次</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">?</span></td>
+            <td><span class="desc">重复零次或一次</span></td>
+        </tr>
+        <tr>
 
-                <td><span class="code">{n}</span></td>
-                <td><span class="desc">重复n次</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">{n,}</span></td>
-                <td><span class="desc">重复n次或更多次</span></td>
-            </tr>
+            <td><span class="code">{n}</span></td>
+            <td><span class="desc">重复n次</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">{n,}</span></td>
+            <td><span class="desc">重复n次或更多次</span></td>
+        </tr>
 
-            <tr>
-                <td><span class="code">{n,m}</span></td>
-                <td><span class="desc">重复n到m次</span></td>
-            </tr>
-        </tbody>
-    </table>
+        <tr>
+            <td><span class="code">{n,m}</span></td>
+            <td><span class="desc">重复n到m次</span></td>
+        </tr>
+    </tbody>
+</table>
 
 下面是一些使用重复的例子：
 
@@ -280,46 +267,46 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 有时需要查找不属于某个能简单定义的字符类的字符。比如想查找除了数字以外，其它任意字符都行的情况，这时需要用到<span class="name">反义</span>：
 
-    <table cellspacing="0">
-        <caption>表3.常用的反义代码</caption>
-        <thead>
-            <tr>
-                <th scope="col">代码/语法</th>
+<table cellspacing="0">
+    <caption>表3.常用的反义代码</caption>
+    <thead>
+        <tr>
+            <th scope="col">代码/语法</th>
 
-                <th scope="col">说明</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="code">\W</span></td>
-                <td><span class="desc">匹配任意不是字母，数字，下划线，汉字的字符</span></td>
+            <th scope="col">说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">\W</span></td>
+            <td><span class="desc">匹配任意不是字母，数字，下划线，汉字的字符</span></td>
 
-            </tr>
-            <tr>
-                <td><span class="code">\S</span></td>
-                <td><span class="desc">匹配任意不是空白符的字符</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">\D</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\S</span></td>
+            <td><span class="desc">匹配任意不是空白符的字符</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\D</span></td>
 
-                <td><span class="desc">匹配任意非数字的字符</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">\B</span></td>
-                <td><span class="desc">匹配不是单词开头或结束的位置</span></td>
-            </tr>
-            <tr>
+            <td><span class="desc">匹配任意非数字的字符</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">\B</span></td>
+            <td><span class="desc">匹配不是单词开头或结束的位置</span></td>
+        </tr>
+        <tr>
 
-                <td><span class="code">[^x]</span></td>
-                <td><span class="desc">匹配除了x以外的任意字符</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">[^aeiou]</span></td>
-                <td><span class="desc">匹配除了aeiou这几个字母以外的任意字符</span></td>
-            </tr>
+            <td><span class="code">[^x]</span></td>
+            <td><span class="desc">匹配除了x以外的任意字符</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">[^aeiou]</span></td>
+            <td><span class="desc">匹配除了aeiou这几个字母以外的任意字符</span></td>
+        </tr>
 
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
 例子：<span class="regex">\S+</span>匹配<span class="desc">不包含空白符的字符串</span>。
 
@@ -328,8 +315,6 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 ## 后向引用
 
 使用小括号指定一个子表达式后，**匹配这个子表达式的文本**(也就是此分组捕获的内容)可以在表达式或其它程序中作进一步的处理。默认情况下，每个分组会自动拥有一个<span class="name">组号</span>，规则是：从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。
-
-    <div class="note">
 
 呃……其实,组号分配还不像我刚说得那么简单：
 
@@ -346,57 +331,57 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 使用小括号的时候，还有很多特定用途的语法。下面列出了最常用的一些：
 
-    <table cellspacing="0">
-        <caption>表4.常用分组语法</caption>
-        <tbody>
-            <tr>
-                <th scope="col">分类</th>
-                <th scope="col">代码/语法</th>
+<table cellspacing="0">
+    <caption>表4.常用分组语法</caption>
+    <tbody>
+        <tr>
+            <th scope="col">分类</th>
+            <th scope="col">代码/语法</th>
 
-                <th scope="col">说明</th>
-            </tr>
-            <tr>
-                <th rowspan="3">捕获</th>
-                <td><span class="code">(exp)</span></td>
-                <td><span class="desc">匹配exp,并捕获文本到自动命名的组里</span></td>
-            </tr>
+            <th scope="col">说明</th>
+        </tr>
+        <tr>
+            <th rowspan="3">捕获</th>
+            <td><span class="code">(exp)</span></td>
+            <td><span class="desc">匹配exp,并捕获文本到自动命名的组里</span></td>
+        </tr>
 
-            <tr>
-                <td><span class="code">(?&lt;name&gt;exp)</span></td>
-                <td><span class="desc">匹配exp,并捕获文本到名称为name的组里，也可以写成(?'name'exp)</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">(?:exp)</span></td>
+        <tr>
+            <td><span class="code">(?&lt;name&gt;exp)</span></td>
+            <td><span class="desc">匹配exp,并捕获文本到名称为name的组里，也可以写成(?'name'exp)</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">(?:exp)</span></td>
 
-                <td><span class="desc">匹配exp,不捕获匹配的文本，也不给此分组分配组号</span></td>
-            </tr>
-            <tr>
-                <th rowspan="4">零宽断言</th>
-                <td><span class="code">(?=exp)</span></td>
-                <td><span class="desc">匹配exp前面的位置</span></td>
-            </tr>
+            <td><span class="desc">匹配exp,不捕获匹配的文本，也不给此分组分配组号</span></td>
+        </tr>
+        <tr>
+            <th rowspan="4">零宽断言</th>
+            <td><span class="code">(?=exp)</span></td>
+            <td><span class="desc">匹配exp前面的位置</span></td>
+        </tr>
 
-            <tr>
-                <td><span class="code">(?&lt;=exp)</span></td>
-                <td><span class="desc">匹配exp后面的位置</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">(?!exp)</span></td>
-                <td><span class="desc">匹配后面跟的不是exp的位置</span></td>
+        <tr>
+            <td><span class="code">(?&lt;=exp)</span></td>
+            <td><span class="desc">匹配exp后面的位置</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">(?!exp)</span></td>
+            <td><span class="desc">匹配后面跟的不是exp的位置</span></td>
 
-            </tr>
-            <tr>
-                <td><span class="code">(?&lt;!exp)</span></td>
-                <td><span class="desc">匹配前面不是exp的位置</span></td>
-            </tr>
-            <tr>
-                <th rowspan="1">注释</th>
+        </tr>
+        <tr>
+            <td><span class="code">(?&lt;!exp)</span></td>
+            <td><span class="desc">匹配前面不是exp的位置</span></td>
+        </tr>
+        <tr>
+            <th rowspan="1">注释</th>
 
-                <td><span class="code">(?#comment)</span></td>
-                <td><span class="desc">这种类型的分组不对正则表达式的处理产生任何影响，用于提供注释让人阅读</span></td>
-            </tr>
-        </tbody>
-    </table>
+            <td><span class="code">(?#comment)</span></td>
+            <td><span class="desc">这种类型的分组不对正则表达式的处理产生任何影响，用于提供注释让人阅读</span></td>
+        </tr>
+    </tbody>
+</table>
 
 我们已经讨论了前两种语法。第三个<span class="code">(?:exp)</span>不会改变正则表达式的处理方式，只是这样的组匹配的内容<span class="desc">不会像前两种那样被捕获到某个组里面，也不会拥有组号</span>。“我为什么会想要这样做？”——好问题，你觉得为什么呢？
 
@@ -454,41 +439,41 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 为什么第一个匹配是aab（第一到第三个字符）而不是ab（第二到第三个字符）？简单地说，因为正则表达式有另一条规则，比懒惰／贪婪规则的优先级更高：最先开始的匹配拥有最高的优先权——The match that begins earliest wins。
 
-    <table cellspacing="0">
-        <caption>表5.懒惰限定符</caption>
-        <thead>
-            <tr>
-                <th scope="col">代码/语法</th>
-                <th scope="col">说明</th>
+<table cellspacing="0">
+    <caption>表5.懒惰限定符</caption>
+    <thead>
+        <tr>
+            <th scope="col">代码/语法</th>
+            <th scope="col">说明</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="code">*?</span></td>
-                <td><span class="desc">重复任意次，但尽可能少重复</span></td>
-            </tr>
-            <tr>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">*?</span></td>
+            <td><span class="desc">重复任意次，但尽可能少重复</span></td>
+        </tr>
+        <tr>
 
-                <td><span class="code">+?</span></td>
-                <td><span class="desc">重复1次或更多次，但尽可能少重复</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">??</span></td>
-                <td><span class="desc">重复0次或1次，但尽可能少重复</span></td>
-            </tr>
+            <td><span class="code">+?</span></td>
+            <td><span class="desc">重复1次或更多次，但尽可能少重复</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">??</span></td>
+            <td><span class="desc">重复0次或1次，但尽可能少重复</span></td>
+        </tr>
 
-            <tr>
-                <td><span class="code">{n,m}?</span></td>
-                <td><span class="desc">重复n到m次，但尽可能少重复</span></td>
-            </tr>
-            <tr>
-                <td><span class="code">{n,}?</span></td>
-                <td><span class="desc">重复n次以上，但尽可能少重复</span></td>
+        <tr>
+            <td><span class="code">{n,m}?</span></td>
+            <td><span class="desc">重复n到m次，但尽可能少重复</span></td>
+        </tr>
+        <tr>
+            <td><span class="code">{n,}?</span></td>
+            <td><span class="desc">重复n次以上，但尽可能少重复</span></td>
 
-            </tr>
-        </tbody>
-    </table>
+        </tr>
+    </tbody>
+</table>
 
 ## 处理选项
 
@@ -496,40 +481,40 @@ IP地址中每个数字都不能大于255. 经常有人问我, 01.02.03.04 这�
 
 上面介绍了几个选项如忽略大小写，处理多行等，这些选项能用来改变处理正则表达式的方式。下面是.Net中常用的正则表达式选项：
 
-    <table cellspacing="0">
-        <caption>表6.常用的处理选项</caption>
-        <thead>
-            <tr>
-                <th scope="col">名称</th>
-                <th scope="col">说明</th>
-            </tr>
+<table cellspacing="0">
+    <caption>表6.常用的处理选项</caption>
+    <thead>
+        <tr>
+            <th scope="col">名称</th>
+            <th scope="col">说明</th>
+        </tr>
 
-        </thead>
-        <tbody>
-            <tr>
-                <td>IgnoreCase(忽略大小写)</td>
-                <td>匹配时不区分大小写。</td>
-            </tr>
-            <tr>
-                <td>Multiline(多行模式)</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>IgnoreCase(忽略大小写)</td>
+            <td>匹配时不区分大小写。</td>
+        </tr>
+        <tr>
+            <td>Multiline(多行模式)</td>
 
-                <td>更改<span class="code">^</span>和<span class="code">$</span>的含义，使它们分别在任意一行的行首和行尾匹配，而不仅仅在整个字符串的开头和结尾匹配。(在此模式下,<span class="code">$</span>的精确含意是:匹配\n之前的位置以及字符串结束前的位置.) </td>
-            </tr>
-            <tr>
-                <td>Singleline(单行模式)</td>
-                <td>更改<span class="code">.</span>的含义，使它与每一个字符匹配（包括换行符\n）。 </td>
+            <td>更改<span class="code">^</span>和<span class="code">$</span>的含义，使它们分别在任意一行的行首和行尾匹配，而不仅仅在整个字符串的开头和结尾匹配。(在此模式下,<span class="code">$</span>的精确含意是:匹配\n之前的位置以及字符串结束前的位置.) </td>
+        </tr>
+        <tr>
+            <td>Singleline(单行模式)</td>
+            <td>更改<span class="code">.</span>的含义，使它与每一个字符匹配（包括换行符\n）。 </td>
 
-            </tr>
-            <tr>
-                <td>IgnorePatternWhitespace(忽略空白)</td>
-                <td>忽略表达式中的非转义空白并启用由<span class="code">#</span>标记的注释。</td>
-            </tr>
-            <tr>
-                <td>ExplicitCapture(显式捕获)</td>
-                <td>仅捕获已被显式命名的组。</td>
-            </tr>
-        </tbody>
-    </table>
+        </tr>
+        <tr>
+            <td>IgnorePatternWhitespace(忽略空白)</td>
+            <td>忽略表达式中的非转义空白并启用由<span class="code">#</span>标记的注释。</td>
+        </tr>
+        <tr>
+            <td>ExplicitCapture(显式捕获)</td>
+            <td>仅捕获已被显式命名的组。</td>
+        </tr>
+    </tbody>
+</table>
 
 一个经常被问到的问题是：是不是只能同时使用多行模式和单行模式中的一种？答案是：不是。这两个选项之间没有任何关系，除了它们的名字比较相似（以至于让人感到疑惑）以外。
 
