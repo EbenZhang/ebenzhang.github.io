@@ -13,6 +13,7 @@ The `this` key word in imediately called function
 -------------------------------------------------------
 What will the code below output to the console and why?
 
+```
     var myObject = {
         foo: "bar",
         func: function() {
@@ -26,7 +27,7 @@ What will the code below output to the console and why?
         }
     };
     myObject.func();
-
+```
 use strict
 ----------
 Q: What is the significance, and what are the benefits, of including `'use strict'` at the beginning of a JavaScript source file?
