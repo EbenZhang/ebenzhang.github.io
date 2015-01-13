@@ -118,4 +118,5 @@ sayHello.constructor.name; // Function
  - "" instanceof String;// false as "" is primitive string, not a object of String
  - typeof("") // string
  - typeof(new String("")); //object
+ - So seems using the Uppercase Functions(e.g. String) is a bad idea...
 
