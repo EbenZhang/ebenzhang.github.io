@@ -99,7 +99,7 @@ y.constructor.name; // Function
 y instanceof Function; // true
 ```
 
-**So `Function` is a function to construct `functions`** (`Object` is a function to construct `objects`, em..). Yes, we can use `Function` to define a `function` as well:
+We can use `Function` to define a `function` as well:
 
 ```javascript
 // equivalent to:
@@ -110,4 +110,12 @@ typeof(sayHello); // function
 sayHello instanceof Function;// true
 sayHello.constructor.name; // Function
 ```
+
+##So##
+ - `Function` is a function to construct `functions`
+ - `Object` is a function to construct `object`, em..
+ - Seems `String` suppose to be a function to construct `string`, but actually `object`, however the `new String("")` is instanceof String;
+ - "" instanceof String;// false as "" is primitive string, not a object of String
+ - typeof("") // string
+ - typeof(new String("")); //object
 
