@@ -113,8 +113,8 @@ sayHello.constructor.name; // Function
 
 ##So##
  - `Function` is a function to construct `functions`
- - `Object` is a function to construct `object`, em..
- - Seems `String` suppose to be a function to construct `string`, but actually `object`, however the `new String("")` is instanceof String;
+ - `Object` is a function to construct `objects`, em..
+ - Seems `String` suppose to be a function to construct `strings`, but actually `objects`, however the `new String("")` is instanceof String;
  - "" instanceof String;// false as "" is primitive string, not a object of String
  - typeof("") // string
  - typeof(new String("")); //object
