@@ -12,7 +12,7 @@ Under Remarks section on page:
 > Password properties are not null, the CreateNoWindow property
 > value is ignored and a new window is created.
 
-```
+```C#
     ProcessStartInfo startInfo = new ProcessStartInfo();
     startInfo.FileName = fullPath;
     startInfo.Arguments = args;
