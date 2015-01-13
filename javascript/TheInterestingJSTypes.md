@@ -99,8 +99,15 @@ y.constructor.name; // Function
 y instanceof Function; // true
 ```
 
-** So `Function` is a function to construct `functions` **
-```javascript
+**So `Function` is a function to construct `functions`** (`Object` is a function to construct `objects`, em..). Yes, we can use `Function` to define a `function` as well:
 
+```javascript
+// equivalent to:
+// var sayHello = function(name){ alert("Hello  " + name  ); }
+var sayHello = new Function('name','alert("Hello " + name  );');
+sayHello('Alice');// result in 'Hello Alice'
+typeof(sayHello); // function
+sayHello instanceof Function;// true
+sayHello.constructor.name; // Function
 ```
 
