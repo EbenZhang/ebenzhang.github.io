@@ -24,7 +24,7 @@ typeof (Object) // function
 Things need to be highlighted are:
 
  - Both `undefined` and `undeclared` variable are of type `undefined`
- - Declared and assigned variable is `null`
+ - Variable is `null` when assigned with null otherwise it will be `undefined`
  - `Object` is a `function`
  - `null` is an `object`, I guess it means a null object.
 
