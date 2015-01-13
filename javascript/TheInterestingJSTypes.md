@@ -98,3 +98,9 @@ typeof(y); //function
 y.constructor.name; // Function
 y instanceof Function; // true
 ```
+
+** So `Function` is a function to construct `functions` **
+```javascript
+
+```
+
