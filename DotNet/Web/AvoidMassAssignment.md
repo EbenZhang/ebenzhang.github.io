@@ -1,4 +1,5 @@
 Copied from http://odetocode.com/blogs/scott/archive/2012/03/11/complete-guide-to-mass-assignment-in-asp-net-mvc.aspx
+
 One of the scenarios that I always demonstrate during an ASP.NET MVC class is how to create a mass assignment vulnerability and then execute an over-posting attack. It is a mass assignment vulnerability that led to a severe problem on [github](https://github.com/blog/1068-public-key-security-vulnerability-and-mitigation) last week.
 
 Let's say you have the following model.
