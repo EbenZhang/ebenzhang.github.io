@@ -33,6 +33,7 @@ What will the code below output to the console and why?
         }
     };
     myObject.func();
+
 use strict
 ----------
 Q: What is the significance, and what are the benefits, of including `'use strict'` at the beginning of a JavaScript source file?
@@ -65,6 +66,7 @@ Consider the two functions below. Will they both return the same thing? Why or w
           bar: "hello"
       };
     }
+
 Surprisingly, these two functions will not return the same thing. Rather:
 
     console.log("foo1 returns:");
@@ -77,6 +79,7 @@ will yield:
     Object {bar: "hello"}
     foo2 returns:
     undefined 
+
 Not only is this surprising, but what makes this particularly gnarly is that `foo2()` returns undefined without any error being thrown.
 
 The reason for this has to do with the fact that semicolons are technically optional in JavaScript (although omitting them is generally really bad form). As a result, when the line containing the `return` statement (with nothing else on the line) is encountered in `foo2()`, a semicolon is automatically inserted immediately after the return statement.
@@ -108,9 +111,11 @@ The issue is that, in the ECMAScript specification, integers only exist conceptu
 With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return `false` even if a non-numeric value such as a string or `null` is passed to the function) would be the following:
 
     function isInteger(x) { return (x^0) === x; } 
+
 The following solution would also work, although not as elegant as the one above:
 
     function isInteger(x) { return Math.round(x) === x; }
+
 Note that `Math.ceil()` or `Math.floor()` could be used equally well (instead of `Math.round()`) in the above implementation.
 
 Or alternatively:
@@ -152,6 +157,7 @@ In what order will the numbers 1-4 be logged to the console when the code below 
         setTimeout(function(){console.log(3)}, 0); 
         console.log(4);
     })();
+
 The values will be logged in the following order:
 
     1
@@ -183,6 +189,7 @@ Q: Consider the following code snippet:
       btn.addEventListener('click', function(){ console.log(i); });
       document.body.appendChild(btn);
     }
+
 (a) What gets logged to the console when the user clicks on “Button 4” and why?
 (b) Provide one or more alternate implementations that will work as expected.
 
@@ -199,6 +206,7 @@ A:
       })(i));
       document.body.appendChild(btn);
     }
+
 Or, we could replace the `for` loop with a call to the `array` object’s native `forEach` method:
 
     ['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
@@ -207,6 +215,7 @@ Or, we could replace the `for` loop with a call to the `array` object’s native
       btn.addEventListener('click', function() { console.log(i); });
       document.body.appendChild(btn);
     });
+
 Type Conversion
 ---------------
 What will the code below output to the console and why ?
@@ -217,6 +226,7 @@ What will the code below output to the console and why ?
     console.log(+"1" +  "1" + "2");
     console.log( "A" - "B" + "2");
     console.log( "A" - "B" + 2);
+
 The above code will output the following to the console:
 
     "122"
@@ -225,6 +235,7 @@ The above code will output the following to the console:
     "112"
     "NaN2"
     NaN
+
 Here’s why…
 
 The fundamental issue here is that JavaScript (ECMAScript) is a loosely typed language and it performs automatic type conversion on values to accommodate the operation being performed. Let’s see how this plays out with each of the above examples.
@@ -251,6 +262,7 @@ What will the code below output to the console and why?
     arr2.push(arr3);
     console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
     console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+
 The logged output will be:
 
     "array 1: length=5 last=j,o,n,e,s"
@@ -290,6 +302,7 @@ To be entirely thorough in our answer, there are two other things worth noting:
 First, the above solution will return `false` if `bar` is a `function`. In most cases, this is the desired behavior, but in situations where you want to also return `true` for `functions`, you could amend the above solution to be:
 
     console.log((bar !== null) && ((typeof bar === "object") || (typeof bar === "function")));
+
 Second, the above solution will return true if `bar` is an `array` (e.g., if `var bar = [];`). In most cases, this is the desired behavior, since arrays are indeed objects, but in situations where you want to also `false` for arrays, you could amend the above solution to be:
 
     console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
@@ -297,6 +310,7 @@ Second, the above solution will return true if `bar` is an `array` (e.g., if `va
 Or, if you’re using jQuery:
 
     console.log((bar !== null) && (typeof bar === "object") && (! $.isArray(bar)));
+
 Inadvertent global variable
 ---------------------------
 What will the code below output to the console and why?
@@ -358,6 +372,7 @@ Write a `sum` method which will work properly when invoked using either syntax b
     console.log(sum(2,3));   // Outputs 5
     console.log(sum(2)(3));  // Outputs 5
     
+
 Here’s the answer, followed by an explanation of how it works:
 
     function sum(x) {
