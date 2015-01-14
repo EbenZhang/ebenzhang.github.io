@@ -1,3 +1,7 @@
+---
+layout: default
+title: ElementName As Source Of Content Menu Command Binding
+---
 ElementName As Source Of Content Menu Command Binding
 
 We can't bind using `ElementName` for a context menu command binding as `popups` are not on the visual tree, thus not able to find the element by its name. But we can workaround it using a couple of tricks though...
