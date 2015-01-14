@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Using CSS Properties to Create a Cool Button
-tags: CSS, Web
+tags: CSS,Web
+category:CSS
 ---
 
 Using CSS properties alone, recreate this button:

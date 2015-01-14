@@ -2,6 +2,7 @@
 layout: post
 title: Deferred in jQuery
 tags: Javascript, jQuery, Deferred
+category:Javascript
 ---
 
 Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html

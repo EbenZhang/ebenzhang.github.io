@@ -2,6 +2,7 @@
 layout: post
 title: Great Javascript Interview Questions
 tag: Javascript, Interview
+category:Javascript
 ---
 
 copied from http://www.toptal.com/javascript/interview-questions
