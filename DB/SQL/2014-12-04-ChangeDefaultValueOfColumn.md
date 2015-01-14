@@ -9,7 +9,7 @@ If the column already has a default value, we can get the existing default const
 And then we need to drop the constraint using the command shown below:
 
 ```
-ALTER TABLE dbo.YouTableName DROP CONSTRAINT TheExistingConstrainName;
+    ALTER TABLE dbo.YouTableName DROP CONSTRAINT TheExistingConstrainName;
 ```
 
     ALTER TABLE dbo.YouTableName DROP CONSTRAINT TheExistingConstrainName;
