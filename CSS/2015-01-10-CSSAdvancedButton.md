@@ -22,7 +22,8 @@ This would be a great test of the candidate's CSS3 skills. This button is loaded
 
 
 My solution
-```css
+
+```
 a {
   border-radius: 4px;
   border-color : aliceblue;
