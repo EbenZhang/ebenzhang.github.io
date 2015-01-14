@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Hide Console Window From Process Start
