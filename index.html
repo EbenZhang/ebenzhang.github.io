@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 首页
+title: Home
 ---
 
 {% for post in paginator.posts %}
@@ -27,14 +27,14 @@ title: 首页
   {% endif %}
   <p>
     <a href="{{ post.url }}" class="more-link">
-      <span class="readmore">阅读全文 &raquo;</span>
+      <span class="readmore">Read More &raquo;</span>
     </a>
   </p>
   {% if forloop.last %}
    {% else %}
   <hr>
   {% endif %}
-  <p class="blog-post-meta">日期：{{ post.date |date: "%Y-%m-%d"}}|分类： {{ post.category }}</p>
+  <p class="blog-post-meta">Date: {{ post.date |date: "%Y-%m-%d"}}|Category： {{ post.category }}</p>
 
 </div>
 <!-- /.blog-post -->
