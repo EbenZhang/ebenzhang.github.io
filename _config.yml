@@ -8,8 +8,8 @@ twitter: https://twitter.com/EbenZhang
 facebook: https://www.facebook.com/EbenZhang
 
 #语法高亮
-highlighter: pygments
-pygments: true
+highlighter: prettify
+pygments: false
 
 #首先概要显示分隔符
 excerpt_separator: "\n\n\n"
