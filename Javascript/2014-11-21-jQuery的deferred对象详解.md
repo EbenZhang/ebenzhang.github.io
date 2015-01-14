@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Deferred in jQuery
+tags: Javascript, jQuery, Deferred
 ---
 
 Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html
@@ -13,8 +14,7 @@ Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jqu
 
 本文不是初级教程，针对的读者是那些已经具备jQuery使用经验的开发者。如果你想了解jQuery的基本用法，请阅读我编写的[《jQuery设计思想》](http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html)和[《jQuery最佳实践》](http://www.ruanyifeng.com/blog/2011/08/jquery_best_practices.html)。
 
-
-
+\n\n\n
 
 ======================================
 

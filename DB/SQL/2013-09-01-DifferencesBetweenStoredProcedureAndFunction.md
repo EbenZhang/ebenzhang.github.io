@@ -1,3 +1,9 @@
+---
+layout: post
+title: Differences between StoredProcedure and UDF
+tags: SQL, StoredProcedure, Database
+---
+
 The differences between Stored Procedure (SP) and User Defined Functions (UDF) in MSSQL
 
 |Ability| SP		| UDF		| 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to change the DEFAULT value for a column
+tags: SQL, Database
 ---
 
 ###First, drop the existing default constraint if necessary

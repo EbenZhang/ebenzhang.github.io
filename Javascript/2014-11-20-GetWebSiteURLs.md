@@ -1,3 +1,9 @@
+---
+layout: post
+title: Get Website URLs via Javascript
+tag: Javascript, URL
+---
+
 Copied from http://stackoverflow.com/questions/19550136/javascript-get-website-url
 
 > **There are several ways you can do this, but one way might be best for certain situations (e.g. within an iFrame).**

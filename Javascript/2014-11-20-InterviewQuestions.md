@@ -1,3 +1,9 @@
+---
+layout: post
+title: Great Javascript Interview Questions
+tag: Javascript, Interview
+---
+
 copied from http://www.toptal.com/javascript/interview-questions
 
 Namespace

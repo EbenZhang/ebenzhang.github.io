@@ -1,3 +1,9 @@
+---
+layout: post
+title: Extract SQL Query From Linq Expression
+tags: SQL, Linq
+---
+
 ##How to Extract sql query from LINQ expressions?
 
 ###GetCommand

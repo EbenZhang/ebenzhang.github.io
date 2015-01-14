@@ -1,3 +1,10 @@
+---
+layout: post
+title: Principal End of One2One Map in EntityFramework
+tags: Database, EntityFramework
+---
+
+
 ##What does principal end of an association means?
 
 In one-to-one relation one end must be principal and second end must be dependent. Principal end is the one which will be inserted first and which can exist without the dependent one. Dependent end is the one which must be inserted after the principal because it has foreign key to the principal.

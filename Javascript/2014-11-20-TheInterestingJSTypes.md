@@ -1,5 +1,8 @@
-The 'interesting' JavaScript Types
----------------------------------------------
+---
+layout: post
+title: The 'interesting' JavaScript Types
+tags: typeof, Javascript
+---
 
 ## `typeof`  primitive types ##
 Here lists the `typeof` results of primitive types:
