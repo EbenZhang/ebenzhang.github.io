@@ -39,7 +39,7 @@ Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jqu
 ##二、ajax操作的链式写法##
 
 首先，回顾一下jQuery的ajax操作的传统写法：
-```javascript
+```
  $.ajax({ 
  url: "test.html", 
  success: function(){ 
@@ -59,7 +59,7 @@ $.ajax()操作完成后，如果使用的是低于1.5.0版本的jQuery，返回�
 
 现在，新的写法是这样的：
 
-```javascript
+```
  $.ajax("test.html") 
  .done(function(){ alert("哈哈，成功了！"); }) 
  .fail(function(){ alert("出错啦！"); });
@@ -76,7 +76,7 @@ deferred对象的一大好处，就是它允许你自由添加多个回调函数
 
 很简单，直接把它加在后面就行了。
 
-```javascript
+```
  $.ajax("test.html") 
  .done(function(){ alert("哈哈，成功了！");} ) 
  .fail(function(){ alert("出错啦！"); } ) 
@@ -92,7 +92,7 @@ deferred对象的另一大好处，就是它允许你为多个事件指定一个
 
 请看下面的代码，它用到了一个新的方法[$.when()](http://api.jquery.com/jQuery.when/)：
 
-```javascript
+```
  $.when($.ajax("test1.html"), $.ajax("test2.html")) 
  .done(function(){ alert("哈哈，成功了！"); }) 
  .fail(function(){ alert("出错啦！"); });
@@ -107,7 +107,7 @@ deferred对象的最大优点，就是它把这一套回调函数接口，从aja
 
 我们来看一个具体的例子。假定有一个很耗时的操作wait：
 
-```javascript
+```
  var wait = function(){ 
 	 var tasks = function(){	 
 		 alert("执行完毕！");
@@ -120,7 +120,7 @@ deferred对象的最大优点，就是它把这一套回调函数接口，从aja
 
 很自然的，你会想到，可以使用$.when()：
 
-```javascript
+```
  $.when(wait()) 
  .done(function(){ alert("哈哈，成功了！"); }) 
  .fail(function(){ alert("出错啦！"); });
@@ -129,7 +129,7 @@ deferred对象的最大优点，就是它把这一套回调函数接口，从aja
 
 但是，这样写的话，done()方法会立即执行，起不到回调函数的作用。原因在于$.when()的参数只能是deferred对象，所以必须对wait()进行改写：
 
-```javascript
+```
 var dtd = $.Deferred(); // 新建一个deferred对象 
 var wait = function(dtd){
     var tasks = function(){
@@ -144,7 +144,7 @@ var wait = function(dtd){
 
 现在，wait()函数返回的是deferred对象，这就可以加上链式操作了。
 
-```javascript
+```
  $.when(wait(dtd))
  
  .done(function(){ alert("哈哈，成功了！"); })
@@ -165,7 +165,7 @@ wait()函数运行完，就会自动运行done()方法指定的回调函数。
 
 类似的，还存在一个[deferred.reject()](http://api.jquery.com/deferred.reject)方法，作用是将dtd对象的执行状态从"未完成"改为"已失败"，从而触发fail()方法。
 
-```javascript
+```
  var dtd = $.Deferred(); // 新建一个Deferred对象 
  var wait = function(dtd){ 
      var tasks = function(){     
@@ -188,7 +188,7 @@ wait()函数运行完，就会自动运行done()方法指定的回调函数。
 
 请看下面的代码：
 
-```javascript
+```
  var dtd = $.Deferred(); // 新建一个Deferred对象
  var wait = function(dtd){ 
      var tasks = function(){     
@@ -212,7 +212,7 @@ wait()函数运行完，就会自动运行done()方法指定的回调函数。
 
 请看下面的代码：
 
-```javascript
+```
  var dtd = $.Deferred(); // 新建一个Deferred对象 
  var wait = function(dtd){ 
 	 var tasks = function(){	 
@@ -236,7 +236,7 @@ wait()函数运行完，就会自动运行done()方法指定的回调函数。
 
 不过，更好的写法是[allenm](http://blog.allenm.me/2012/01/jquery_deferred_promise_method/)所指出的，将dtd对象变成wait(）函数的内部对象。
 
-```javascript
+```
  var wait = function(){ 
 	 var dtd = $.Deferred(); //在函数内部，新建一个Deferred对象	 
 	 var tasks = function(){ 
@@ -260,7 +260,7 @@ wait()函数运行完，就会自动运行done()方法指定的回调函数。
 
 这时，wait函数还是保持不变，我们直接把它传入$.Deferred()：
 
-```javascript
+```
  $.Deferred(wait) 
  .done(function(){ alert("哈哈，成功了！"); }) 
  .fail(function(){ alert("出错啦！"); }); 
@@ -273,7 +273,7 @@ jQuery规定，$.Deferred()可以接受一个函数名（注意，是函数名�
 
 除了上面两种方法以外，我们还可以直接在wait对象上部署deferred接口。
 
-```javascript
+```
  var dtd = $.Deferred(); // 生成Deferred对象 
  var wait = function(dtd){ 
 	 var tasks = function(){ 
@@ -316,7 +316,7 @@ jQuery规定，$.Deferred()可以接受一个函数名（注意，是函数名�
 
 有时为了省事，可以把done()和fail()合在一起写，这就是then()方法。
 
-```javascript
+```
 $.when($.ajax( "/main.php" ))
 .then(successFunc, failureFunc );
 ```
@@ -343,7 +343,7 @@ $.when($.ajax( "/main.php" ))
 ----------
 好啰嗦, 总结一下, 用下面这个就对了:
 
-```javascript
+```
 var wait = function(){
     var dtd = $.Deferred();
     var tasks = function(){

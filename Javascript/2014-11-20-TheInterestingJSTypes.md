@@ -7,7 +7,7 @@ tags: typeof, Javascript
 ## `typeof`  primitive types ##
 Here lists the `typeof` results of primitive types:
  
-```javascript
+```
 var undefinedVariable;
 var nullValue = null;
 var anObject = new Object();
@@ -35,7 +35,7 @@ Things need to be highlighted are:
 
 `Object` is actually a constructor function to create objects (that why `typeof(Object)` result in `function`), just like the `Person` function shown below.
 
-```javascript
+```
 var alice= new Object();
 alice.name = "Alice";
 //or alice = { name : "Alice" };, the result will be the same.
@@ -55,7 +55,7 @@ console.log(bob.constructor.name); // Person
 
 Similarly, the upper case `String`, `Number`, `Boolean` are `functions` as well as `Object`:
 
-```javascript
+```
 typeof(String);  // function
 typeof(Number);  // function
 typeof(Boolean); // function
@@ -72,7 +72,7 @@ s.constructor.name;; // String
 ##Other functions##
 
 Array, Date, RegExp are functions as well.
-```javascript
+```
 typeof(Array);// function
 typeof(new Array());// object
 typeof(Date); // function
@@ -90,7 +90,7 @@ Now, how can we determine my object is of a specific function? The answer is `in
 ##function##
 functions are first-class objects, they are objects and can be manipulated and passed around just like any other object. Specifically, they are Function objects, just like the relationship between `Object` and `object`.
 
-```javascript
+```
 typeof(Function); // function
 typeof(function(){}); // function
 var x = function(){};
@@ -104,7 +104,7 @@ y instanceof Function; // true
 
 We can use `Function` to define a `function` as well:
 
-```javascript
+```
 // equivalent to:
 // var sayHello = function(name){ alert("Hello  " + name  ); }
 var sayHello = new Function('name','alert("Hello " + name  );');

@@ -14,7 +14,7 @@ This is an increasingly common practice, employed by many popular JavaScript lib
 
 Another feature of this technique is to allow for an easily referenceable (presumably shorter) alias for a global variable. This is often used, for example, in `jQuery` plugins. `jQuery` allows you to disable the `$` reference to the `jQuery` namespace, using `jQuery.noConflict()`. If this has been done, your code can still use `$` employing this closure technique, as follows:
 
-```javascript
+```
     (function($) { /* jQuery plugin code referencing $ */ } )(jQuery);
 ```
 
@@ -22,7 +22,7 @@ The `this` key word in imediately called function
 -------------------------------------------------------
 What will the code below output to the console and why?
 
-```javascript
+```
     var myObject = {
         foo: "bar",
         func: function() {
@@ -56,7 +56,7 @@ Comma appended at the end of line
 ---------------------------------
 Consider the two functions below. Will they both return the same thing? Why or why not?
 
-```javascript
+```
     function foo1(){
       return {
           bar: "hello"
@@ -73,14 +73,14 @@ Consider the two functions below. Will they both return the same thing? Why or w
 ```
 Surprisingly, these two functions will not return the same thing. Rather:
 
-```javascript
+```
     console.log("foo1 returns:");
     console.log(foo1());
     console.log("foo2 returns:");
     console.log(foo2());
 ```
 will yield:
-```javascript
+```
     foo1 returns:
     Object {bar: "hello"}
     foo2 returns:
@@ -97,7 +97,7 @@ This behavior also argues for following the convention of placing an opening cur
 inaccurate float number
 -----------------------
 What will the code below output? Explain your answer.
-```javascript
+```
     console.log(0.1 + 0.2);
     console.log(0.1 + 0.2 == 0.3);
 ```
@@ -105,7 +105,7 @@ An educated answer to this question would simply be: “You can’t be sure. it 
 
 The example provided above is classic case that demonstrates this issue. Surprisingly, it will print out:
 
-```javascript
+```
     0.30000000000000004
     false
 ```
@@ -118,25 +118,25 @@ The issue is that, in the ECMAScript specification, integers only exist conceptu
 
 With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return `false` even if a non-numeric value such as a string or `null` is passed to the function) would be the following:
 
-```javascript
+```
     function isInteger(x) { return (x^0) === x; } 
 ```
 The following solution would also work, although not as elegant as the one above:
 
-```javascript
+```
     function isInteger(x) { return Math.round(x) === x; }
 ```
 Note that `Math.ceil()` or `Math.floor()` could be used equally well (instead of `Math.round()`) in the above implementation.
 
 Or alternatively:
 
-```javascript
+```
     function isInteger(x) { return parseInt(x, 10) === x; }
 ```
 
 While this `parseInt`-based approach will work well for many values of `x`, once `x` becomes quite large, it will fail to work properly. The problem is that `parseInt()` coerces its first parameter to a string before parsing digits. Therefore, once the number becomes sufficiently large, its string representation will be presented in exponential form (e.g., `1e+21`). Accordingly, parseInt() will then try to parse `1e+21`, but will stop parsing when it reaches the `e` character and will therefore return a value of `1`. Observe:
 
-```javascript
+```
     > String(1000000000000000000000)
     '1e+21'
     
@@ -154,13 +154,13 @@ Write a one-line function (less than 80 characters) that returns a boolean indic
 
 The following one line function will return `true` if str is a palindrome; otherwise, it returns `false`.
 
-```javascript
+```
     function isPalindrome(str) { return str.split('').reverse().join('') === str; }
 ```
 
 For example:
 
-```javascript
+```
     console.log(isPalindrome("level"));      // logs 'true'
     console.log(isPalindrome("levels"));     // logs 'false'
 ```
@@ -169,7 +169,7 @@ setTimeout and thread
 ------------------
 In what order will the numbers 1-4 be logged to the console when the code below is executed? Why? 
 
-```javascript
+```
     (function() {
         console.log(1); 
         setTimeout(function(){console.log(2)}, 1000); 
@@ -202,7 +202,7 @@ Closure captures variable by reference
 --------------------------------------
 Q: Consider the following code snippet:
 
-```javascript
+```
     for (var i = 0; i < 5; i++) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
@@ -218,7 +218,7 @@ A:
 
 (b) The key to making this work is to capture the value of i at each pass through the for loop by passing it into a newly created function object. Here are three possible ways to accomplish this:
 
-```javascript
+```
     for (var i = 0; i < 5; i++) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
@@ -230,7 +230,7 @@ A:
 ```
 Or, we could replace the `for` loop with a call to the `array` object’s native `forEach` method:
 
-```javascript
+```
     ['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
@@ -242,7 +242,7 @@ Type Conversion
 ---------------
 What will the code below output to the console and why ?
 
-```javascript
+```
     console.log(1 +  "2" + "2");
     console.log(1 +  +"2" + "2");
     console.log(1 +  -"1" + "2");
@@ -278,7 +278,7 @@ Array reverse & push & concat & slice
 ------------------------------------------------------
 What will the code below output to the console and why?
 
-```javascript
+```
     var arr1 = "john".split('');
     var arr2 = arr1.reverse();
     var arr3 = "jones".split('');
@@ -288,7 +288,7 @@ What will the code below output to the console and why?
 ```
 The logged output will be:
 
-```javascript
+```
     "array 1: length=5 last=j,o,n,e,s"
     "array 2: length=5 last=j,o,n,e,s"
 ```
@@ -314,14 +314,14 @@ Although `typeof bar === "object"` is a reliable way of checking if `bar` is an 
 
 Therefore, the following code will, to the surprise of most developers, log `true` (not `false`) to the console:
 
-```javascript
+```
     var bar = null;
     console.log(typeof bar === "object");  // logs true!
 ```
     
 As long as one is aware of this, the problem can easily be avoided by also checking if `bar` is null:
 
-```javascript
+```
     console.log((bar !== null) && (typeof bar === "object"));  // logs false
 ```
     
@@ -329,25 +329,25 @@ To be entirely thorough in our answer, there are two other things worth noting:
 
 First, the above solution will return `false` if `bar` is a `function`. In most cases, this is the desired behavior, but in situations where you want to also return `true` for `functions`, you could amend the above solution to be:
 
-```javascript
+```
     console.log((bar !== null) && ((typeof bar === "object") || (typeof bar === "function")));
 ```
 Second, the above solution will return true if `bar` is an `array` (e.g., if `var bar = [];`). In most cases, this is the desired behavior, since arrays are indeed objects, but in situations where you want to also `false` for arrays, you could amend the above solution to be:
 
-```javascript
+```
     console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
 ```
 
 Or, if you’re using jQuery:
 
-```javascript
+```
     console.log((bar !== null) && (typeof bar === "object") && (! $.isArray(bar)));
 ```
 Inadvertent global variable
 ---------------------------
 What will the code below output to the console and why?
 
-```javascript
+```
     (function(){
       var a = b = 3;
     })();
@@ -360,7 +360,7 @@ Since both `a` and `b` are defined within the enclosing scope of the function, a
 
 However, the above code will actually output:
 
-```javascript
+```
     a undefined? true
     b undefined? false
 ```
@@ -369,14 +369,14 @@ Why isn’t b `undefined` outside of the scope of the enclosing function?
 
 The issue here is that most developers understand the statement `var a = b = 3;` to be shorthand for:
 
-```javascript
+```
     var b = 3;
     var a = b;
 ```
 
 But in fact, `var a = b = 3;` is actually shorthand for:
 
-```javascript
+```
     b = 3;
     var a = b;
 ```
@@ -395,13 +395,13 @@ While this seems straightforward enough, there are a couple of somewhat surprisi
 
 For one thing, although `NaN` means “not a number”, its type is, believe it or not, `Number`:
 
-```javascript
+```
     console.log(typeof NaN === "number");  // logs "true"
 ```
 
 Additionally, `NaN` compared to anything – even itself! – is `false`:
 
-```javascript
+```
     console.log(NaN === NaN);  // logs "false"
 ```
 
@@ -413,14 +413,14 @@ Curry function
 --------------
 Write a `sum` method which will work properly when invoked using either syntax below.
 
-```javascript
+```
     console.log(sum(2,3));   // Outputs 5
     console.log(sum(2)(3));  // Outputs 5
 ```
     
 Here’s the answer, followed by an explanation of how it works:
 
-```javascript
+```
     function sum(x) {
       if (arguments.length == 2) {
         return arguments[0] + arguments[1];
@@ -441,7 +441,7 @@ A `closure` is an inner `function` that has access to the variables in the outer
 
 Here is a simple example:
 
-```javascript
+```
     var globalVar = "xyz";
     
     (function outerFunc(outerArg) {
@@ -474,7 +474,7 @@ When, why, and how would you use a `closure` in JavaScript? Provide examples.
 
 Probably the most famous example of the use case for closures is the following code snippet:
 
-```javascript
+```
     for (var i = 0; i < 5; i++) {
       setTimeout(function() { console.log(i); }, i * 1000 );
     }
@@ -486,7 +486,7 @@ The reason for this is that each function executed within the loop will be execu
 
 Closures can be used to prevent this problem by creating a unique scope for each iteration, storing each unique value of the variable within its scope, as follows:
 
-```javascript
+```
     var createFunction = function(i) {
       return function() { console.log(i); };
     };
@@ -499,7 +499,7 @@ This will produce the presumably desired result of logging `0, 1, 2, 3, and 4` t
 
 Closures can also be used to resolve issues with the this keyword, which is unique to each scope. For example:
 
-```javascript
+```
     // Using a closure to access inner and outer object instances simultaneously.
     var outerObj = {
       myName: "outer",
@@ -523,7 +523,7 @@ Use `Object` as key of dictionay
 --------------------------------
 What is the output out of the following code? Explain your answer.
 
-```javascript
+```
     var a={},
         b={key:'b'},
         c={key:'c'};

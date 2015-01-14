@@ -9,7 +9,7 @@ We can't bind using `ElementName` for a context menu command binding as `popups`
 
 1. Use RoutedUICommands with a command binding on the UserControl, then no binding is needed.
 2. Use the placement target binding on the context menu's DataContext. This allows you to at least get the data context of the element the context menu appears on to the context menu.
-```C#
+```
      DataContext="{Binding RelativeSource={RelativeSource Mode=Self}, Path=PlacementTarget.DataContext}"
 ```
 3. Use [ElementSpy][1] to link to the window using a static resource so we can then use a defacto ElementName bindings.

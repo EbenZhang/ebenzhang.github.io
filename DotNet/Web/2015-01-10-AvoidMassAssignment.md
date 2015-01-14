@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Avoid Mass Assignment in Asp.Net MVC
@@ -11,7 +10,7 @@ One of the scenarios that I always demonstrate during an ASP.NET MVC class is ho
 
 Let's say you have the following model.
 
-```C#
+```
 public class User
 {
     public string FirstName { get; set; }
@@ -21,7 +20,7 @@ public class User
 
 When you want to let a regular user change their first name, you give them the following form.
 
-```C#
+```
 @using (Html.BeginForm()) {
    
      @Html.EditorFor(model => model.FirstName)
@@ -42,7 +41,7 @@ Fortunately, there are at least 6 different approaches you can use to remove the
 
 The [Bind] attribute will let you specify the exact properties a model binder should include in binding (a whitelist).
 
-```C#
+```
 [HttpPost]
 public ViewResult Edit([Bind(Include = "FirstName")] User user)
 {
@@ -50,7 +49,7 @@ public ViewResult Edit([Bind(Include = "FirstName")] User user)
 }
 ```
 Alternatively, you could use a blacklist approach by setting the Exclude parameter on the attribute.
-```C#
+```
 [HttpPost]
 public ViewResult Edit([Bind(Exclude = "IsAdmin")] User user)
 {
@@ -59,7 +58,7 @@ public ViewResult Edit([Bind(Exclude = "IsAdmin")] User user)
 ```
 If you prefer explicit binding with the UpdateModel and TryUpdateModel API, then these methods also support whitelist and blacklist parameters.
 
-```C#
+```
 [HttpPost]
 public ViewResult Edit()
 {
@@ -73,7 +72,7 @@ public ViewResult Edit()
 
 TryUpdateModel will take a generic type parameter.&nbsp; You can use the generic type parameter and an interface definition to restrict the model binder to a subset of properties.
 
-```C#
+```
 [HttpPost]
 public ViewResult Edit()
 {
@@ -86,7 +85,7 @@ public ViewResult Edit()
 
 This assumes your interface definition looks like the following.
 
-```C#
+```
 public interface IUserInputModel
 {
     string FirstName { get; set; }
@@ -95,7 +94,7 @@ public interface IUserInputModel
 
 Of course, the model will also have to implement the interface.
 
-```C#
+```
 public class User : IUserInputModel
 {
     public string FirstName { get; set; }
@@ -105,7 +104,7 @@ public class User : IUserInputModel
 
 There is also a [ReadOnly] attribute the model binder will respect. ReadOnly metadata might be want you want to use if you never want to bind the IsAdmin property. (Note: I remember ReadOnly not working in MVC 2 or MVC 1, but it is working in 3 & 4 (beta)).
 
-```C#
+```
 public class User 
 {
     public string FirstName { get; set; }
@@ -119,7 +118,7 @@ public class User
 
 One of many architectural approaches to solve the problem is to always put user input into a model designed for user input only.
 
-```C#
+```
 public class UserInputViewModel
 {
     public string FirstName { get; set; }

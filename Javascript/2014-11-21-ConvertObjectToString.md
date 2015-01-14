@@ -5,7 +5,7 @@ tags: JSON, Javascript
 ---
 
 
-```javascript
+```
 function objToString (obj) {
     var str = '';
     for (var p in obj) {
@@ -19,7 +19,7 @@ function objToString (obj) {
 
 or 
 
-```javascript
+```
 JSON.stringify(obj);
 ```
 > Written with [StackEdit](https://stackedit.io/).

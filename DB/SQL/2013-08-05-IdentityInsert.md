@@ -9,7 +9,7 @@ tags: SQL, Database
 Sometimes we want to copy a table that contains an identity column from another one exactly with the id column's values kept, e.g. Migration, Recovering from a backup table. In this case we need to turn on the `IDENTITY_INSERT`, which enables the ability to insert specific values into the target table. And after inserted we should turn it off to bring the behaviour back to normal.
 
 The following commands work on MSSQLServer.
-```SQL
+```
 # to turn on
 SET IDENTITY_INSERT YourTableName ON
 # to turn off

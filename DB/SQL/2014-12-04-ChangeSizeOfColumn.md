@@ -6,7 +6,7 @@ tags: SQL, Database
 
 ##How to Changing the size of a column in SQL Server?
 
-```SQL
+```
 ALTER TABLE [table_name] ALTER COLUMN [column_name] varchar(20)
 ```
 
