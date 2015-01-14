@@ -12,22 +12,18 @@ In one-to-one relation one end must be principal and second end must be dependen
 ##How to config in FluentAPI?
 Say we have one to one User and UserProfile entities, and the User is principal, UserProfile is dependant.
 
-```
-class User{
-   UserProfile Profile { get;set; }
-   //...
-}
-
-class UserProfile{
-   User User{ get;set; }
-   //...
-}
-```
+    class User{
+       UserProfile Profile { get;set; }
+       //...
+    }
+    
+    class UserProfile{
+       User User{ get;set; }
+       //...
+    }
 
 Then the fluentAPI configuration will be:
 
-```
-modelBuilder.Entity<User>().HasRequired(u => u.Profile).WithRequiredPrincipal(p => p.User);
-```
+    modelBuilder.Entity<User>().HasRequired(u => u.Profile).WithRequiredPrincipal(p => p.User);
 
 > Written with [StackEdit](https://stackedit.io/).

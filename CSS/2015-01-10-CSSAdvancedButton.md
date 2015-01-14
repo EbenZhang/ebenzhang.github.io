@@ -23,27 +23,24 @@ This would be a great test of the candidate's CSS3 skills. This button is loaded
 
 My solution
 
-```
-a {
-  border-radius: 4px;
-  border-color : aliceblue;
-  background-color: gray;
-  padding: 5px;  
-  display:inline;
-  text-decoration: none;
-  text-transform:uppercase;
-  box-shadow:0px 0px 1px 4px red,
-    0px 0px 1px 8px #000000;
-  text-shadow:1px 1px #00ffff;
-  font-weight: bold;
- 
-  background: linear-gradient(180deg, lightgray, gray);
-}
-
-a:before, a:after{
-  content:'\2605';
-}
-```
+    a {
+      border-radius: 4px;
+      border-color : aliceblue;
+      background-color: gray;
+      padding: 5px;  
+      display:inline;
+      text-decoration: none;
+      text-transform:uppercase;
+      box-shadow:0px 0px 1px 4px red,
+        0px 0px 1px 8px #000000;
+      text-shadow:1px 1px #00ffff;
+      font-weight: bold;     
+      background: linear-gradient(180deg, lightgray, gray);
+    }
+    
+    a:before, a:after{
+      content:'\2605';
+    }
 
 
 The challenge/question was from http://css-tricks.com/interview-questions-css/

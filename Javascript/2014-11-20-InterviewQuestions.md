@@ -14,15 +14,12 @@ This is an increasingly common practice, employed by many popular JavaScript lib
 
 Another feature of this technique is to allow for an easily referenceable (presumably shorter) alias for a global variable. This is often used, for example, in `jQuery` plugins. `jQuery` allows you to disable the `$` reference to the `jQuery` namespace, using `jQuery.noConflict()`. If this has been done, your code can still use `$` employing this closure technique, as follows:
 
-```
     (function($) { /* jQuery plugin code referencing $ */ } )(jQuery);
-```
 
 The `this` key word in imediately called function
 -------------------------------------------------------
 What will the code below output to the console and why?
 
-```
     var myObject = {
         foo: "bar",
         func: function() {
@@ -36,7 +33,6 @@ What will the code below output to the console and why?
         }
     };
     myObject.func();
-```
 use strict
 ----------
 Q: What is the significance, and what are the benefits, of including `'use strict'` at the beginning of a JavaScript source file?
@@ -56,7 +52,6 @@ Comma appended at the end of line
 ---------------------------------
 Consider the two functions below. Will they both return the same thing? Why or why not?
 
-```
     function foo1(){
       return {
           bar: "hello"
@@ -70,22 +65,18 @@ Consider the two functions below. Will they both return the same thing? Why or w
           bar: "hello"
       };
     }
-```
 Surprisingly, these two functions will not return the same thing. Rather:
 
-```
     console.log("foo1 returns:");
     console.log(foo1());
     console.log("foo2 returns:");
     console.log(foo2());
-```
 will yield:
-```
+
     foo1 returns:
     Object {bar: "hello"}
     foo2 returns:
     undefined 
-```
 Not only is this surprising, but what makes this particularly gnarly is that `foo2()` returns undefined without any error being thrown.
 
 The reason for this has to do with the fact that semicolons are technically optional in JavaScript (although omitting them is generally really bad form). As a result, when the line containing the `return` statement (with nothing else on the line) is encountered in `foo2()`, a semicolon is automatically inserted immediately after the return statement.
@@ -97,18 +88,16 @@ This behavior also argues for following the convention of placing an opening cur
 inaccurate float number
 -----------------------
 What will the code below output? Explain your answer.
-```
+
     console.log(0.1 + 0.2);
     console.log(0.1 + 0.2 == 0.3);
-```
+
 An educated answer to this question would simply be: “You can’t be sure. it might print out “0.3” and “true”, or it might not. Numbers in JavaScript are all treated with floating point precision, and as such, may not always yield the expected results.”
 
 The example provided above is classic case that demonstrates this issue. Surprisingly, it will print out:
 
-```
     0.30000000000000004
     false
-```
 
 Discuss possible ways to write a function `isInteger(x)` that determines if `x` is an integer.
 ------------------------------------------------------------------------
@@ -118,25 +107,18 @@ The issue is that, in the ECMAScript specification, integers only exist conceptu
 
 With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return `false` even if a non-numeric value such as a string or `null` is passed to the function) would be the following:
 
-```
     function isInteger(x) { return (x^0) === x; } 
-```
 The following solution would also work, although not as elegant as the one above:
 
-```
     function isInteger(x) { return Math.round(x) === x; }
-```
 Note that `Math.ceil()` or `Math.floor()` could be used equally well (instead of `Math.round()`) in the above implementation.
 
 Or alternatively:
 
-```
     function isInteger(x) { return parseInt(x, 10) === x; }
-```
 
 While this `parseInt`-based approach will work well for many values of `x`, once `x` becomes quite large, it will fail to work properly. The problem is that `parseInt()` coerces its first parameter to a string before parsing digits. Therefore, once the number becomes sufficiently large, its string representation will be presented in exponential form (e.g., `1e+21`). Accordingly, parseInt() will then try to parse `1e+21`, but will stop parsing when it reaches the `e` character and will therefore return a value of `1`. Observe:
 
-```
     > String(1000000000000000000000)
     '1e+21'
     
@@ -145,7 +127,6 @@ While this `parseInt`-based approach will work well for many values of `x`, once
     
     > parseInt(1000000000000000000000, 10) === 1000000000000000000000
     false
-```
 
 String to Array
 ---------------
@@ -154,29 +135,23 @@ Write a one-line function (less than 80 characters) that returns a boolean indic
 
 The following one line function will return `true` if str is a palindrome; otherwise, it returns `false`.
 
-```
     function isPalindrome(str) { return str.split('').reverse().join('') === str; }
-```
 
 For example:
 
-```
     console.log(isPalindrome("level"));      // logs 'true'
     console.log(isPalindrome("levels"));     // logs 'false'
-```
 
 setTimeout and thread
 ------------------
 In what order will the numbers 1-4 be logged to the console when the code below is executed? Why? 
 
-```
     (function() {
         console.log(1); 
         setTimeout(function(){console.log(2)}, 1000); 
         setTimeout(function(){console.log(3)}, 0); 
         console.log(4);
     })();
-```
 The values will be logged in the following order:
 
     1
@@ -202,14 +177,12 @@ Closure captures variable by reference
 --------------------------------------
 Q: Consider the following code snippet:
 
-```
     for (var i = 0; i < 5; i++) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
       btn.addEventListener('click', function(){ console.log(i); });
       document.body.appendChild(btn);
     }
-```
 (a) What gets logged to the console when the user clicks on “Button 4” and why?
 (b) Provide one or more alternate implementations that will work as expected.
 
@@ -218,7 +191,6 @@ A:
 
 (b) The key to making this work is to capture the value of i at each pass through the for loop by passing it into a newly created function object. Here are three possible ways to accomplish this:
 
-```
     for (var i = 0; i < 5; i++) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
@@ -227,29 +199,24 @@ A:
       })(i));
       document.body.appendChild(btn);
     }
-```
 Or, we could replace the `for` loop with a call to the `array` object’s native `forEach` method:
 
-```
     ['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
       var btn = document.createElement('button');
       btn.appendChild(document.createTextNode('Button ' + i));
       btn.addEventListener('click', function() { console.log(i); });
       document.body.appendChild(btn);
     });
-```
 Type Conversion
 ---------------
 What will the code below output to the console and why ?
 
-```
     console.log(1 +  "2" + "2");
     console.log(1 +  +"2" + "2");
     console.log(1 +  -"1" + "2");
     console.log(+"1" +  "1" + "2");
     console.log( "A" - "B" + "2");
     console.log( "A" - "B" + 2);
-```
 The above code will output the following to the console:
 
     "122"
@@ -278,20 +245,17 @@ Array reverse & push & concat & slice
 ------------------------------------------------------
 What will the code below output to the console and why?
 
-```
     var arr1 = "john".split('');
     var arr2 = arr1.reverse();
     var arr3 = "jones".split('');
     arr2.push(arr3);
     console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
     console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
-```
 The logged output will be:
 
-```
     "array 1: length=5 last=j,o,n,e,s"
     "array 2: length=5 last=j,o,n,e,s"
-```
+
 `arr1` and `arr2` are the same after the above code is executed for the following reasons:
 
  - Calling an array object’s `reverse()` method doesn’t only return the  array in reverse order, it also reverses the order of the array  itself (i.e., in this case, `arr1`).
@@ -314,72 +278,54 @@ Although `typeof bar === "object"` is a reliable way of checking if `bar` is an 
 
 Therefore, the following code will, to the surprise of most developers, log `true` (not `false`) to the console:
 
-```
     var bar = null;
     console.log(typeof bar === "object");  // logs true!
-```
-    
+
 As long as one is aware of this, the problem can easily be avoided by also checking if `bar` is null:
 
-```
     console.log((bar !== null) && (typeof bar === "object"));  // logs false
-```
-    
+
 To be entirely thorough in our answer, there are two other things worth noting:
 
 First, the above solution will return `false` if `bar` is a `function`. In most cases, this is the desired behavior, but in situations where you want to also return `true` for `functions`, you could amend the above solution to be:
 
-```
     console.log((bar !== null) && ((typeof bar === "object") || (typeof bar === "function")));
-```
 Second, the above solution will return true if `bar` is an `array` (e.g., if `var bar = [];`). In most cases, this is the desired behavior, since arrays are indeed objects, but in situations where you want to also `false` for arrays, you could amend the above solution to be:
 
-```
     console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
-```
 
 Or, if you’re using jQuery:
 
-```
     console.log((bar !== null) && (typeof bar === "object") && (! $.isArray(bar)));
-```
 Inadvertent global variable
 ---------------------------
 What will the code below output to the console and why?
 
-```
     (function(){
       var a = b = 3;
     })();
     
     console.log("a undefined? " + (typeof a === 'undefined'));
     console.log("b undefined? " + (typeof b === 'undefined'));
-```
 
 Since both `a` and `b` are defined within the enclosing scope of the function, and since the line they are on is preceded by the var keyword, most JavaScript developers would expect `typeof` `a` and `typeof` `b` to both be `undefined` in the above example.
 
 However, the above code will actually output:
 
-```
     a undefined? true
     b undefined? false
-```
 
 Why isn’t b `undefined` outside of the scope of the enclosing function?
 
 The issue here is that most developers understand the statement `var a = b = 3;` to be shorthand for:
 
-```
     var b = 3;
     var a = b;
-```
 
 But in fact, `var a = b = 3;` is actually shorthand for:
 
-```
     b = 3;
     var a = b;
-```
 
 Therefore, `b` ends up being a `global variable` (since it is not preceded by the `var` keyword) and is still in scope even outside of the enclosing function.
 
@@ -395,15 +341,11 @@ While this seems straightforward enough, there are a couple of somewhat surprisi
 
 For one thing, although `NaN` means “not a number”, its type is, believe it or not, `Number`:
 
-```
     console.log(typeof NaN === "number");  // logs "true"
-```
 
 Additionally, `NaN` compared to anything – even itself! – is `false`:
 
-```
     console.log(NaN === NaN);  // logs "false"
-```
 
 A semi-reliable way to test whether a number is equal to `NaN` is with the built-in function `isNaN()`, but even using `isNaN()` is an imperfect solution.
 
@@ -413,14 +355,11 @@ Curry function
 --------------
 Write a `sum` method which will work properly when invoked using either syntax below.
 
-```
     console.log(sum(2,3));   // Outputs 5
     console.log(sum(2)(3));  // Outputs 5
-```
     
 Here’s the answer, followed by an explanation of how it works:
 
-```
     function sum(x) {
       if (arguments.length == 2) {
         return arguments[0] + arguments[1];
@@ -428,7 +367,7 @@ Here’s the answer, followed by an explanation of how it works:
         return function(y) { return x + y; };
       }
     }
-```
+
 In JavaScript, functions provide access to an `arguments` object which provides access to the actual arguments passed to a function. This enables us to use the `length` property to determine at runtime the number of arguments passed to the function.
 
 If two arguments are passed, we simply add them together and return.
@@ -441,7 +380,6 @@ A `closure` is an inner `function` that has access to the variables in the outer
 
 Here is a simple example:
 
-```
     var globalVar = "xyz";
     
     (function outerFunc(outerArg) {
@@ -459,7 +397,6 @@ Here is a simple example:
         
       })(456);
     })(123);
-```
 
 In the above example, variables from `innerFunc`, `outerFunc`, and the global namespace are all in scope in the `innerFunc`. The above code will therefore produce the following output:
 
@@ -474,11 +411,9 @@ When, why, and how would you use a `closure` in JavaScript? Provide examples.
 
 Probably the most famous example of the use case for closures is the following code snippet:
 
-```
     for (var i = 0; i < 5; i++) {
       setTimeout(function() { console.log(i); }, i * 1000 );
     }
-```
 
 As expected, the above code will log 5 values to the console, one every 1,000 milliseconds (i.e., one every second). However, it will not display the values `0, 1, 2, 3,` and `4` as might be expected; rather, it will display `5, 5, 5, 5`, and `5`.
 
@@ -486,20 +421,17 @@ The reason for this is that each function executed within the loop will be execu
 
 Closures can be used to prevent this problem by creating a unique scope for each iteration, storing each unique value of the variable within its scope, as follows:
 
-```
     var createFunction = function(i) {
       return function() { console.log(i); };
     };
     for (var i = 0; i < 5; i++) {
       setTimeout(createFunction(i), i * 1000 );
     }
-```
 
 This will produce the presumably desired result of logging `0, 1, 2, 3, and 4` to the console.
 
 Closures can also be used to resolve issues with the this keyword, which is unique to each scope. For example:
 
-```
     // Using a closure to access inner and outer object instances simultaneously.
     var outerObj = {
       myName: "outer",
@@ -517,13 +449,11 @@ Closures can also be used to resolve issues with the this keyword, which is uniq
       }
     };
     outerObj.outerFunction();
-```
 
 Use `Object` as key of dictionay
 --------------------------------
 What is the output out of the following code? Explain your answer.
 
-```
     var a={},
         b={key:'b'},
         c={key:'c'};
@@ -532,7 +462,6 @@ What is the output out of the following code? Explain your answer.
     a[c]=456;
     
     console.log(a[b]);
-```
 
 The output of this code will be
 
