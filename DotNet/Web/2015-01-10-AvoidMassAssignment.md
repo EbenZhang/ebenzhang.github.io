@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Avoid Mass Assignment in Asp.Net MVC
-category: Web
-tag: Asp.NetMVC, Web, Security
+category : Web
+tag : [Asp.NetMVC, Web, Security]
 ---
 
 Copied from http://odetocode.com/blogs/scott/archive/2012/03/11/complete-guide-to-mass-assignment-in-asp-net-mvc.aspx

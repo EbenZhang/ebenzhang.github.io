@@ -1,8 +1,8 @@
 ---
 layout: post
 title: The 'interesting' JavaScript Types
-tags: typeof, Javascript
-category:Javascript
+tags : [typeof, Javascript]
+category : Javascript
 ---
 
 ## `typeof`  primitive types ##

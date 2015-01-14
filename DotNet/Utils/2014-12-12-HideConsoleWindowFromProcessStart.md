@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Hide Console Window From Process Start
-category: Utils
-tags: UI, Console 
+category : Utils
+tags : [UI, Console]
 ---
 
 Copied from http://stackoverflow.com/questions/5377423/hide-console-window-from-process-start-c-sharp

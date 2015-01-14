@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Convert Javascript object To String
-tags: JSON, Javascript
-category:Javascript
+tags : [JSON, Javascript]
+category : Javascript
 ---
 
 

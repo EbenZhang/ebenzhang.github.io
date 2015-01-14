@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How to change the DEFAULT value for a column
-tags: SQL, Database
-category:Database
+tags : [SQL, Database]
+category : Database
 ---
 
 ###First, drop the existing default constraint if necessary

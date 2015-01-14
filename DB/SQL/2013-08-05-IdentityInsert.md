@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Insert Value for Identity Column in MSSQL
-tags: SQL, Database
-category:Database
+tags : [SQL, Database]
+category : Database
 ---
 
 ##Turn on IDENTITY_INSERT

@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Implement Javascript Curry Function and Invoke it
-tags: Curry, Javascript, Functional
-category:Javascript
+layout : post
+title : Implement Javascript Curry Function and Invoke it
+tags : [Curry, Javascript, Functional]
+category : Javascript
 ---
 
 copied from http://alichchiu.blogspot.com.au/2014/03/javascript-currying.html

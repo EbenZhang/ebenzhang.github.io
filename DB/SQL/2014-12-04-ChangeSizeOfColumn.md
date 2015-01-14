@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Change the Size of a Column in SQL
-tags: SQL, Database
-category:Database
+tags : [SQL, Database]
+category : Database
 ---
 
 ##How to Changing the size of a column in SQL Server?

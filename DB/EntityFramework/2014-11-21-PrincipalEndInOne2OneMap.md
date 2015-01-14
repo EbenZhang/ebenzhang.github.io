@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Principal End of One2One Map in EntityFramework
-tags: Database, EntityFramework
-category:Database
+tags : [Database, EntityFramework]
+category : Database
 ---
 
 
