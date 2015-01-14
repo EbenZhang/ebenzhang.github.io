@@ -1,0 +1,30 @@
+<div class="col-sm-2  blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>About This Site</h4>
+        <p>OOOoops, nothing here.</p>
+        <p><a href="http://ebenzhang.github.io/">My GitHub</a></p>
+    </div>
+    <div class="sidebar-module">
+        <h4>Contact Me</h4>
+        <ol class="list-unstyled">
+            <li><a href="https://github.com/EbenZhang">GitHub</a></li>
+        </ol>
+    </div>
+
+    <div class="sidebar-module">
+        {% include recently_comments.html %}
+    </div>
+
+
+    <div class="sidebar-module">
+        {% include  recently_visitors.html %}
+    </div>
+
+    <div class="sidebar-module">
+        {% include  friend_link.html %}
+    </div>
+
+    <div class="sidebar-module">
+        {% include recently_posts.html %}
+    </div>
+</div><!-- /.blog-sidebar -->
