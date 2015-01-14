@@ -1,0 +1,18 @@
+##How to change the DEFAULT value for a column
+
+###First, drop the existing default constrain if necessary
+If the column already has a default value, we can get the existing default constrain name from the Table Designer or DDL.
+
+And then we need to drop the constrain using the command shown below:
+
+```SQL
+ALTER TABLE dbo.YouTableName DROP CONSTRAINT TheExistingConstrainName;
+```
+
+###Add a new default constrain
+```SQL
+ALTER TABLE dbo.YouTableName ADD CONSTRAINT YourNewConstrainName DEFAULT 2 FOR YourColumnName;
+```
+
+Alternatively, you can reuse the `TheExistingConstrainName` instead of `YourNewConstrainName`
+> Written with [StackEdit](https://stackedit.io/).
