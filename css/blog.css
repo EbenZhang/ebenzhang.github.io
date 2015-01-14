@@ -9,8 +9,6 @@ body {
   padding-top: 70px;
 }
 
-
-
 .headroom--pinned {
     display: block;
 }
@@ -247,4 +245,9 @@ list-style: none;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+.anchor-target {
+    padding-top: 70px;
+    margin-top: -70px;
 }
