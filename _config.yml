@@ -24,7 +24,7 @@ permalink:  /posts/:title
 # comment
 comments:
     duoshuo:
-        name:  liuyiyou                             # short name
+        name:  ebenzhanggithubio                             # short name
         rcomments:
             num: 10
             avatar: 0
