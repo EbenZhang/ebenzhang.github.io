@@ -2,6 +2,8 @@ title: 温故而知新，触类而旁通
 name: EbenZhang
 markdown: kramdown
 
+exclude: [vendor]
+
 github: https://github.com/EbenZhang
 weibo: http://weibo.com/fingerpro
 twitter: https://twitter.com/EbenZhang
