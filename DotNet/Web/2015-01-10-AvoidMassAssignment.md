@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Avoid Mass Assignment in Asp.Net MVC
+category: Asp.NETMVC
 tag: Asp.NetMVC, Web, Security
 ---
 

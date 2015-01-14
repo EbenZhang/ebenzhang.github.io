@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ElementName As Source Of Content Menu Command Binding
+category: WPF
 tags: WPF, ElementName, Binding, ContextMenu, Popup
 ---
 ElementName As Source Of Content Menu Command Binding
