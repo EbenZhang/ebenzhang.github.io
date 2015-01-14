@@ -4,7 +4,8 @@
 <script type="text/javascript">
 
 $(function(){
-   $('pre').addClass('prettyprint');
+   $('pre, code').addClass('prettyprint');
+   $('pre code').removeClass('prettyprint');
    prettyPrint();
 });
 
