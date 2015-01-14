@@ -11,7 +11,8 @@ ALTER TABLE dbo.YouTableName DROP CONSTRAINT TheExistingConstrainName;
 
 ###Add a new default constrain
 ```SQL
-ALTER TABLE dbo.YouTableName ADD CONSTRAINT YourNewConstrainName DEFAULT YourNameDefaultValue FOR YourColumnName;
+ALTER TABLE dbo.YouTableName ADD CONSTRAINT YourNewConstrainName
+DEFAULT YourNameDefaultValue FOR YourColumnName;
 ```
 
 Alternatively, you can reuse the `TheExistingConstrainName` instead of `YourNewConstrainName`
