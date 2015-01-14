@@ -1,21 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
- {% include head.html %}
-<body>
-
-{% include navbar.html %}
- 
-<div class="container">
-    <div class="row">
-
-        <div class="col-sm-12 blog-main">
-
-            <div class="blog-post">
-             <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-<p class="blog-post-meta">{{ post.date |date: "%Y-%m-%d"}}</p>
-<div class="blog-post-content">{{ content }}</div> 
-            </div><!-- /.blog-post -->
-        </div><!-- /.blog-main -->
+---
+layout: default
+title: {{ page.title }}
+---
+<div class="blog-post">
+   <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+   <p class="blog-post-meta">{{ post.date |date: "%Y-%m-%d"}}</p>
+   <div class="blog-post-content">{{ content }}</div> 
+</div><!-- /.blog-post -->
 
 
 <ul class="pager">
@@ -32,12 +23,3 @@
 </ul>
 
 {% include comments.html %}
-
-    </div><!-- /.row -->
-
-</div><!-- /.container -->
-
-{% include footer.html %}
-
-</body>
-</html>
