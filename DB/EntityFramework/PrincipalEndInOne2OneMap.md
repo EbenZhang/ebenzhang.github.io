@@ -15,6 +15,11 @@ class UserProfile{
    User User{ get;set; }
    //...
 }
+```
+
+Then the fluentAPI configuration will be:
+
+```C#
 modelBuilder.Entity<User>().HasRequired(u => u.Profile).WithRequiredPrincipal(p => p.User);
 ```
 
