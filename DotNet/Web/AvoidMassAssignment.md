@@ -88,7 +88,7 @@ public interface IUserInputModel
 
 Of course, the model will also have to implement the interface.
 
-```
+```C#
 public class User : IUserInputModel
 {
     public string FirstName { get; set; }
@@ -98,7 +98,7 @@ public class User : IUserInputModel
 
 There is also a [ReadOnly] attribute the model binder will respect. ReadOnly metadata might be want you want to use if you never want to bind the IsAdmin property. (Note: I remember ReadOnly not working in MVC 2 or MVC 1, but it is working in 3 & 4 (beta)).
 
-```
+```C#
 public class User 
 {
     public string FirstName { get; set; }
@@ -112,7 +112,7 @@ public class User
 
 One of many architectural approaches to solve the problem is to always put user input into a model designed for user input only.
 
-```
+```C#
 public class UserInputViewModel
 {
     public string FirstName { get; set; }
