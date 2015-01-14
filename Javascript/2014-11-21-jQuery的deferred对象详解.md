@@ -1,3 +1,8 @@
+---
+layout:post
+title:jQuery的deferred对象详解
+---
+
 Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html
 
 [jQuery](http://jquery.com/)的开发速度很快，几乎每半年一个大版本，每两个月一个小版本。
@@ -7,6 +12,9 @@ Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jqu
 这个功能很重要，未来将成为jQuery的核心方法，它彻底改变了如何在jQuery中使用ajax。为了实现它，jQuery的全部ajax代码都被改写了。但是，它比较抽象，初学者很难掌握，网上的教程也不多。所以，我把自己的学习笔记整理出来了，希望对大家有用。
 
 本文不是初级教程，针对的读者是那些已经具备jQuery使用经验的开发者。如果你想了解jQuery的基本用法，请阅读我编写的[《jQuery设计思想》](http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html)和[《jQuery最佳实践》](http://www.ruanyifeng.com/blog/2011/08/jquery_best_practices.html)。
+
+
+
 
 ======================================
 
