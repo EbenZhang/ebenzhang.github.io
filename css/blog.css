@@ -290,7 +290,11 @@ input.gsc-input{
 .gsc-input-box{
   background: transparent !important;
   border: none !important;
-  min-width: 150px;
+  min-width: 150px !important;
+}
+
+.gsc-search-box{
+  max-width: 200px !important;
 }
 
 td.gsib_a{
