@@ -12,11 +12,13 @@
 
             <div class="col-sm-9 blog-main">
 
-                <div class="blog-post">
+                <div class="blog-post row">
                    <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
                    <p class="blog-post-meta">{{ post.date |date: "%Y-%m-%d"}}</p>
                    <div class="blog-post-content">{{ content }}</div> 
                </div><!-- /.blog-post -->
+
+               <div class="row">{% include comments.html %}</div>
 
            </div><!-- /.blog-main -->
 
@@ -40,8 +42,6 @@
   </div>
 
   {% include prettify_js.html %}
-
-  <div class="row">{% include comments.html %}</div>
 
 </div><!-- /.container -->
 
