@@ -1,88 +1,51 @@
 ---
-layout: page-single
+layout: page-about
 title: "About"
-description: "liuyiyou的个人简历"
+description: "EbenZhang's Profile"
 ---
 
+{:toc}
 
----
+# Summary
+- About <span class='js-years-of-exp'></span>y of programming experience including 5y of C++ and recently <span class='js-years-of-csharp'></span>y of .NET.
+- Solid working knowledge of C#, WPF/MVVM, SQL(MySQL and MSSQL) C++/STL and MFC.
+- Hands-on knowledge of ASP.NET MVC as well as knowledge of web front end such as HTML/CSS/Javascript, jQuery and Bootstrap.
+- Well understanding of Object Oriented Design with design patterns, UML and other best practices.
+- Exposure to Agile methodologies like SCRUM, TDD, Refactorying and Continuous Integration
+- A clear understanding of version control (prefer git), issue tracking tools (prefer Trac/Jira) and MediaWiki/Confluencel
+- Proven capabilities of solving problems like memory leaking, crashing, handlers leaking and performance issues.
 
+Specialties: C# WPF MVVM ASP.NETMVC4 WebFrontEnd Git SQL WinDbg  C++
 
-# 联系方式
+# Employment History
 
-- 手机：186007740xx 
-- Email：13751511x@qq.com / liuyiyou@yahoo.com
-- QQ/微信号：13751511x/qq1375151x
+## [Advanced Share Registry Limited](http://advancedshare.com.au)
+Worked as a C# Software Engineer from August 2013 – November 2014 (1 year 4 months) at Perth, Australia
 
----
+## [Immersive Technologies](http://ImmersiveTechnologies.com.au)
+Worked as a C#/C++ Software Engineer from January 2012 – April 2013 (1 year 4 months) at Perth, Australia
 
-# 个人信息
+## [Kedacom](http://kedacom.com/en)
+Worked as a C/C++ Software Engineer from March 2007 – October 2011 (4 years 8 months) at Shanghai China
 
- - 刘易友/男/1988 
- - 本科/中南林业科技大学计算机系 
- - 工作年限：3年
- - 微博：[@liuyiyou](http://weibo.com/virgots)
- - 技术博客: [www.liuyiyou.cn](http://liuyiyou.cn)
- - Github: [liuyiyou](http://github.com/liuyiyou)
+# Personal Projects
 
- - 期望职位：Java高级程序员，架构师
- - 期望薪资：税前月薪15k~20k，特别喜欢的公司可例外
- - 期望城市：北京
+## [KumoVideo](https://play.google.com/store/apps/details?id=com.ezhang.kumovid)
 
----
+[KumoVideo](https://play.google.com/store/apps/details?id=com.ezhang.kumovid) is an android app designed to stream videos/audios from airvid server to your android devices.
 
-# 工作经历
+Built in with FFmpeg codecs, it is capable of playing almost all videos to your mobile devices via WiFi and 3G/4G network. Also, the airvid server is able to convert videos on the fly If the videos in your collection are not in format supported by your device. You don't need to wait until the entire video is converted. You can start watching it almost immediately!
 
-## 北京东师理想教育科技有限公司 （ 2014年9月 ~ 至今 ）
+It acts as your personal audio video cloud (Kumo). From now on, you will have access to a limitless number of movies at anywhere without waiting, and they take up no space on your devices at all!
+However to enjoy streaming over internet you will need to configure the port forwarding manually.
 
-### 新平台研发 
-我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+## [WaFuelFuel](https://play.google.com/store/apps/details?id=com.ezhang.kumovid)
 
- 
-## 北京中林地信科技开发有限公司 （ 2012年6月 ~ 2014年9月 ）
+Wafuelfuel is an App helps find the nearest petrol station and the cheapest prices for Unleaded, Diesel and LPG petrol in Western Australia. It can:
 
-### 林产品在线交易平台 
-我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+- Find the cheapest fuel station based on your current location.
+- Reduce the price if you have any woolworths or coles voucher
+- Launch your navigation apps to go to the petrol station.
 
-
-### 全国林地一张图 
-我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
-
-
----
-
-# 开源项目和作品
-（这一段用于放置工作以外的、可证明你的能力的材料）
-
-## 开源项目
-
- - [YiList](http://github.com/liuyiyoux/yilist): 一个安卓应用程序，主要是wouderlist要钱
- - [YiNote](http://github.com/liuyiyoux/yinote) : 一个云笔记
- - [YiBlog](http://github.com/yournamex/projectname) : 一个java各种框架的大杂烩
-
-
-# 技能清单
-（我一般主张将技能清单写入到工作经历里边去。不过很难完整，所以有这么一段也不错）
-
-以下均为我熟练使用的技能
-
-- Web框架： SpringMvc/WebX
-- 前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic
-- 开发工具：Idea/eclipse
-- 数据库相关：MySQL/SQLite
-- 版本管理、文档和自动化部署工具：Svn/Git/
-
-
----
-
-# 致谢
-感谢您花时间阅读我的简历，期待能有机会和您共事。
-
-
-#### 二维码:
-
-![Alt text]({{ BASE_PATH }}/images/qq.jpg "liuyiyou的二维码")
-
-
-
-{% include comments.html %}
+## [PdfSharp.XPS](https://github.com/ebenzhang/PdfSharp.XPS)
+Added the ability to use XPS parser from .NET to Convert XPS file or WPF controls to PDF.
