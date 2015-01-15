@@ -251,3 +251,43 @@ list-style: none;
     padding-top: 70px;
     margin-top: -70px;
 }
+
+/* Fix layout of google custom search box*/
+.gsc-search-button{
+    background-color: #1a4195;
+    border-radius: 5px;
+}
+
+input.gsc-input{
+  padding: 2px 6px !important;
+  margin: 0 !important;
+  border-radius: 2px;  
+  background:white !important;
+}
+
+.gsc-input-box{
+  background: transparent !important;
+  border: none !important;
+  min-width: 150px;
+}
+
+td.gsib_a{
+  padding: 0 !important;
+}
+
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    background-color: #1a4195 !important;
+    background-image: url("http://www.google.com/uds/css/v2/search_box_icon.png") !important;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 16px !important;
+    border-color: #1a4195 !important;
+    filter: none;
+}
+
+.gsc-control-cse{
+  background: transparent !important;
+  border-color:  transparent !important;
+}
+
+/* End Fix layout of google custom search box*/
