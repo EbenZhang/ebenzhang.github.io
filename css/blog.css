@@ -134,9 +134,8 @@ blockquote{
   color: #999;
 }
 
-.blog-post-content{
-  border-bottom: 1px dotted #3a3a3a;
-  padding-bottom: 2.5em;
+.sep-at-bottom{
+  border-bottom: 1px dotted #3a3a3a;  
 }
 
 /* Sidebar modules for boxing content */

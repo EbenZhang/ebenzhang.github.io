@@ -10,7 +10,7 @@ layout: page
     {% capture nmonth %}{{ post.previous.date | date: "%B" }}{% endcapture %}
    
     {% if forloop.first %}
-     <div class="blog-post">
+     <div class="sep-at-bottom">
      <h4>{{ year }}</h4>
      <h5>{{ month }}:</h5>
     <ul>
@@ -24,7 +24,7 @@ layout: page
         {% if year != nyear %}
           </ul>
           </div>
-          <div class="blog-post">
+          <div class="sep-at-bottom">
           <h4>{{ nyear }}</h4>
           <h5>{{ nmonth }}:</h5>
           <ul>
