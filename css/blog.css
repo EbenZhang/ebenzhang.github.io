@@ -249,6 +249,31 @@ list-style: none;
     margin-top: -70px;
 }
 
+.affix{
+    z-index:100;
+}
+
+.affix-right{
+    right:10px;
+}
+
+.affix-bottom{
+    bottom:10px;
+}
+
+.btn-sidebar {
+  color: #333333;
+  background-color: lightgray;
+  border-color: whitesmoke;
+}
+
+@media only screen and (max-device-width : 568px) { 
+    .btn-sidebar {
+        font-size: 0.5em;
+        padding: 2px 4px;        
+    }
+}
+
 /* Fix layout of google custom search box*/
 .gsc-search-button{
     background-color: #1a4195;
