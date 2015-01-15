@@ -32,17 +32,14 @@ title: Home
     </div>
   </div>
   {% else %}
-  <div class="blog-post-content">{{post.excerpt }}</div>
-  {% endif %}
-  <p>
-    <a href="{{ post.url }}" class="more-link">
-      <span class="readmore">Read More &raquo;</span>
-    </a>
-  </p>
-  {% if forloop.last %}
-   {% else %}
-  <hr>
-  {% endif %} 
+  <div class="blog-post-content">{{post.excerpt }}
+    <p>
+      <a href="{{ post.url }}" class="more-link">
+        <span class="readmore">Read More &raquo;</span>
+      </a>
+    </p>
+  </div>
+  {% endif %}  
 </div>
 <!-- /.blog-post -->
 {% endfor %}

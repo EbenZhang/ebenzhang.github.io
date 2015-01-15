@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-9">
-                <header class="col-sm-12">
+                <header class="col-sm-12 blog-post-title">
                     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
                 </header>
                 <div class='col-sm-12'>
@@ -19,7 +19,7 @@
                         <span class="blog-post-meta">{{ post.date |date: "%d-%m-%Y"}}</span>
                     </div>
                 </div>
-                <article class="col-sm-12">{{ content }}</article>
+                <article class="col-sm-12 blog-post-content">{{ content }}</article>
                 <ul class="pager col-sm-12">
                     {% if page.previous %}
                     <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
