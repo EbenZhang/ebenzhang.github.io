@@ -1,52 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 {% include head.html %}
 <body>
-
     {% include navbar.html %}
 
 
     <div class="container-fluid">
-
         <div class="row">
-
             <div class="col-sm-9 blog-main">
-
                 <div class="blog-post">
-                   <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-                   <p class="blog-post-meta">{{ post.date |date: "%Y-%m-%d"}}</p>
-                   <div class="blog-post-content">{{ content }}</div> 
-               </div><!-- /.blog-post -->
+                    <h2 class="blog-post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                    <div class='col-sm-10'>
+                        {% assign post = page %}
+                        {% include post_cate_tags.html %}
+                    </div>
+                    <div class='col-sm-2'>
+                        <span class="blog-post-meta">{{ post.date |date: "%d-%m-%Y"}}</span>
+                    </div>
+                    <div class="blog-post-content">{{ content }}</div>
+                </div><!-- /.blog-post -->
+                <div class="row">
+                    <ul class="pager">
+                        {% if page.previous %}
+                        <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
+                        {% else %}
+                        <li class="previous disabled"><a href="#">&larr; Prev</a></li>
+                        {% endif %}
+                        {% if page.next %}
+                        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+                        {% else %}
+                        <li class="next disabled"><a href="#">Next &rarr;</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div>{% include comments.html %}</div>
+            </div><!-- /.blog-main -->
+            {% include sidebar.html %}
 
-               <div class="row">
-                <ul class="pager">
-                  {% if page.previous %}
-                  <li class="previous"><a  href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
-                  {% else %}
-                  <li class="previous disabled"><a href="#">&larr; Prev</a></li>
-                  {% endif %}
-                  {% if page.next %}
-                  <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-                  {% else %}
-                  <li class="next disabled"><a href="#">Next &rarr;</a></li>
-                  {% endif %}
-                </ul>
-              </div>
+        </div><!-- /.row -->
+        {% include prettify_js.html %}
 
-               <div>{% include comments.html %}</div>
-
-           </div><!-- /.blog-main -->
-
-           {% include sidebar.html %}
-
-       </div><!-- /.row -->
-
-  {% include prettify_js.html %}
-
-</div><!-- /.container -->
-
-{% include  footer.html %}
-
-
+    </div><!-- /.container -->
+    {% include  footer.html %}
 </body>
 </html>

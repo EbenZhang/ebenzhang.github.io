@@ -11,7 +11,7 @@ layout: page
 <ul class="entry-meta inline-list">
   {% for item in (0..site.categories.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
-  <li><a class="tag" href="#{{ this_word | cgi_escape }}">{{ this_word }} <sup>{{ site.categories[this_word].size }}</sup></a></li>
+  <li><a class="tag" href="#{{ this_word | cgi_escape | downcase}}">{{ this_word }} <sup>{{ site.categories[this_word].size }}</sup></a></li>
   {% endunless %}{% endfor %}
 </ul>
 </div>
@@ -19,7 +19,7 @@ layout: page
 <!-- category_words: {{ category_words }} -->
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
         {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
-        <div class="blog-post anchor-target" id="{{ this_word | cgi_escape }}">
+        <div class="blog-post anchor-target" id="{{ this_word | cgi_escape| downcase }}">
 
          <h4>{{ this_word }}</h4>
           {% for post in site.categories[this_word] %}
