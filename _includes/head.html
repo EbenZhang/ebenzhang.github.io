@@ -20,8 +20,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ BASE_PATH }}/css/blog.css" media="all" rel="stylesheet">
@@ -32,7 +31,16 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    <link href="/js/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="/js/respond.proxy.min.js"></script>
+    <script src="/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <link href="{{ BASE_PATH }}/css/cse-btn-ie.css" media="all" rel="stylesheet">
     <![endif]-->
 </head>
