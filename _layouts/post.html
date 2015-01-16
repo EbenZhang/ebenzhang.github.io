@@ -22,14 +22,10 @@
                 <article class="col-sm-12 sep-at-bottom">{{ content }}</article>
                 <ul class="pager col-sm-12">
                     {% if page.previous %}
-                    <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
-                    {% else %}
-                    <li class="previous disabled"><a href="#">&larr; Prev</a></li>
+                    <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a></li>
                     {% endif %}
                     {% if page.next %}
-                    <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-                    {% else %}
-                    <li class="next disabled"><a href="#">Next &rarr;</a></li>
+                    <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a></li>
                     {% endif %}
                 </ul>
                 <div class='col-sm-12'>{% include comments.html %}</div>
