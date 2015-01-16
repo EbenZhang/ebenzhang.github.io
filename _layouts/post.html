@@ -20,14 +20,16 @@
                     </div>
                 </div>
                 <article class="col-sm-12 sep-at-bottom">{{ content }}</article>
-                <ul class="pager col-sm-12">
-                    {% if page.previous %}
-                    <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a></li>
-                    {% endif %}
-                    {% if page.next %}
-                    <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a></li>
-                    {% endif %}
-                </ul>
+                <aside class='col-sm-12'>
+                    <ul class="pager">
+                        {% if page.previous %}
+                        <li><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" class='btn btn-default'><span class='glyphicon glyphicon-chevron-left'></span> {{ page.previous.title }}</a></li>
+                        {% endif %}
+                        {% if page.next %}
+                        <li class='navbar-right'><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}" class='btn btn-default'>{{ page.next.title }} <span class='glyphicon glyphicon-chevron-right'></span></a></li>
+                        {% endif %}
+                    </ul>
+                </aside>
                 <div class='col-sm-12'>{% include comments.html %}</div>
             </div><!-- /.blog-main -->
             {% include sidebar.html %}
