@@ -99,10 +99,10 @@ JavaScript的最初版本是这样区分的：
 - 作为函数的参数，表示该函数的参数不是对象。
 - 作为对象原型链的终点
 
-```
+<!-- hack for code after list item -->
+
     Object.getPrototypeOf(Object.prototype)
     // null
-```
 
 **undefined表示“缺少值”，就是此处应该有一个值，但是还没有定义。**典型用法是：
 
@@ -111,10 +111,11 @@ JavaScript的最初版本是这样区分的：
 - 对象没有赋值的属性，该属性的值为undefined。
 - 函数没有返回值时，默认返回undefined。
 
-```
+<!-- hack for code after list item -->
+
     var i;
     i // undefined
-
+    
     function f(x){console.log(x)}
     f() // undefined
 
@@ -123,7 +124,6 @@ JavaScript的最初版本是这样区分的：
 
     var x = f();
     x // undefined
-```
 
 （完）
 
