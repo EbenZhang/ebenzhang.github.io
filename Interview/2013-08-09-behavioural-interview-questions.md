@@ -22,6 +22,8 @@ Remember to assess all candidates against the same behavioural criteria!
 - What has been the most stressful situation you have ever found yourself in at work? How did you handle it?
 - What have you done in the past to prevent a situation from becoming too stressful for you or your colleagues to handle?
 
+see [How do you handle Stress and Pressure]({% post_url Interview/2013-08-10-HandleStressAndPressure %})
+
 ### ADAPTABILITY
 
 - Tell me about a situation in which you have had to adjust to changes over which you had no control. How did you handle it?
