@@ -272,8 +272,8 @@ list-style: none;
 
 @media only screen and (max-device-width : 568px) { 
     .btn-sidebar {
-        font-size: 0.5em;
-        padding: 2px 4px;        
+        font-size: 0.9em;
+        padding: 2px 4px;
     }
 }
 
