@@ -298,6 +298,12 @@ input.gsc-input{
 
 .gsc-search-box{
   max-width: 200px !important;
+  
+}
+
+.gsc-container{
+  margin-top: 10px;
+  margin-left: 3px;
 }
 
 td.gsib_a{
