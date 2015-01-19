@@ -281,6 +281,10 @@ list-style: none;
     }
 }
 
+.navbar-brand img {
+    height: 35px;
+    margin-top: -8px;
+}
 /* Fix layout of google custom search box*/
 .gsc-search-button{
     background-color: #1a4195;
