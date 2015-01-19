@@ -270,6 +270,10 @@ list-style: none;
   border-color: whitesmoke;
 }
 
+.side-toolbar-space{
+  margin-top: 2rem;
+}
+
 @media only screen and (max-device-width : 568px) { 
     .btn-sidebar {
         font-size: 0.9em;
