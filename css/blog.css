@@ -285,6 +285,10 @@ list-style: none;
     height: 35px;
     margin-top: -8px;
 }
+
+img {
+    max-width: 100%;
+}
 /* Fix layout of google custom search box*/
 .gsc-search-button{
     background-color: #1a4195;
