@@ -15,5 +15,5 @@ We can't bind using `ElementName` for a context menu command binding as `popups`
 
 3. Use [ElementSpy][1] to link to the window using a static resource so we can then use a defacto ElementName bindings.
 
-Copied and modified from http://stackoverflow.com/questions/2617122/wpf-menuitem-command-binding-to-elementname-results-to-system-windows-data-error
+Copied and modified from [here](http://stackoverflow.com/questions/2617122/wpf-menuitem-command-binding-to-elementname-results-to-system-windows-data-error)
 > Written with [StackEdit](https://stackedit.io/).

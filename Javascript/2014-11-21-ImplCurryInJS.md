@@ -5,7 +5,7 @@ tags : [Curry, Javascript, Functional]
 category : Javascript
 ---
 
-copied from http://alichchiu.blogspot.com.au/2014/03/javascript-currying.html
+copied from [here](http://alichchiu.blogspot.com.au/2014/03/javascript-currying.html)
 
 **JavaScript : 實作柯里化(Currying)與部份調用**
 ----------

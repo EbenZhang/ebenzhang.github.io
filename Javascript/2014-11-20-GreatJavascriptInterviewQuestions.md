@@ -5,7 +5,7 @@ tag : [Javascript, Interview]
 category : Javascript
 ---
 
-copied from http://www.toptal.com/javascript/interview-questions
+copied from [here](http://www.toptal.com/javascript/interview-questions)
 
 Namespace
 ------------------------------------------------------------------------

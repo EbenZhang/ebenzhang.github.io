@@ -5,7 +5,7 @@ tags : [Javascript, jQuery, Deferred]
 category : Javascript
 ---
 
-Copied from http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html
+Copied from [here](http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html)
 
 [jQuery](http://jquery.com/)的开发速度很快，几乎每半年一个大版本，每两个月一个小版本。
 

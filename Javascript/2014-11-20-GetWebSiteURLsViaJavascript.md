@@ -5,7 +5,7 @@ tag : [Javascript, URL]
 category : Javascript
 ---
 
-Copied from http://stackoverflow.com/questions/19550136/javascript-get-website-url
+Copied from [here](http://stackoverflow.com/questions/19550136/javascript-get-website-url)
 
 > **There are several ways you can do this, but one way might be best for certain situations (e.g. within an iFrame).**
 
