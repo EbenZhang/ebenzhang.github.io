@@ -1,8 +1,8 @@
 ---
 layout : post
-title : Javascript undefined VS null
-tags : [Javascript]
-category : Javascript
+title : JavaScript undefined VS null
+tags : [JavaScript]
+category : JavaScript
 ---
 
 

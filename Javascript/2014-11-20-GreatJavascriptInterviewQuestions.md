@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Great Javascript Interview Questions
-tag : [Javascript, Interview]
-category : Javascript
+title: Great JavaScript Interview Questions
+tag : [JavaScript, Interview]
+category : JavaScript
 ---
 
 copied from [here](http://www.toptal.com/javascript/interview-questions)

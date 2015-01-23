@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Get Website URLs via Javascript
-tag : [Javascript, URL]
-category : Javascript
+title: Get Website URLs via JavaScript
+tag : [JavaScript, URL]
+category : JavaScript
 ---
 
 Copied from [here](http://stackoverflow.com/questions/19550136/javascript-get-website-url)
