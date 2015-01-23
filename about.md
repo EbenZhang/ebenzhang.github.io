@@ -16,7 +16,7 @@ Solid working knowledge of C#, WPF/MVVM, SQL(MySQL and MSSQL) C++/STL and MFC.
 
 ----
 
- Hands-on knowledge of ASP.NET MVC as well as knowledge of web front end such as HTML/CSS/Javascript, jQuery and Bootstrap.
+ Hands-on knowledge of ASP.NET MVC as well as knowledge of web front end such as HTML/CSS/JavaScript, jQuery and Bootstrap.
 
 ----
 
