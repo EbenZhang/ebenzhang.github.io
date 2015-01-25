@@ -4,6 +4,8 @@ title: Extract SQL Query From Linq Expression
 tags : [SQL, Linq]
 category : Database
 ---
+* auto-gen TOC:
+{:toc}
 
 ##How to Extract sql query from LINQ expressions?
 

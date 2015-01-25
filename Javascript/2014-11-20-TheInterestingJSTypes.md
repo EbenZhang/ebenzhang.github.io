@@ -4,6 +4,8 @@ title: The 'interesting' JavaScript Types
 tags : [typeof, JavaScript]
 category : JavaScript
 ---
+* auto-gen TOC:
+{:toc}
 
 ## `typeof`  primitive types ##
 Here lists the `typeof` results of primitive types:

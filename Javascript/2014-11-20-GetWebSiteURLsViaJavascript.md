@@ -4,6 +4,8 @@ title: Get Website URLs via JavaScript
 tag : [JavaScript, URL]
 category : JavaScript
 ---
+* auto-gen TOC:
+{:toc}
 
 Copied from [here](http://stackoverflow.com/questions/19550136/javascript-get-website-url)
 

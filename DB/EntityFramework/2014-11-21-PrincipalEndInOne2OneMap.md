@@ -4,7 +4,8 @@ title: Principal End of One2One Map in EntityFramework
 tags : [Database, EntityFramework]
 category : Database
 ---
-
+* auto-gen TOC:
+{:toc}
 
 ##What does principal end of an association means?
 

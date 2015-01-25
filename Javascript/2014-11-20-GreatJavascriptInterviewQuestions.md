@@ -4,6 +4,9 @@ title: Great JavaScript Interview Questions
 tag : [JavaScript, Interview]
 category : JavaScript
 ---
+* auto-gen TOC:
+{:toc}
+
 19 Great JavaScript Interview Questions
 
 copied from [here](http://www.toptal.com/javascript/interview-questions)

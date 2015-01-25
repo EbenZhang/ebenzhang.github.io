@@ -4,6 +4,8 @@ title : Implement JavaScript Curry Function and Invoke it
 tags : [Curry, JavaScript, Functional]
 category : JavaScript
 ---
+* auto-gen TOC:
+{:toc}
 
 copied from [here](http://alichchiu.blogspot.com.au/2014/03/javascript-currying.html)
 

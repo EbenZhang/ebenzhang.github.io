@@ -4,7 +4,8 @@ title : JavaScript undefined VS null
 tags : [JavaScript]
 category : JavaScript
 ---
-
+* auto-gen TOC:
+{:toc}
 
 Copied from [here](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html)
 
@@ -44,6 +45,9 @@ undefined和null在if语句中，都会被自动转为false，相等运算符甚
 上面代码说明，两者的行为是何等相似！
 
 既然undefined和null的含义与用法都差不多，为什么要同时设置两个这样的值，这不是无端增加JavaScript的复杂度，令初学者困扰吗？Google公司开发的JavaScript语言的替代品Dart语言，就明确规定只有null，没有undefined！
+
+
+
 
 ## 二、历史原因
 
