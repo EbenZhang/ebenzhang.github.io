@@ -17,13 +17,13 @@ Namespace
 ------------------------------------------------------------------------
 What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
 
-This is an increasingly common practice, employed by many popular JavaScript libraries (`jQuery`, `Node.js`, etc.). This technique creates a closure around the entire contents of the file which, perhaps most importantly, creates a private namespace and thereby helps avoid potential name clashes between different JavaScript modules and libraries.
+A: This is an increasingly common practice, employed by many popular JavaScript libraries (`jQuery`, `Node.js`, etc.). This technique creates a closure around the entire contents of the file which, perhaps most importantly, creates a private namespace and thereby helps avoid potential name clashes between different JavaScript modules and libraries.
 
 Another feature of this technique is to allow for an easily referenceable (presumably shorter) alias for a global variable. This is often used, for example, in `jQuery` plugins. `jQuery` allows you to disable the `$` reference to the `jQuery` namespace, using `jQuery.noConflict()`. If this has been done, your code can still use `$` employing this closure technique, as follows:
 
     (function($) { /* jQuery plugin code referencing $ */ } )(jQuery);
 
-The `this` key word in imediately called function
+The `this` key word in function
 -------------------------------------------------------
 What will the code below output to the console and why?
 
@@ -41,6 +41,17 @@ What will the code below output to the console and why?
     };
     myObject.func();
 
+The above code will output the following to the console:
+
+    outer func:  this.foo = bar
+    outer func:  self.foo = bar
+    inner func:  this.foo = undefined
+    inner func:  self.foo = bar
+
+In the `outer` function, both `this` and `self` refer to `myObject` and therefore both can properly reference and access `foo`.
+
+In the `inner` function, though, `this` no longer refers to `myObject`. As a result, `this.foo` is undefined in the inner function, whereas the reference to the local variable `self` remains in scope and is accessible there. (Prior to ECMA 5, `this` in the inner function would refer to the global window object; whereas, as of ECMA 5, `this` in the inner function would be `undefined`.)
+
 use strict
 ----------
 Q: What is the significance, and what are the benefits, of including `'use strict'` at the beginning of a JavaScript source file?
@@ -53,10 +64,10 @@ Some of the key benefits of strict mode include:
  - **Prevents accidental globals.** Without strict mode, assigning a value to an undeclared variable automatically creates a global variable with that name. This is one of the most common errors in JavaScript. In strict mode, attempting to do so throws an error.
  - **Eliminates `this` coercion.** Without strict mode, a reference to a `this` value of null or undefined is automatically coerced to the global. This can cause many headfakes and pull-out-your-hair kind of bugs. In strict mode, referencing a `this` value of null or undefined throws an error.
  - **Disallows duplicate property names or parameter values.** Strict mode throws an error when it detects a duplicate named property in an object (e.g., `var object = {foo: "bar", foo: "baz"};`) or a duplicate named argument for a function (e.g., `function foo(val1, val2, val1){}`), thereby catching what is almost certainly a bug in your code that you might otherwise have wasted lots of time tracking down.
- - **Makes eval() safer.** There are some differences in the way `eval()` behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an `eval()` statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems). 
+ - **Makes eval() safer.** There are some differences in the way `eval()` behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an `eval()` statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems).
  - **Throws error on invalid usage of `delete`.** The `delete` operator (used to remove properties from objects) cannot be used on non-configurable properties of the object. Non-strict code will fail silently when an attempt is made to delete a non-configurable property, whereas strict mode will throw an error in such a case.
 
-Comma appended at the end of line
+semi-colon appended at the end of line
 ---------------------------------
 Consider the two functions below. Will they both return the same thing? Why or why not?
 
@@ -65,7 +76,7 @@ Consider the two functions below. Will they both return the same thing? Why or w
           bar: "hello"
       };
     }
-    
+
     function foo2()
     {
       return
@@ -80,12 +91,13 @@ Surprisingly, these two functions will not return the same thing. Rather:
     console.log(foo1());
     console.log("foo2 returns:");
     console.log(foo2());
+
 will yield:
 
     foo1 returns:
     Object {bar: "hello"}
     foo2 returns:
-    undefined 
+    undefined
 
 Not only is this surprising, but what makes this particularly gnarly is that `foo2()` returns undefined without any error being thrown.
 
@@ -117,7 +129,7 @@ The issue is that, in the ECMAScript specification, integers only exist conceptu
 
 With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return `false` even if a non-numeric value such as a string or `null` is passed to the function) would be the following:
 
-    function isInteger(x) { return (x^0) === x; } 
+    function isInteger(x) { return (x^0) === x; }
 
 The following solution would also work, although not as elegant as the one above:
 
@@ -133,10 +145,10 @@ While this `parseInt`-based approach will work well for many values of `x`, once
 
     > String(1000000000000000000000)
     '1e+21'
-    
+
     > parseInt(1000000000000000000000, 10)
     1
-    
+
     > parseInt(1000000000000000000000, 10) === 1000000000000000000000
     false
 
@@ -156,12 +168,12 @@ For example:
 
 setTimeout and thread
 ------------------
-In what order will the numbers 1-4 be logged to the console when the code below is executed? Why? 
+In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?
 
     (function() {
-        console.log(1); 
-        setTimeout(function(){console.log(2)}, 1000); 
-        setTimeout(function(){console.log(3)}, 0); 
+        console.log(1);
+        setTimeout(function(){console.log(2)}, 1000);
+        setTimeout(function(){console.log(3)}, 0);
         console.log(4);
     })();
 
@@ -325,7 +337,7 @@ What will the code below output to the console and why?
     (function(){
       var a = b = 3;
     })();
-    
+
     console.log("a undefined? " + (typeof a === 'undefined'));
     console.log("b undefined? " + (typeof b === 'undefined'));
 
@@ -378,7 +390,7 @@ Write a `sum` method which will work properly when invoked using either syntax b
 
     console.log(sum(2,3));   // Outputs 5
     console.log(sum(2)(3));  // Outputs 5
-    
+
 
 Here’s the answer, followed by an explanation of how it works:
 
@@ -396,6 +408,8 @@ If two arguments are passed, we simply add them together and return.
 
 Otherwise, we assume it was called in the form `sum(2)(3)`, so we return an anonymous function that adds together the argument passed to `sum()` (in this case 2) and the argument passed to the anonymous function (in this case 3).
 
+See [here]({% post_url /Javascript/2014-11-21-ImplCurryInJS %}) for more about curry function.
+
 What is a “closure” in JavaScript? Provide an example.
 ------------------------------------------------------
 A `closure` is an inner `function` that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
@@ -403,20 +417,20 @@ A `closure` is an inner `function` that has access to the variables in the outer
 Here is a simple example:
 
     var globalVar = "xyz";
-    
+
     (function outerFunc(outerArg) {
       var outerVar = 'a';
-      
+
       (function innerFunc(innerArg) {
         var innerVar = 'b';
-        
+
         console.log(
           "outerArg = " + outerArg + "\n" +
           "innerArg = " + innerArg + "\n" +
           "outerVar = " + outerVar + "\n" +
           "innerVar = " + innerVar + "\n" +
           "globalVar = " + globalVar);
-        
+
       })(456);
     })(123);
 
@@ -479,10 +493,10 @@ What is the output out of the following code? Explain your answer.
     var a={},
         b={key:'b'},
         c={key:'c'};
-    
+
     a[b]=123;
     a[c]=456;
-    
+
     console.log(a[b]);
 
 The output of this code will be
