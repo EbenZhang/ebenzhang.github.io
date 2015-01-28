@@ -35,14 +35,14 @@ My solution
       box-shadow:0px 0px 1px 4px red,
         0px 0px 1px 8px #000000;
       text-shadow:1px 1px #00ffff;
-      font-weight: bold;     
+      font-weight: bold;
       background: linear-gradient(180deg, lightgray, gray);
     }
-    
+
     a:before, a:after{
       content:'\2605';
     }
 
 
-The challenge/question was from http://css-tricks.com/interview-questions-css/
+The challenge/question was from [here](http://css-tricks.com/interview-questions-css/)
 > Written with [StackEdit](https://stackedit.io/).
