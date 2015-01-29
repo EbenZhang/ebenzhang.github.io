@@ -19,7 +19,11 @@
                         <span class="blog-post-meta">{{ post.date |date: "%d-%m-%Y"}}</span>
                     </div>
                 </div>
-                <article class="col-sm-12 sep-at-bottom">{{ content }}</article>
+                <article class="col-sm-12 sep-at-bottom">{{ content }}
+                    {% if post.original %}
+                        {% include cc.html %}
+                    {% endif %}
+                </article>
                 <aside class='col-sm-12'>
                     <ul class="pager">
                         {% if page.previous %}
