@@ -3,6 +3,7 @@ layout : post
 title : Using CSS Properties to Create a Cool Button
 tags : [CSS,Web]
 category : CSS
+original: true
 ---
 
 Using CSS properties alone, recreate this button:

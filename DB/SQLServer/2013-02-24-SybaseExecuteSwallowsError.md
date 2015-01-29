@@ -3,6 +3,7 @@ layout: post
 title: Sybase Execute 不报错的问题
 category : Database
 tags : [Database, SQLServer]
+original: true
 ---
 
 仅仅sybase 的windows客户端有这个问题, isql 没有这个问题. select 的效果也是一样的.
@@ -18,7 +19,7 @@ tags : [Database, SQLServer]
             LastOfflineTime     int                 null,
             constraint MyTable primary key(DiskId)
         )with identity_gap = 100'
-    
+
     IF NOT EXISTS(select name from sysobjects where name = 'MyTable')
     EXECUTE (@sqlstr)
     go

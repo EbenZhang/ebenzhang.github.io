@@ -3,19 +3,20 @@ layout: post
 title: The 'interesting' JavaScript Types
 tags : [typeof, JavaScript]
 category : JavaScript
+original: true
 ---
 * auto-gen TOC:
 {:toc}
 
 ## `typeof`  primitive types ##
 Here lists the `typeof` results of primitive types:
- 
+
 
     var undefinedVariable;
     var nullValue = null;
     var anObject = new Object();
     var func = function () { };
-    
+
     typeof ("string"); //result in "string"
     typeof (1024); // number
     typeof (true); // boolean
@@ -45,11 +46,11 @@ Things need to be highlighted are:
     console.log(alice.constructor.name);// Object;
     console.log(typeof alice);// object
     console.log(typeof Object);// fucntion
-    
+
     function Person(name){
         this.name = name;
     }
-    
+
     var bob = new Person("Bob");
     console.log(typeof bob); // object
     console.log(typeof Person); // function
@@ -60,10 +61,10 @@ Similarly, the upper case `String`, `Number`, `Boolean` are `functions` as well 
     typeof(String);  // function
     typeof(Number);  // function
     typeof(Boolean); // function
-    
+
     typeof(string);  //string is not defined
     typeof(boolean); // boolean is not defined
-    
+
     var s = new String("test");
     typeof(s); // object
     s.constructor.name;; // String
@@ -118,4 +119,3 @@ We can use `Function` to define a `function` as well:
  - typeof("") // string
  - typeof(new String("")); //object
  - So seems using the Uppercase Functions(e.g. String) is a bad idea...
-

@@ -3,6 +3,7 @@ layout: post
 title: Identity Gap in Sybase and SQLServer
 category : Database
 tags : [Database, SQLServer]
+original: true
 ---
 sybase中关于自增字段的一个概念
 名字叫identity cache 更合适一点.默认值为500,000,000,000,000.
@@ -22,4 +23,3 @@ sybase将为你的自增字段缓存 100(identity_gap的值) 个值到内存.
     create table MyRecord (......)
     with identity_gap = 100
     go
-

@@ -3,6 +3,7 @@ layout: post
 title: Insert Value for Identity Column in MSSQL
 tags : [SQL, Database]
 category : Database
+original: true
 ---
 
 ##Turn on IDENTITY_INSERT

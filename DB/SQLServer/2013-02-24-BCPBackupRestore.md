@@ -3,7 +3,8 @@
 layout: post
 title: Use BCP to Backup/Restore Table
 category : Database
-tags : [Database] 
+tags : [Database]
+original: true
 ---
 
 
