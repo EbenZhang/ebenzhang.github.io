@@ -6,7 +6,7 @@ tags : [Database, SQLServer, DMV]
 original: true
 ---
 
-This article demonstrates how to get the recent queries as well as the last or current running query for a specific SPID.
+This article discusses how to get the recent queries as well as the last or current running query for a specific SPID.
 
 ## Get Recent Queries from the Query Cache
 
