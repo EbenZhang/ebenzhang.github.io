@@ -22,7 +22,7 @@ Let's say you have the following model.
 When you want to let a regular user change their first name, you give them the following form.
 
 
-    @using (Html.BeginForm()) {       
+    @using (Html.BeginForm()) {
          @Html.EditorFor(model => model.FirstName)
         <input type="submit" value="Save" />
     }
@@ -78,7 +78,7 @@ TryUpdateModel will take a generic type parameter.&nbsp; You can use the generic
     {
         var user = new User();
         TryUpdateModel<IUserInputModel>(user);
-    
+
         return View("detail", user);
     }
 
@@ -102,10 +102,10 @@ Of course, the model will also have to implement the interface.
 
 There is also a [ReadOnly] attribute the model binder will respect. ReadOnly metadata might be want you want to use if you never want to bind the IsAdmin property. (Note: I remember ReadOnly not working in MVC 2 or MVC 1, but it is working in 3 & 4 (beta)).
 
-    public class User 
+    public class User
     {
         public string FirstName { get; set; }
-    
+
         [ReadOnly(true)]
         public bool IsAdmin { get; set; }
     }
