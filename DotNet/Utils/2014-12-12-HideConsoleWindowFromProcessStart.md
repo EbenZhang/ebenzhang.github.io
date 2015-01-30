@@ -9,8 +9,7 @@ Copied from [here](http://stackoverflow.com/questions/5377423/hide-console-windo
 
 I had a similar issue when attempting to start a process without showing the console window.  I tested with several different combinations of property values until I found one that exhibited the behavior I wanted.  
 
-Here is a page detailing why the `UseShellExecute` property must be set to false.  
- http://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.createnowindow.aspx 
+[Here](http://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.createnowindow.aspx) is a page detailing why the `UseShellExecute` property must be set to false.
 
 Under Remarks section on page:
 
@@ -25,7 +24,7 @@ Under Remarks section on page:
     startInfo.RedirectStandardError = true;
     startInfo.UseShellExecute = false;
     startInfo.CreateNoWindow = true;
-    
+
     Process processTemp = new Process();
     processTemp.StartInfo = startInfo;
     processTemp.EnableRaisingEvents = true;
