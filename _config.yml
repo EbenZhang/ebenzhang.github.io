@@ -10,7 +10,7 @@ twitter: https://twitter.com/EbenZhang
 facebook: https://www.facebook.com/EbenZhang
 
 #首先概要显示分隔符
-excerpt_separator: "\n\n\n"
+excerpt_separator: "<!--more-->"
 
 #分页
 paginate: 5
