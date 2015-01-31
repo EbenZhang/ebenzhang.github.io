@@ -20,6 +20,8 @@ copied from [here](https://answers.yahoo.com/question/index?qid=20100607151104AA
 
 `$` “dollar sign”, for example $29.00 would be read as “twenty-nine dollars'
 
+<!--more-->
+
 `%` “percent sign”, so 50% is “fifty per cent''
 
 `^` “caret” or “up-arrow head” or “circumflex accent”. Often used on computers to indicate the following symbol(s) would be superscripted in normal typography, that is 5^23 is the same as 5²³. Sometimes called a “carrot” by the illiterate.
@@ -62,4 +64,4 @@ copied from [here](https://answers.yahoo.com/question/index?qid=20100607151104AA
 
 `:` “colon”, a punctuation mark
 
-`;` “semi-colon”, a punctuation mark 
+`;` “semi-colon”, a punctuation mark

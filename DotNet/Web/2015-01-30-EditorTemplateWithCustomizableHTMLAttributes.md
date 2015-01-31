@@ -10,7 +10,7 @@ When using EditorTemplate, we wouldn't set some attributes (e.g. the Bootstrap g
 
 This article illustrates how to pass the HTML attributes to the EditorTemplate and merge with the attributes reside in the EditorTemplate itself.
 
-
+<!--more-->
 
 Let's say we want to display a Markdown editor for the content of a blog post.
 

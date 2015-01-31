@@ -35,6 +35,8 @@ Things need to be highlighted are:
  - `Object` is a `function`
  - `null` is an `object`, I guess it means a null object.
 
+ <!--more-->
+
 ## `Object` is a `function` rather than an `object` ##
 
 `Object` is actually a constructor function to create objects (that why `typeof(Object)` result in `function`), just like the `Person` function shown below.

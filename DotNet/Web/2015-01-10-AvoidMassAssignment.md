@@ -30,8 +30,7 @@ When you want to let a regular user change their first name, you give them the f
 
 There is no input in the form to let a user set the IsAdmin flag, but this won't stop someone from crafting an HTTP request with IsAdmin in the query string or request body. Maybe they saw the "IsAdmin" name somewhere in a request displaying account details, or maybe they just got lucky and guessed the name.
 
-
-
+<!--more-->
 
 ![composing the attack](http://odetocode.com/Blogs/images/odetocode_com/Blogs/scott/Windows-Live-Writer/Avoiding-Mass-Assignments-in-ASP.NET-MVC_1416F/image_3.png)
 

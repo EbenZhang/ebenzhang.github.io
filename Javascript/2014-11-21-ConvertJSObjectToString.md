@@ -17,7 +17,7 @@ category : JavaScript
     }
 
 
-or 
+or
 
     JSON.stringify(obj);
 

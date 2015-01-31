@@ -17,6 +17,8 @@ Copied from [here](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
 
 这是为什么？
 
+<!--more-->
+
 ![undefined vs. null](http://image.beekka.com/blog/2014/bg2014032801.png)
 
 ## 一、相似性
@@ -30,14 +32,14 @@ Copied from [here](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
 
 undefined和null在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。
 
-    if (!undefined) 
+    if (!undefined)
         console.log('undefined is false');
     // undefined is false
-    
-    if (!null) 
+
+    if (!null)
         console.log('null is false');
     // null is false
-    
+
     undefined == null
     // true
 
@@ -59,7 +61,7 @@ undefined和null在if语句中，都会被自动转为false，相等运算符甚
 
     Number(null)
     // 0
-    
+
     5 + null
     // 5
 
@@ -83,13 +85,13 @@ undefined和null在if语句中，都会被自动转为false，相等运算符甚
 JavaScript的最初版本是这样区分的：
 
 > **null是一个表示“无”的对象，转为数值时为0。**
-> 
+>
 > **undefined是一个表示“无”的原始值，转为数值时为NaN。**
 
 
     Number(undefined)
     // NaN
-    
+
     5 + undefined
     // NaN
 
@@ -119,7 +121,7 @@ JavaScript的最初版本是这样区分的：
 
     var i;
     i // undefined
-    
+
     function f(x){console.log(x)}
     f() // undefined
 
@@ -132,5 +134,5 @@ JavaScript的最初版本是这样区分的：
 （完）
 
 >文档信息
-> 
+>
 > 版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）

@@ -10,7 +10,7 @@ This article illustrates how to investigate the handle leak via WinDbg.
 
 The idea is to take two snapshots and compare them to find out the code where handle was allocated during the period.
 
-
+<!--more-->
 
 ## Prerequisite
 

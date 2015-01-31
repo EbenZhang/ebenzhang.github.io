@@ -26,6 +26,8 @@ Shows all threads, the current been debugging thread will have a `dot` ahead lik
 
 We can use `~*kb`(or `~*kp`) to enumerate all threads and print their stack trace information.
 
+<!--more-->
+
 ~xs
 ===
 

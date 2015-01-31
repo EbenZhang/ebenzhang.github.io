@@ -19,8 +19,7 @@ This article is not about object-orientation, because the structure we’re goin
 
 <cite>For more about the difference between object-based and object-oriented programming, and an introduction to object-orientated programming in JavaScript, I’d recommend Ryan Frishberg’s article: [JavaScript Object-Oriented Programming](http://www.sitepoint.com/oriented-programming-1/).</cite>
 
-
-
+<!--more-->
 
 ## Modular Design Patterns
 
@@ -82,7 +81,7 @@ Let’s see that object again, but this time using the revealing module pattern:
         myPublicFunction : myPublicFunction
       };
     })();
-    
+
 The split between public and private members is still the same, but this time it’s implemented not by the original syntax used to define those members, but simply by what’s returned. This makes the revealing module pattern a useful variant, because it allows for an internally consistent style of coding. It also means you can change the names of public members when they’re returned, and even change at any time which members will be public at all.
 
 <cite>This pattern was innovated by Christian Heilmann, who provides an excellent explanation of it, and the module pattern it’s based on, in his article: [Again with the Module Pattern — Reveal Something to the World](http://christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/).</cite>
@@ -165,7 +164,7 @@ var MyModule = (function() {
 }).apply(MyModule);
 alert(MyModule.getVersion()); //alerts "1.0"
 
-Binding additional modules in this way is sometimes known as **augmentation**. You might also hear it described as **strict augmentation** or **loose augmentation** — where **strict augmentation** means the modules must load in _synchronous order_, as opposed to **loose augmentation** where they can load in _any order_. (Normal `<script>` tags load their content in synchronous source-order, whereas dynamically generated scripts that are added later will load asynchronously.) 
+Binding additional modules in this way is sometimes known as **augmentation**. You might also hear it described as **strict augmentation** or **loose augmentation** — where **strict augmentation** means the modules must load in _synchronous order_, as opposed to **loose augmentation** where they can load in _any order_. (Normal `<script>` tags load their content in synchronous source-order, whereas dynamically generated scripts that are added later will load asynchronously.)
 
     // loose augmentation example.
     var MyModule = (function(my) {
@@ -250,7 +249,7 @@ With that framework in place we can add any number of additional modules, and ha
       var utils = this.utils;
       return this;
     }).apply(MyModule);
-    
+
 In fact, it isn’t strictly necessary to copy the protected members to private variables at all, but doing so means we have a consistent form of reference in every module.
 
 We can also **extend** protected objects on a module-specific basis, for example, to define additional utility functions that only certain modules need. Such extensions will obviously also be available to later modules:

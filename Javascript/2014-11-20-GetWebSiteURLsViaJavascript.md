@@ -15,7 +15,7 @@ Copied from [here](http://stackoverflow.com/questions/19550136/javascript-get-we
 
     document.URL
     > "http://example.com/page1.html"
-    
+
     document.location.href
     > "http://example.com/page1.html"
 

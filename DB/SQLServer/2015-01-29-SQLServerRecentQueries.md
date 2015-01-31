@@ -17,7 +17,7 @@ The idea is to find the `sql_handle` for the recently executed queries from the 
             CROSS APPLY sys.dm_exec_sql_text(stats.sql_handle) AS sql_text
     order by last_execution_time DESC
 
-
+<!--more-->
 
 ## Get Last Query for a specific SPID
 

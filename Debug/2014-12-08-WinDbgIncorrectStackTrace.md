@@ -16,7 +16,7 @@ One of mistakes beginners make is trusting WinDbg !analyze or kv commands displa
 - Have strange looking disassembled function code or code that doesn’t make any sense from compiler perspective
 - Have ChildEBP and RetAddr addresses that don’t make any sense
 
-
+<!--more-->
 
 Consider the following stack trace:
 
@@ -28,7 +28,6 @@ Consider the following stack trace:
     **00099d30 00000000** ntdll!RtlpLowFragHeapFree+0xa7
 
 Here we have almost all attributes of the wrong stack trace. At the first glance it looks like some heap corruption happened (runtime heap alloc and free functions are present) but if we give it second thought we would see that the low fragmentation heap Free function shouldn’t call low the fragmentation heap Alloc function and the latter shoudn’t query the full path name. That doesn’t make any sense.
-
 
 What we should do here? Look at raw stack and try to build the correct stack trace ourselves. In our case this is very easy. We need to traverse stack frames from BaseThreadStart+0×34 until we don’t find any function call or reach the top. When func-tions are called (no optimization, most compilers) EBP registers are linked together as explained on the following slide from my Practical Foundations of Debugging seminars:
 

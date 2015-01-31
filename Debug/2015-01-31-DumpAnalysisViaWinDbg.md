@@ -10,7 +10,7 @@ In computing, a core dump (in Unix parlance), memory dump, or system dump[1] con
 
 This article figures out the steps to investigate a dump file for exception information and stack trace via WinDbg.
 
-
+<!--more-->
 
 ## Config the Symbol Path
 

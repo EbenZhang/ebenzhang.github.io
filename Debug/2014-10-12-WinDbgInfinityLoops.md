@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analysis High CPU via WinDbg
+title: Investigate High CPU usage or Infinite Loop via WinDbg
 tags : [Debug, WinDbg]
 category : Debug
 original : true
@@ -20,7 +20,9 @@ Note: WinDbg will suspend all thread, so we need to run the `g` command frequent
 Open WinDbg and the Command window(alt+1)
 
 - Attach to the process that you want to inspect using `File-->Attach to a process(F6)``. And run `g` in Command window immediately.
-- See the instructions [here]({% post_url Debug/2015-01-31-WinDbg Dump File Analysis %}) to setup the Symbol File Path and don't forget to tick the `reload` check box. If you process cannot be suspended to long, then I would suggest just include the minimal necessary symbol files, especially you should exclude the Microsoft Symbol Server.
+- See the instructions [here]({% post_url Debug/2015-01-31-DumpAnalysisViaWinDbg %}) to setup the Symbol File Path and don't forget to tick the `reload` check box. If you process cannot be suspended to long, then I would suggest just include the minimal necessary symbol files, especially you should exclude the Microsoft Symbol Server.
+
+<!--more-->
 
 ## Find out the Thread
 
