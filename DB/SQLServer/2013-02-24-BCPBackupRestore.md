@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Use BCP to Backup/Restore Table
@@ -7,13 +6,12 @@ tags : [Database]
 original: true
 ---
 
+## Backup/Export
 
-##导出
+    bcp YourDBName.dbo.YourTableName out YourOutputFilePath -U YourUserName -P YourPassword -S HostNameOfYourServer -c
 
-    bcp YourDBName.dbo.YourTableName out YourOutputFilePath -U YourUserName -P YourPassword -S YourServer'sHostName -c
+## Restore/Import
 
-##导入
-
-    bcp YourDBName.dbo.YourTableName in YourDatabaseTableFilePath -U YourUserName -P YourPassword -S YourServer'sHostName -c
+    bcp YourDBName.dbo.YourTableName in YourDatabaseTableFilePath -U YourUserName -P YourPassword -S HostNameOfYourServer -c
 
 详细参数参考 [这里](https://msdn.microsoft.com/en-au/library/ms162802.aspx)
