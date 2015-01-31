@@ -6,7 +6,7 @@ category : Web
 tag : [Asp.NetMVC, Web]
 ---
 
-When using EditorTemplate, we wouldn't set some attributes (e.g. the Bootstrap grid width col-md-\* ) of the widget in the template, so as to enable the ability to customize via the second parameter of HtmlHelper.EditorFor for different needs from different contexts/pages. On the other hand, to avoid duplication, it's the widget's responsibility to set some attributes that the widget always has or belong to the widget rather than its container.
+When using EditorTemplate, we wouldn't set some attributes (e.g. the Bootstrap grid width col-md-\* ) of the widget in the template, so they can be customized via the second parameter of HtmlHelper.EditorFor for different contexts/pages. On the other hand, to avoid duplication, it's the widget's responsibility to set the attributes that the widget always has or belong to the widget rather than its container.
 
 This article illustrates how to pass the HTML attributes to the EditorTemplate and merge with the attributes reside in the EditorTemplate itself.
 
