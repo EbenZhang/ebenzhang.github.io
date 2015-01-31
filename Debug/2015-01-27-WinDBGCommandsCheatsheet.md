@@ -1,8 +1,8 @@
 ---
 layout: post
-title : WinDBG Commands Cheatsheet
+title : WinDbg Commands Cheatsheet
 category : Debug
-tags : [WinDBG, Debug]
+tags : [WinDbg, Debug]
 original: true
 ---
 k
@@ -38,7 +38,7 @@ Please not the `x` is not the thread id (TID). Anyway we can use `~~[TID]s` to s
 g
 =
 
-I guess it means `go` which instructs WinDBG to continue run after a breakpoint reached.
+I guess it means `go` which instructs WinDbg to continue run after a breakpoint reached.
 
 !runaway
 ========

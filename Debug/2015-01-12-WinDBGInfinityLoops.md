@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Analysis High CPU via WinDBG
-tags : [Debug, WinDBG]
+title: Analysis High CPU via WinDbg
+tags : [Debug, WinDbg]
 category : Debug
 original : true
 ---
@@ -13,14 +13,14 @@ If the CPU rate is not high but the program hangs, it probably indicates a deadl
 
 # Find the Thread
 
-Note: WinDBG will suspend all thread, so we need to run the `g` command frequently if the program has something needs to run continuously, for example the program may disconnect from the server if suspended too long.
+Note: WinDbg will suspend all thread, so we need to run the `g` command frequently if the program has something needs to run continuously, for example the program may disconnect from the server if suspended too long.
 
 ## Preparation
 
-Open Windbg and the Command window(alt+1)
+Open WinDbg and the Command window(alt+1)
 
 - Attach to the process that you want to inspect using `File-->Attach to a process(F6)``. And run `g` in Command window immediately.
-- See the instructions [here]({% post_url Debug/2015-01-20-WinDBG Dump File Analysis %}) to setup the Symbol File Path and don't forget to tick the `reload` check box. If you process cannot be suspended to long, then I would suggest just include the minimal necessary symbol files, especially you should exclude the Microsoft Symbol Server.
+- See the instructions [here]({% post_url Debug/2015-01-31-WinDbg Dump File Analysis %}) to setup the Symbol File Path and don't forget to tick the `reload` check box. If you process cannot be suspended to long, then I would suggest just include the minimal necessary symbol files, especially you should exclude the Microsoft Symbol Server.
 
 ## Find out the Thread
 

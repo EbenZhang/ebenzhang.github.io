@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Handle Leak Analysis via WinDBG
+title: Handle Leak Analysis via WinDbg
 category : Debug
-tags : [Debug, WinDBG]
+tags : [Debug, WinDbg]
 original : true
 ---
 
-This article illustrates how to investigate the handle leak via WinDBG.
+This article illustrates how to investigate the handle leak via WinDbg.
 
 The idea is to take two snapshots and compare them to find out the code where handle was allocated during the period.
 
@@ -21,7 +21,7 @@ The idea is to take two snapshots and compare them to find out the code where ha
 
 ### Enable Handle Trace
 
-Break the application in WinDBG (Use Ctrl+Break) and then enable the handle trace using the following command.
+Break the application in WinDbg (Use Ctrl+Break) and then enable the handle trace using the following command.
 
     !htrace -enable
     g
@@ -42,6 +42,6 @@ Monitor the application in TaskMgr, and find the number of handles is increasing
 
 ### Compare the Snapshots
 
-Now, break the application again and use `-diff` to compare the current value with the snapshot we took before and Windbg will show the code where handles were allocated.
+Now, break the application again and use `-diff` to compare the current value with the snapshot we took before and WinDbg will show the code where handles were allocated.
 
     !htrace -diff

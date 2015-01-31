@@ -1,8 +1,8 @@
 ---
 layout: post
-title: WinDBG Incorrect Stack Trace
+title: WinDbg Incorrect Stack Trace
 category : Debug
-tags : [Debug, WinDBG, Dump]
+tags : [Debug, WinDbg, Dump]
 original: false
 ---
 
