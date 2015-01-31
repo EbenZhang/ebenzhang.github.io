@@ -6,7 +6,7 @@ tags : [Debug, WinDbg]
 original : true
 ---
 
-In computing, a core dump (in Unix parlance), memory dump, or system dump[1] consists of the recorded state of the working memory of a computer program at a specific time, generally when the program has terminated abnormally (crashed).[2] In practice, other key pieces of program state are usually dumped at the same time, including the processor registers, which may include the program counter and stack pointer, memory management information, and other processor and operating system flags and information. Core dumps are often used to assist in diagnosing and debugging errors in computer programs. -- from Wikipedia's [Core Dump](http://en.wikipedia.org/wiki/Core_dump) page.
+In computing, a core dump (in Unix parlance), memory dump, or system dump consists of the recorded state of the working memory of a computer program at a specific time, generally when the program has terminated abnormally (crashed). In practice, other key pieces of program state are usually dumped at the same time, including the processor registers, which may include the program counter and stack pointer, memory management information, and other processor and operating system flags and information. Core dumps are often used to assist in diagnosing and debugging errors in computer programs. -- from Wikipedia's [Core Dump](http://en.wikipedia.org/wiki/Core_dump) page.
 
 This article figures out the steps to investigate a dump file for exception information and stack trace via WinDbg.
 
