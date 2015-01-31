@@ -301,6 +301,14 @@ list-style: none;
     }
 }
 
+.navbar-brand {
+    float:right;
+}
+
+button.navbar-toggle{
+    float:left;
+}
+
 .navbar-brand img {
     height: 35px;
     margin-top: -8px;
