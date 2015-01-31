@@ -58,6 +58,9 @@ blockquote{
   font-size: 10px;
 }
 
+code{
+    color: #222;
+}
 /*
  * Override Bootstrap's default container.
  */
