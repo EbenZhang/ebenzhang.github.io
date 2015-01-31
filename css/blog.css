@@ -162,13 +162,13 @@ code{
 
 /* Pagination */
 .pager {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   text-align: left;
 }
 .pager > li > a {
-  padding: 10px 20px;
+  padding: 5px 10px;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 
@@ -278,9 +278,26 @@ list-style: none;
 }
 
 @media only screen and (max-device-width : 568px) {
-    .btn-sidebar {
-        font-size: 0.9em;
-        padding: 2px 4px;
+    #main-nav{
+        bottom: 0;
+        top: auto;
+        margin-bottom: 0;
+    }
+
+    body{
+        padding-bottom: 70px;
+        padding-top: 0;
+    }
+
+    #side-tool-bar{
+        margin-bottom: 55px;
+    }
+
+    ul.pager>li a{
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
@@ -292,6 +309,7 @@ list-style: none;
 img {
     max-width: 100%;
 }
+
 /* Fix layout of google custom search box*/
 .gsc-search-button{
     background-color: #1a4195;
