@@ -179,6 +179,12 @@ button.navbar-toggle{
     margin-top: -70px;
 }
 
+@media only screen and (min-device-width : 568px) {
+    .affix-side-tool-bar{
+        right:10px;
+    }
+}
+
 @media only screen and (max-device-width : 568px) {
     #main-nav{
         bottom: 0;
@@ -205,6 +211,10 @@ button.navbar-toggle{
     .anchor-target {
         padding-top: 0;
         margin-top: 0;
+    }
+
+    .affix-side-tool-bar{
+        left:10px;
     }
 }
 
