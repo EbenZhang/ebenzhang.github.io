@@ -193,8 +193,7 @@ button.navbar-toggle{
     }
 
     body{
-        padding-bottom: 70px;
-        padding-top: 0;
+        padding:0 0 70px 0;
     }
 
     #side-tool-bar{
