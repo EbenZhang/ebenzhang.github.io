@@ -4,7 +4,7 @@ title: "About"
 description: "EbenZhang's Profile"
 ---
 
-##**Eben Zhang's Profile**##
+##**Eben Zhang's Profile** [Contact Me]({{ BASE_PATH }}/contact.html) ##
 ----
 
 # Summary
@@ -16,7 +16,7 @@ Solid working knowledge of C#, WPF/MVVM, SQL(MySQL and MSSQL) C++/STL and MFC.
 
 ----
 
- Hands-on knowledge of ASP.NET MVC as well as knowledge of web front end such as HTML/CSS/JavaScript, jQuery and Bootstrap.
+Hands-on knowledge of ASP.NET MVC as well as knowledge of web front end such as HTML/CSS/JavaScript, jQuery and Bootstrap.
 
 ----
 
@@ -27,7 +27,7 @@ Well understanding of Object Oriented Design with design patterns, UML and other
 Exposure to Agile methodologies like SCRUM, TDD, Refactorying and Continuous Integration
 
 ----
-A clear understanding of version control (prefer git), issue tracking tools (prefer Trac/Jira) and 
+A clear understanding of version control (prefer git), issue tracking tools (prefer Trac/Jira) and
 MediaWiki/Confluence.
 
 ----
