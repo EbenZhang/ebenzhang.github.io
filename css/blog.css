@@ -1,5 +1,5 @@
 /*
- * Globals
+ * Tags
  */
 
 body {
@@ -11,22 +11,6 @@ body {
   padding-right: 15px;
 }
 
-.headroom--pinned {
-    display: block;
-}
-.headroom--unpinned {
-    display: none;
-}
-
-.headroom {
-    transition: transform 200ms linear;
-}
-.headroom--pinned {
-    transform: translateY(0%);
-}
-.headroom--unpinned {
-    transform: translateY(-100%);
-}
 h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
   color: #1e2328;
@@ -62,80 +46,9 @@ blockquote{
 code{
     color: #222;
 }
-/*
- * Override Bootstrap's default container.
- */
 
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
-  }
-}
-
-
-/*
- * Masthead for nav
- */
-
-.blog-masthead {
-  background-color: #292f36;
-  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0;
-}
-
-/* Nav links */
-.blog-nav-item {
-  position: relative;
-  display: inline-block;
-  padding: 20px;
-  color: #cdddeb;
-}
-.blog-nav-item:hover,
-.blog-nav-item:focus {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Active state gets a caret at the bottom */
-.blog-nav .active {
-  color: #fff;
-}
-.blog-nav .active:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -5px;
-  vertical-align: middle;
-  content: " ";
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid;
-  border-left: 5px solid transparent;
-}
-
-
-/*
- * Blog name and description
- */
-
-.blog-header {
-  margin-top: 100px;
-}
-.blog-title {
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 60px;
-  font-weight: normal;
-}
-.blog-description {
-  font-size: 20px;
-  color: #999;
+img {
+    max-width: 100%;
 }
 
 .sep-at-bottom{
@@ -159,50 +72,23 @@ code{
   margin-bottom: 0;
 }
 
-
-
 /* Pagination */
 .pager {
   margin-bottom: 20px;
   text-align: left;
 }
+
 .pager > li > a {
   padding: 5px 10px;
   text-align: center;
   border-radius: 15px;
 }
 
-
-/*
- * Blog posts
- */
-
-.blog-post {
-  padding: 25px 15px;
-  margin-bottom: 30px;
-  background-color: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  box-shadow: 0 0 0 0,0 6px 12px rgba(34,34,34,0.1);
-}
-
-.blog-post-title {
-  margin-bottom: 5px;
-}
-
-.blog-post-meta {
-  margin-bottom: 20px;
-  color: #999;
-}
-
-
 .entry-meta {
-font-size: 12px;
-font-size: .95rem;
-color: #bbb;
+    font-size: 12px;
+    font-size: .95rem;
+    color: #bbb;
 }
-
 
 .entry-meta .tag {
     color: gray;
@@ -222,13 +108,13 @@ color: #bbb;
 
 media="all"
 .entry-meta a {
-color: #bbb;
+    color: #bbb;
 }
 
 .inline-list {
-padding-left: 0;
-margin-left: 0;
-list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
 }
 
 .inline-list li {
@@ -251,11 +137,7 @@ list-style: none;
   margin-bottom: 0;
 }
 
-.anchor-target {
-    padding-top: 70px;
-    margin-top: -70px;
-}
-
+/* side tool bar */
 .affix{
     z-index:100;
 }
@@ -276,6 +158,26 @@ list-style: none;
 
 .side-toolbar-space{
   margin-top: 2rem;
+}
+
+/* nav bar */
+.navbar-brand {
+    float:right;
+}
+
+button.navbar-toggle{
+    float:left;
+}
+
+.navbar-brand img {
+    height: 35px;
+    margin-top: -8px;
+}
+
+/* anchor position fix for bootstrap navbar-fixed-top */
+.anchor-target {
+    padding-top: 70px;
+    margin-top: -70px;
 }
 
 @media only screen and (max-device-width : 568px) {
@@ -300,23 +202,11 @@ list-style: none;
         text-overflow: ellipsis;
         overflow: hidden;
     }
-}
 
-.navbar-brand {
-    float:right;
-}
-
-button.navbar-toggle{
-    float:left;
-}
-
-.navbar-brand img {
-    height: 35px;
-    margin-top: -8px;
-}
-
-img {
-    max-width: 100%;
+    .anchor-target {
+        padding-top: 0;
+        margin-top: 0;
+    }
 }
 
 /* Fix layout of google custom search box*/

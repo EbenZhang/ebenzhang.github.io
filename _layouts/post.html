@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-9">
-                <header class="col-sm-12 blog-post-title">
+                <header class="col-sm-12">
                     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
                 </header>
                 <div class='col-sm-12'>
@@ -16,7 +16,7 @@
                         {% include post_cate_tags.html %}
                     </div>
                     <div class='col-sm-2'>
-                        <span class="blog-post-meta">{{ post.date |date: "%d-%m-%Y"}}</span>
+                        <span class="tag">{{ post.date |date: "%d-%m-%Y"}}</span>
                     </div>
                 </div>
                 <article class="col-sm-12 sep-at-bottom">{{ content }}
