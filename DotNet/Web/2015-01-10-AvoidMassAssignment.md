@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Avoid Mass Assignment in Asp.Net MVC
+title: Avoid Mass Assignment in ASP.NET MVC
 category : Web
-tag : [Asp.NetMVC, Web, Security]
+tag : [ASP.NETMVC, Web, Security]
 ---
 * auto-gen TOC:
 {:toc}
