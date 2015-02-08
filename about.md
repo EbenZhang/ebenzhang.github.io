@@ -42,18 +42,18 @@ C# WPF MVVM ASP.NETMVC4 WebFrontEnd Git SQL WinDbg  C++
 
 # Employment History
 
-### [Advanced Share Registry Limited](http://advancedshare.com.au)
-Worked as a C# Software Engineer from August 2013 – November 2014 (1 year 4 months) at Perth, Australia
+### [Advanced Share Registry Limited](http://advancedshare.com.au) 08/2013–11/2014 (1y4m) Perth
+Worked as a C# Software Engineer
 
 ----------
 
-### [Immersive Technologies](http://ImmersiveTechnologies.com.au)
-Worked as a C#/C++ Software Engineer from January 2012 – April 2013 (1 year 4 months) at Perth, Australia
+### [Immersive Technologies](http://ImmersiveTechnologies.com.au) 01/2012–04/2013 (1y4m) Perth
+Worked as a C#/C++ Software Engineer 
 
 ----------
 
-### [Kedacom](http://kedacom.com/en)
-Worked as a C/C++ Software Engineer from March 2007 – October 2011 (4 years 8 months) at Shanghai China
+### [Kedacom](http://kedacom.com/en) 03/2007 – 10/2011 (4y8m) Shanghai China
+Worked as a C++ Software Engineer and Team Leader of UI Applications for Telecom Operators
 
 ----------
 
