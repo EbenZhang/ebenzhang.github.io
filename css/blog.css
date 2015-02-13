@@ -2,11 +2,14 @@
  * Tags
  */
 
+html {
+  font-size: 18px;
+}
 body {
   color: #555;
   background-color: #e8e8e8;
   font-family: Verdana,"Lucida Grande",Geneva,Arial,sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   padding: 70px 15px 0 15px;
 }
 
@@ -22,24 +25,24 @@ h1,h2,h3,h4,.alpha,.beta,.gamma,.delta {
 }
 
 h1,.alpha {
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 h2,.beta {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3,.gamma {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: normal;
 }
 
 h4,.delta {
-  font-size: 1.125em;
+  font-size: 1.125rem;
 }
 
 blockquote{
-  font-size: 10px;
+  font-size: 0.95rem;
 }
 
 code{
@@ -84,8 +87,7 @@ img {
 }
 
 .entry-meta {
-    font-size: 12px;
-    font-size: .95rem;
+    font-size: 1rem;
     color: #bbb;
 }
 
