@@ -2,7 +2,7 @@
 layout : post
 title : ElementName As Source Of Content Menu Command Binding
 category : WPF
-tags : [WPF, Binding]
+tags : [WPF]
 ---
 ElementName As Source Of Content Menu Command Binding
 
