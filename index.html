@@ -4,42 +4,44 @@ title: Home
 ---
 
 {% for post in paginator.posts %}
-<section class="">
-  <header>
-      <h2>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-      </h2>
-  </header>
+<section class="container-fluid">
+  <div class='row'>
+    <header>
+        <h2>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+    </header>
 
-  <div class='col-sm-10'>
-    {% include post_cate_tags.html %}
-  </div>
-  <div class='col-sm-2'>
-    <span class="tag">{{ post.date |date: "%d-%m-%Y"}}</span>
-  </div>
-  
-  {% if post.thumbnail != nil %}
-  <div class="row">
-    <div class="col-sm-6">
-      <p>
-        <a href="{{ post.url }}">
-          <img src="{{ post.thumbnail }}" width="300" height="400" alt="{{ post.description }}" />
-        </a>
-      </p>
+    <div class='col-sm-10'>
+      {% include post_cate_tags.html %}
     </div>
-    <div class="col-sm-6">
-      <article class="sep-at-bottom">{{post.excerpt }}</article>
+    <div class='col-sm-2'>
+      <span class="tag">{{ post.date |date: "%d-%m-%Y"}}</span>
+    </div>
+    
+    <div class="row">
+      {% if post.thumbnail != nil %}  
+        <div class="col-sm-6">
+          <p>
+            <a href="{{ post.url }}">
+              <img src="{{ post.thumbnail }}" width="300" height="400" alt="{{ post.description }}" />
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <article class="sep-at-bottom">{{post.excerpt }}</article>
+        </div>
+      {% else %}
+      <article class="sep-at-bottom col-sm-12">{{ post.excerpt }}
+        <p>
+          <a href="{{ post.url }}" class="more-link">
+            <span class="readmore">Read More &raquo;</span>
+          </a>
+        </p>
+      </article>
+      {% endif %}
     </div>
   </div>
-  {% else %}
-  <article class="sep-at-bottom">{{ post.excerpt }}
-    <p>
-      <a href="{{ post.url }}" class="more-link">
-        <span class="readmore">Read More &raquo;</span>
-      </a>
-    </p>
-  </article>
-  {% endif %}
 </section>
 
 {% endfor %}
