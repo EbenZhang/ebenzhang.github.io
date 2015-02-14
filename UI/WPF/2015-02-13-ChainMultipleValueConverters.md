@@ -8,7 +8,7 @@ original: true
 
 This article describes how to chain multiple WPF value converters into a set, like most command-line environments that allow the output of one command to be piped into another command as input. It enables and encourages us write reusable converters and combine them to gain a new powerful converter, rather than write all the conversion code in one single converter. 
 
-Let say we need to converter `false` to `Visible`, `true` to `Collapse`. Of course we can write a new `FalseToVisibleConverter` to get the job done, but following this style could result in a huge number of specific converters as we may have lots of combinations. The better way is to combine/pipe/reuse the `InverseBoolConverter` (A wildly used custom converter to inverse `true` to `false` and vice versa) and the existing `BooleanToVisibilityConverter` (Provided by WPF, which can convert `true` to `Visible` and `false` to `Collapse`).
+Let say we need to converter `false` to `Visible`, `true` to `Collapse`. Of course we can write a new `FalseToVisibleConverter` to get the job done, but following this style could result in a huge number of specific non-reusable converters as we may have lots of combinations. The better way is to combine/pipe/reuse the `InverseBoolConverter` (A wildly used custom converter to inverse `true` to `false` and vice versa) and the existing `BooleanToVisibilityConverter` (Provided by WPF, which can convert `true` to `Visible` and `false` to `Collapse`).
 
 <!--more-->
 
