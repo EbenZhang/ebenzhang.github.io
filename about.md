@@ -46,7 +46,15 @@ C# WPF MVVM ASP.NETMVC4 WebFrontEnd Git SQL WinDbg  C++
 
 Software Engineer
 
-C#, WinForms, ASP.NET MVC, TDD, SQL, SCRUM
+C#, WinForms, ASP.NET MVC, TDD, SQL, SCRUM, NUnit, NSubstitute
+
+----------
+
+## Nicologies 11/2014 - Present, Perth
+
+Software Engineer
+
+C#, WinForms, WPF/MVVM, ASP.NET MVC, TDD, SQL, EntityFramework, Android, NUnit, NSubstitute
 
 ----------
 
