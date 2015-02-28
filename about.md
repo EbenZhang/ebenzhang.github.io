@@ -78,30 +78,6 @@ Worked as a C++ Software Engineer and Team Leader of UI Applications for Telecom
 
 C++, MFC, SQL, Linux, Networking
 
-----------
+# Donate
 
-# Personal Projects
-
-### [KumoVideo](https://play.google.com/store/apps/details?id=com.ezhang.kumovid)
-
-[KumoVideo](https://play.google.com/store/apps/details?id=com.ezhang.kumovid) is an android app designed to stream videos/audios from airvid server to your android devices.
-
-Built in with FFmpeg codecs, it is capable of playing almost all videos to your mobile devices via WiFi and 3G/4G network. Also, the airvid server is able to convert videos on the fly If the videos in your collection are not in format supported by your device. You don't need to wait until the entire video is converted. You can start watching it almost immediately!
-
-It acts as your personal audio video cloud (Kumo). From now on, you will have access to a limitless number of movies at anywhere without waiting, and they take up no space on your devices at all!
-However to enjoy streaming over internet you will need to configure the port forwarding manually.
-
-----------
-
-### [WaFuelFuel](https://play.google.com/store/apps/details?id=com.ezhang.kumovid)
-
-Wafuelfuel is an App helps find the nearest petrol station and the cheapest prices for Unleaded, Diesel and LPG petrol in Western Australia. It can:
-
-- Find the cheapest fuel station based on your current location.
-- Reduce the price if you have any woolworths or coles voucher
-- Launch your navigation apps to go to the petrol station.
-
-----------
-
-### [PdfSharp.XPS](https://github.com/ebenzhang/PdfSharp.XPS)
-Added the ability to use XPS parser from .NET to Convert XPS file or WPF controls to PDF.
+{% include donate.md %}
