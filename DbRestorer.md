@@ -16,7 +16,7 @@ Click [here](https://raw.github.com/EbenZhang/DbRestorer/master/dist/setup.exe) 
 
 # License
 
-DbRestorer is published under [Microsoft Public License (MS-PL)](http://opensource.org/licenses/ms-pl.html)
+DbRestorer is a free tool and its [source code](https://github.com/ebenzhang/dbrestorer) is published under [Microsoft Public License (MS-PL)](http://opensource.org/licenses/ms-pl.html)
 
 All rights reserved [Nicologies](http://www.nicologies.tk) @2015
 
