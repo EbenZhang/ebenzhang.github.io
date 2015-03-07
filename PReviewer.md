@@ -4,20 +4,45 @@ title: "PReviewer"
 description: "Detail Page For PReviewer"
 ---
 
-# PReviewer
+I am pleased to annouce that **PReviewer** is ready. 
 
-A desktop application to help review/compare github pull requests.
+# Introduction
 
-It's still under development.
+**PReviewer** is a desktop application designed to review github pull requests. The key feature is the ability to view differences in external diff tools such as [Beyond Compare](http://www.scootersoftware.com), [KDiff](http://kdiff3.sourceforge.net/), [WinMerge](http://winmerge.org) or whatever you like.
 
 # Features
 
-* List changed files and compare changes in a pull request
-* Configuable diff or merge tool
-* Comment on a pull request
-* Compare branches, so you can self review your changes before create pull request
-* Integrated markdown editor, probably a WYSIWYG editor.
+In this release **PReviewer** provides the ability  to
+
+ * Display the title and description of the pull request.
+ * List changed files in a pull request.
+ * open the changed files in external difftool, for example beyond compare.
+ * Show the differences inside the application itself.
+ * comment on individual files, and submit a general  comment. However inline comment on specific commit hasn't been supported yet.
+
+# Install
+
+Navigate to [here](https://raw.github.com/EbenZhang/PReviewer/master/dist/setup.exe) to download the setup.exe and install it following the instructions.
+
+# License
+
+PReview is a free tool and its [source code](https://github.com/ebenzhang/previewer) is published under [Microsoft Public License (MS-PL)](http://opensource.org/licenses/ms-pl.html)
+
+All rights reserved [Nicologies](http://www.nicologies.tk) @2015
 
 # Donate
 
 {% include donate.md %}
+
+# Feedback
+
+If you have any suggestion, find any bug, or just want to contribute, please submit to the [issues page](https://github.com/EbenZhang/PReviewer/issues/new).
+
+# Coming Features
+
+Here are the features may be added in the future but with no guarantee. I would be appreciated if you can [help](https://github.com/EbenZhang/PReviewer).
+
+ * Compare branches, so you can self review your changes before create a pull request
+ * Inline comment on specific commit
+ * Integrated markdown editor, probably a WYSIWYG editor, but this is low priority .
+ * Replace the diffviewer With the wpf version of ICsharpcode.editor.
