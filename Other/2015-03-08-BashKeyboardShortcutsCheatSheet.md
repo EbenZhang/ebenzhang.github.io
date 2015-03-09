@@ -13,6 +13,7 @@ tags:  [Bash]
  * `Ctrl + k`: Cut the Line after the cursor to the clipboard
  * `Ctrl + w`: Cut the Word before the cursor to the clipboard
  * `Alt + d`: Delete the Word after the cursor
+ * `Alt + Del`: Delete the Word before the cursor.
  * `Ctrl + y`: Paste the last thing that was cut
 
 <!--more-->
