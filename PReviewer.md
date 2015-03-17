@@ -18,7 +18,8 @@ In this release **PReviewer** provides the ability  to
  * List changed files in a pull request.
  * open the changed files in external difftool, for example beyond compare.
  * Show the differences inside the application itself.
- * comment on individual files, and submit a general  comment. However inline comment on specific commit hasn't been supported yet.
+ * comment on individual files, and submit a general comment. However inline comment on specific commit hasn't been supported yet.
+ * Compare commits in the pull request.
 
 # Install
 
