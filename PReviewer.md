@@ -42,7 +42,6 @@ If you have any suggestion, find any bug, or just want to contribute, please sub
 
 Here are the features may be added in the future but with no guarantee. I would be appreciated if you can [help](https://github.com/EbenZhang/PReviewer).
 
- * Compare branches, so you can self review your changes before create a pull request
  * Inline comment on specific commit
  * Integrated markdown editor, probably a WYSIWYG editor, but this is low priority .
  * Replace the diffviewer With the wpf version of ICsharpcode.editor.
