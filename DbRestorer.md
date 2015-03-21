@@ -14,6 +14,8 @@ However it also provides the ability to customise the database name and the path
 
 Click [here](https://raw.github.com/EbenZhang/DbRestorer/master/dist/setup.exe) to download the setup.exe file and follow the instrcutions to install.
 
+For Windows8 users: if your system complains `Windows protected your PC blahblah...`, then just click the `More info` on the screen, and press the `Run anyway` button.
+
 # License
 
 DbRestorer is a free tool and its [source code](https://github.com/ebenzhang/dbrestorer) is published under [Microsoft Public License (MS-PL)](http://opensource.org/licenses/ms-pl.html)
