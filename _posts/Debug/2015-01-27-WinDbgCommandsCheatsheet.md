@@ -63,13 +63,20 @@ It shows the user mode time by default with an option to display kernel time and
 - `4` shows the time since the creation of the thread.
 - We can `LogicOR` the above options to show a combined result, e.g `!runaway 7` will show all the kinds of time because `7` = `1` \| `2` \| `4`
 
+ld
+=
+`ld` can be used to load symbols for modules, but usually I will use `ld *` to list all modules.
+
 x
 =
 
+Displays symbols that match the specified pattern
 Shows the address of a function, e.g the address of `printf` is `77bd27c2` (maybe different on your computer.):
 
     x msvcrt!printf
     77bd27c2 msvcrt!printf = <no type information>
+
+We can use wildcard with this command to list all the function/symbol from a specific dll e.g. `x  msvcrt!*`
 
 ln
 ==
