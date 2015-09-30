@@ -76,12 +76,12 @@ In this MOD, the diff view shows you the real line number of the file.
 
 ### Known Issues
 
-- Combined diff that has two parents is partially supported as described earlier.
+- Combined diff for merge commit that has two parents is partially supported as described earlier.
 - Showing real line number of octopus merge commit is purely not supported.
 
 ## Force-with-lease
 
-`Force-With-Lease` is a new introduced successor of `force push` as it will make sure there is no change made by other people on the remote side.
+`Force-With-Lease` is a new introduced successor of `force push` as it will make sure there is no change made by other people on the remote side; thereby protecting you from overwriting other people's commits inadvertently.
 
 ![image](/images/EnhancedGitExtensions/forcewithlease.png)
 
@@ -97,7 +97,7 @@ Then you'll see the differences in a popup dialog like below.
 
 ![image](/images/EnhancedGitExtensions/CompareBranchesDetails.png)
 
-As you may already notice, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare your branch to the most recent common commit between the left and right commits instead of comparing to the left one directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
+As you may already aware of, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare your branch to the most recent common commit between the left and right commits instead of comparing to the left one directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
 
 In addition, there is a `swap` button which swaps the left and right commit when confusing of which commit is the base/head.
 
