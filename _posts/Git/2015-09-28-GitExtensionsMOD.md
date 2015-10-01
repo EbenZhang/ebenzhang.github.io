@@ -32,15 +32,15 @@ If you want to contribute a fix or feature, please make sure your branch is base
 
 To help figure out what changes had been made while solving the merge conflicts, we introduced a new section in the files panel to show the combined diff.
 
-As you can see from the below image, there is a new combined diff section in the  left panel.
+As you can see from the below image, there is a new combined diff section in the left panel.
 
 ![image](/images/EnhancedGitExtensions/CombinedDiff.png)
 
 By clicking any file in the list, you can see the combined diff in the right panel. 
 
-FYI: Combined diff shows the differences between the current revision and all of its parents, for example line 2102 means it's a new added line in compare to its right parent(the plus sign is on the right hand side. The diff indicator will be `++` if it's a new line for both of its parents).
+FYI: Combined diff means the differences between the current revision and all of its parents, for example there is a space and together with a plus sign ` +` at line 2102, this indicates the line is a new added one in compare to its right parent. The diff indicator will be `++` if it's a new line for both of its parents).
 
-### Omit the Uninteresting Diff
+### Omitting the Uninteresting Diff
 
 By default, it may show some unexpected differences that were not caused by conflicts. Those differences are so called uninteresting diff, by contrast, the differences caused by solving conflicts are interesting diff.
 
