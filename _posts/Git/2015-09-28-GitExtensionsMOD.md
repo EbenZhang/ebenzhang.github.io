@@ -10,7 +10,7 @@ This MOD is an enhanced version of GitExtensions with the most wanted features a
 
 Please don't submit any issue to the official team as it's a MOD version. You can report issues [Here](https://github.com/EbenZhang/gitextensions/issues/new) if you have any concern. 
 
-If you want to contribute a fix or feature, please make sure you based on the official master branch, so that your pull request can be merged to both official and this MOD.
+If you want to contribute a fix or feature, please make sure your branch is based on the official master branch, so it can be merged to both official and this MOD.
 
 <!--more-->
 
@@ -36,13 +36,13 @@ As you can see from the below image, there is a new combined diff section in the
 
 ![image](/images/EnhancedGitExtensions/CombinedDiff.png)
 
-By clicking any file in the list, you will see the combined diff in the right panel. 
+By clicking any file in the list, you can see the combined diff in the right panel. 
 
-FYI: Combined diff is the differences between the current revision and all of its parents, for example line 2102 means it's a new added line in compare to its right parent(the plus sign is on the right side, the diff indicator will be `++` if it's a new line for both of its parents).
+FYI: Combined diff shows the differences between the current revision and all of its parents, for example line 2102 means it's a new added line in compare to its right parent(the plus sign is on the right hand side. The diff indicator will be `++` if it's a new line for both of its parents).
 
 ### Omit the Uninteresting Diff
 
-By default, GitExtensions shows you some unexpected differences that were not caused by conflicts. Those differences are so called uninteresting diff, by contrast, the differences caused by solving conflicts are interesting diff.
+By default, it may show some unexpected differences that were not caused by conflicts. Those differences are so called uninteresting diff, by contrast, the differences caused by solving conflicts are interesting diff.
 
 Fortunately, there's an advanced option to omit the uninteresting diff.
 
@@ -66,11 +66,11 @@ The remote branches, stashes and tags are not showing, but better than nothing, 
 
 In the revision grid, you're now able to select multiple commits and cherry-pick them. Just keep in mind the first commit selected will be cherry-picked first.
 
-In addition, your choice of whether to automatically create a commit and reference to the original one will be remembered.
+In addition, the choice of whether to automatically create a commit and add reference to the original one will be kindly remembered.
 
 ## Real Line Number in the Diff
 
-In this MOD, the diff view shows you the real line number of the file.
+In this MOD, the diff view shows the real line number of the file.
 
 ![image](/images/EnhancedGitExtensions/RealLineNum.png)
 
@@ -81,13 +81,13 @@ In this MOD, the diff view shows you the real line number of the file.
 
 ## Force-with-lease
 
-`Force-With-Lease` is a new introduced successor of `force push` as it will make sure there is no change made by other people on the remote side; thereby protecting you from overwriting other people's commits inadvertently.
+`Force-With-Lease` is a new introduced (in git 1.85) successor of `force push` as it will make sure there is no change made by other people on the remote side; thereby protecting you from inadvertently overwriting other people's commits.
 
 ![image](/images/EnhancedGitExtensions/forcewithlease.png)
 
 ## Comparing to Another Branch
 
-Using this handy feature, you're able to compare a commit (or branch) to another, therefore easily review your changes.
+Using this handy feature, you're able to compare a commit (or branch) to another, therefore easily review the changes on your branch.
 
 The feature is accessible from the context menu:
 
@@ -97,7 +97,7 @@ Then you'll see the differences in a popup dialog like below.
 
 ![image](/images/EnhancedGitExtensions/CompareBranchesDetails.png)
 
-As you may already aware of, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare your branch to the most recent common commit between the left and right commits instead of comparing to the left one directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
+As you may already aware of, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare a branch to the most recent common commit between the left and right commits instead of comparing to the left one directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
 
 In addition, there is a `swap` button which swaps the left and right commit when confusing of which commit is the base/head.
 
@@ -119,9 +119,9 @@ If you want, you can tick an advanced option to remember you choice.
 
 ## Option to NOT Save Local Changes Preference When Checking Out
 
-The original GitExtensions will remember the dangerous choice (the reset) you made on the `Checkout branch` dialog, which might cause you lose all you local changes next time.
+The original GitExtensions will remember the dangerous choice (the reset) made on the `Checkout branch` dialog, which might cause people lose all the local changes next time.
 
-With this MOD you choice on the `Checkout branch` dialog will be saved only when the `Set as default` check box is ticked.
+With this MOD the choice on the `Checkout branch` dialog will be saved only when the `Set as default` check box is ticked.
 
 ![image](/images/EnhancedGitExtensions/LocalChangesDefaultAction.png)
 
@@ -140,7 +140,7 @@ To use this feature, you'll need to tick the `AutoStash` in the advanced rebase 
 
 ## Unable to Restore Once Minimised
 
-When you have two or more GitExtensions instances running on Win7 or later,  you might not be able to restore them after minimised by Win+D or Win+M.
+When having two or more GitExtensions instances running on Win7 or later,  you might not be able to restore them after minimised by Win+D or Win+M.
 
 ## Intermittently ObjectDisposedExceptio
 
