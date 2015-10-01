@@ -38,7 +38,7 @@ As you can see from the below image, there is a new combined diff section in the
 
 By clicking any file in the list, you can see the combined diff in the right panel. 
 
-FYI: Combined diff means the differences between the current revision and all of its parents, for example there is a space and together with a plus sign ` +` at line 2102, this indicates the line is a new added one in compare to its right parent. The diff indicator will be `++` if it's a new line for both of its parents).
+FYI: Combined diff means the differences between the current revision and all of its parents, for example there is a space and together with a plus sign ` +`at line 2102, this indicates the line is a new added one in compare to its right parent. The diff indicator will be `++` if it's a new line for both of its parents).
 
 ### Omitting the Uninteresting Diff
 
