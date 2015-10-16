@@ -20,10 +20,7 @@ If you want to contribute a fix or feature, please make sure your branch is base
 
 # Get Started
 
-[Download](https://github.com/EbenZhang/gitextensions/releases/download/2.49.99.1/2.49.99.1_MOD.7z) it, unzip it to overwrite your existing official GitExtensions.
-
-
-[Here](https://github.com/EbenZhang/gitextensions/releases) is the release page contains the latest binaries and source code.
+The installer, `GitExtensions.msi`, with the latest version can be downloaded from [Here](https://github.com/EbenZhang/gitextensions/releases/latest).
 
 
 # Features
