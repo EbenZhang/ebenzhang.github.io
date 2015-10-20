@@ -51,13 +51,15 @@ Fortunately, there's an advanced option to omit the uninteresting diff.
 - Some context menu items are not supported. E.g `open in external diff tool`
 - Showing combined diff for octopus merge is not supported.
 
-## Left Panel for Local Branches
+## Left Panel for Branches
+
+A left panel has been introduced to show the local branches and remote branches from all the remotes together with couple of useful context menus.
 
 ![image](/images/EnhancedGitExtensions/leftpanel.png)
 
 ### Known Issues
 
-The remote branches, stashes and tags are not showing, but better than nothing, isn't it?
+The stashes and tags are not showing.
 
 ## Ability to Cherry-pick Multiple Commits
 
