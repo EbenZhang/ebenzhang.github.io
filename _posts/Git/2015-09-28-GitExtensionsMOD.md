@@ -20,7 +20,10 @@ If you want to contribute a fix or feature, please make sure your branch is base
 
 # Get Started
 
-The installer, `GitExtensions.msi`, with the latest version can be downloaded from [Here](https://github.com/EbenZhang/gitextensions/releases/latest).
+The latest installer can be downloaded from [Here](https://github.com/EbenZhang/gitextensions/releases/latest).
+
+There is also a complete version of the installer
+that contains other third party tools such as git, kdiff3, windows credential store help and so on.
 
 
 # Features
