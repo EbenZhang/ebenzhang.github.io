@@ -11,6 +11,9 @@ This extension provides additional outlining with syntax highlighted hint for Vi
 
 Unlike the [C# Outline extension](https://visualstudiogallery.msdn.microsoft.com/9390e08c-d0aa-42f1-b3d2-5134aabf3b9a), which replaces the outlining provided by Visual Studio, this extension keeps it untouched, as a result the syntax highlighting remains unchanged.
 
+
+<!--more-->
+
 # Installing
 
 You can either search `Visual Basic and C# Outliner` and install it via the Visual Studio Extension Manager or download it manually from [here](https://visualstudiogallery.msdn.microsoft.com/699ecb9d-bd8f-4f6b-b290-05c42407b43e)

@@ -15,6 +15,8 @@ Built in with FFmpeg codecs, it is capable of playing almost all videos to your 
 It acts as your personal audio video cloud (Kumo). From now on, you will have access to a limitless number of movies at anywhere without waiting, and they take up no space on your devices at all!
 However to enjoy streaming over internet you will need to configure the port forwarding manually.
 
+<!--more-->
+
 # Install
 
 Click [here](https://play.google.com/store/apps/details?id=com.ezhang.kumovid) to install it from Google Play.

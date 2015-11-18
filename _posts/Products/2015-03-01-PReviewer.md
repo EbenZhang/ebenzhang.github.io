@@ -23,6 +23,7 @@ In this release **PReviewer** provides the ability  to
  * comment on individual files, and submit a general comment. However inline comment on specific commit hasn't been supported yet.
  * Compare commits in the pull request.
 
+<!--more-->
 # Install
 
 Navigate to [here](https://raw.github.com/EbenZhang/PReviewer/master/dist/setup.exe) to download the setup.exe and install it following the instructions.

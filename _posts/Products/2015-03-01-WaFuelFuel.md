@@ -15,6 +15,8 @@ Wafuelfuel is an android app helps find the nearest petrol station and the cheap
 - Reduce the price if you have any woolworths or coles voucher
 - Launch your navigation apps to go to the petrol station.
 
+<!--more-->
+
 # Install
 Click [here](https://play.google.com/store/apps/details?id=com.ezhang.pop) to install it from Google Play.
 
