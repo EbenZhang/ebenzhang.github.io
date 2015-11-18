@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "KumoVideo"
 description: "Detail Page For KumoVideo"
 category : Products 

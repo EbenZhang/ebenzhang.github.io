@@ -1,5 +1,5 @@
 ---
-layout: default
+layout : post
 title: "PReviewer"
 description: "Detail Page For PReviewer"
 tags : [Products, Git, GitHub]

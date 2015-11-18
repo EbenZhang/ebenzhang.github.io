@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "DbRestorer"
 description: "Detail Page For DbRestorer"
 category : Products 

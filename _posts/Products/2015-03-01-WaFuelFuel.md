@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Wafuelfuel"
 description: "Detail Page For Wafuelfuel"
 category : Products

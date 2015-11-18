@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Visual Basic .NET and C# Outlining Extension"
 description: "An extension to add additional outlining to Visual Basic .NET and C#"
 category : Products 
