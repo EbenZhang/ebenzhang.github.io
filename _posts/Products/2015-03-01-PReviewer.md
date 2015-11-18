@@ -2,8 +2,8 @@
 layout: default
 title: "PReviewer"
 description: "Detail Page For PReviewer"
-tags : [Prodcuts, Git]
-Category : Prodcuts
+tags : [Products, Git, GitHub]
+Category : Products
 ---
 
 I am pleased to annouce that **PReviewer** is ready. 

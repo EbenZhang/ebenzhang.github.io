@@ -3,7 +3,7 @@ layout: post
 title: GitExtensions MOD
 tags : [GitExtensions, Git, Products]
 keywords: [GitExtensions, Combined Diff, cherry-pick, force-with-lease, ]
-category : GitExtensions
+category : Products 
 ---
 
 This MOD is an enhanced version of GitExtensions with the most wanted features and bug fixes flavored, such as combined diff (for reviewing merge conflicts), left branches panel, multiple commits cherry-picking, branches/commits comparision, force with lease, showing real line number in the diff and so on.

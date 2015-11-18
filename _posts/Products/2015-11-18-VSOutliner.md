@@ -2,8 +2,8 @@
 layout: default
 title: "Visual Basic .NET and C# Outlining Extension"
 description: "An extension to add additional outlining to Visual Basic .NET and C#"
-category : Utility
-tags : [Outlining, Products, Outliner, Collapse]
+category : Products 
+tags : [Outlining, Utility, Products, Outliner, Extension, VSIX]
 ---
 
 This extension provides additional outlining with syntax highlighted hint for Visual Basic .NET and C#, therefore we can collapse the blocks/scopes such as IF, ELSE, USING, WITH, WHILE, FOREACH and you name it.
