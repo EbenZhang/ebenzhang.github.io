@@ -40,3 +40,8 @@ Additionally, it will show the collapsed content with syntax highlighted when mo
 In addition to C#, this extension also supports Visual Basic .NET:
 
 ![Visual Basic collapsible scopes](/images/VSOutliner/VBCollapsibleScopes.png)
+
+# Donate
+
+{% include donate.md %}
+

@@ -151,3 +151,8 @@ When checking if there is a upgrade version of GitExtensions, the program may cr
 ## Statistics Plugin Calculates Files Not Under Source Control
 
 Now the statistics plugin only counts the number of lines for files that under source control.
+
+# Donate
+
+{% include donate.md %}
+
