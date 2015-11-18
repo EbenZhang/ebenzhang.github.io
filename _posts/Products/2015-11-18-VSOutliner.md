@@ -22,7 +22,7 @@ Due to the dependencies of the Roslyn dlls, it only supports Visual Studio 2015,
 
 # Features
 
-## C#
+## CSharp
 
 As you can see from the below image, there are couple of additional outliners added to the editor, so we can collapse them.
 
