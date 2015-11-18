@@ -2,6 +2,8 @@
 layout: default
 title: "KumoVideo"
 description: "Detail Page For KumoVideo"
+category : Utility
+tags : [Products]
 ---
 
 [<img alt='Kumovideo Image' src="http://lh4.ggpht.com/adgiks6ftVFmLS3IAP7K1D7VoSS_2D3-zU2gjJ5EJbfWTjSKlfEfzYQfCin-XRb0wdc=w100" />](https://play.google.com/store/apps/details?id=com.ezhang.kumovid)
