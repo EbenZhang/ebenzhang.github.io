@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitExtensions MOD
-tags : [GitExtensions, Git]
+tags : [GitExtensions, Git, Products]
 keywords: [GitExtensions, Combined Diff, cherry-pick, force-with-lease, ]
 category : GitExtensions
 ---
