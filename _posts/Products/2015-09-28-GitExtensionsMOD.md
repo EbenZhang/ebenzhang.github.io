@@ -85,9 +85,9 @@ In this MOD, the diff view shows the real line number of the file.
 
 ![image](/images/EnhancedGitExtensions/forcewithlease.png)
 
-## Comparing to Another Branch
+## Comparing to Another Branch or Commit
 
-Using this handy feature, you're able to compare a commit (or branch) to another, therefore easily review the changes on your branch.
+Using this handy feature, you're able to compare a commit (or branch) to another, thus easily review the changes on your branch.
 
 The feature is accessible from the context menu:
 
@@ -97,15 +97,15 @@ Then you'll see the differences in a popup dialog like below.
 
 ![image](/images/EnhancedGitExtensions/CompareBranchesDetails.png)
 
-As you may already aware of, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare a branch to the most recent common commit between the left and right commits instead of comparing to the left one directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
+As you may already aware of, there is a `Compare right commit to merge base` option. With it ticked, you're able to compare a branch to the most recent common commit between the BASE and HEAD commits instead of comparing to the BASE directly. This is useful if your branch was created based on an old commit of the target branch to where your branch is going to be merged.
 
-In addition, there is a `swap` button which swaps the left and right commit when confusing of which commit is the base/head.
+The `swap` button in the top-middle of the windows is designed to swap the BASE and HEAD commit. 
 
-Moreover, you can pick up another branch to compare by clicking the `Another Branch` button.
+Moreover, you can pick up another branch or commit to compare by clicking the `Another Branch` or `Another Commit` button.
 
-## Known Issues
+### Select a Commit as BASE and Compare to it
 
-Translation hasn't been supported. 
+As you may have already seen from the context menu, there are two items, one is `Select as BASE to compare`, another is `Compare to BASE`. With these two items, you can select one commit as the BASE using the `Select as BASE to compare` menu, then right click another commit and select the `Compare to BASE` menu to compare the later selected commit to the BASE you selected before.
 
 ## Remembering the `ignore white space` settings
 
