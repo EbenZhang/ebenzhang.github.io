@@ -60,9 +60,7 @@ A left panel has been introduced to show the local branches and remote branches 
 
 ![image](/images/EnhancedGitExtensions/leftpanel.png)
 
-### Known Issues
-
-The stashes and tags are not showing.
+Tags are supported but not showing by default, you can turn on it by clicking the settings button (which is a dropdown) and select the `Show tags` menu item to add the tags to the left panel.
 
 ## Ability to Cherry-pick Multiple Commits
 
