@@ -1,72 +1,113 @@
 ---
-layout: default
-title: Home
+layout: products
+title: Products
 ---
-
-{% for post in paginator.posts %}
-<section class="container-fluid">
-  <div class='row'>
-    <header>
-        <h2>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
-    </header>
-
-    <div class='col-sm-10'>
-      {% include post_cate_tags.html %}
+<section>
+    <div class="jumbotron">
+        <h1>Products</h1>
+        <span class='product-intro'>At Nicologies, we have a passion for making people more productive through smart software solutions that help them focus more on what they really want to accomplish, and less on mundane, repetitive "computer busy work". We think you will find that our products reflect our dedication to this ideal.</span>
     </div>
-    <div class='col-sm-2'>
-      <span class="tag">{{ post.date |date: "%d-%m-%Y"}}</span>
-    </div>
-    
-    <div class="row">
-      {% if post.thumbnail != nil %}  
-        <div class="col-sm-6">
-          <p>
-            <a href="{{ post.url }}">
-              <img src="{{ post.thumbnail }}" width="300" height="400" alt="{{ post.description }}" />
-            </a>
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <article class="sep-at-bottom">{{post.excerpt }}</article>
-        </div>
-      {% else %}
-      <article class="sep-at-bottom col-sm-12">{{ post.excerpt }}
-        <p>
-          <a href="{{ post.url }}" class="more-link">
-            <span class="readmore">Read More &raquo;</span>
-          </a>
-        </p>
-      </article>
-      {% endif %}
-    </div>
-  </div>
 </section>
+<section class='container-fluid'>
+    <aside class='col-sm-12 col-md-3'>
+        <nav>
+            <ul class='nav navbar-stack sidebar-module sidebar-module-inset smaller-font' id='products-side-bar'>
+                <li><a href='#developer_tools'>Developer Tools</a>
+                    <ul class='no-bullet'>
+                        <li><a href='#VSOutliner'>VB and C# outlining Extension</a></li>
+                        <li><a href='#GitExtensionsMod'>Enhanced GitExtensions</a></li>
+                        <li><a href='#PReviewer'>PReviewer(GitHub Review Tool)</a></li>
+                        <li><a href='#DBRestorer'>SQLServer DBRestorer</a></li>        
+                    </ul>
+                 </li>
+                <li><a href='#Others'>Other Products</a>
+                    <ul class='no-bullet'>
+                        <li><a href='#KumoVideo'>Android Client for Air Video</a></li>
+                        <li><a href='#WaFuelFuel'>Fuel Price in Western Australia</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-{% endfor %}
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-  <span>&laquo; Prev</span>
-  {% endif %}
+    <section class='col-sm-12 col-md-9'>
+        <section id='developer_tools' class='anchor-target'>
+            <h2>Developer Tools</h2>
+            <article id='VSOutliner' class='anchor-target sep-at-bottom'>
+                <a href='/posts/VSOutliner'><h2>
+                    <img alt='VSOutliner Icon' src='https://raw.githubusercontent.com/EbenZhang/VbSharpOutliner/master/VBSharpOutliner/vsoutliner.png?v=1' width='85'/>
+                    Visual Basic .NET and C# Outlining Extension
+                </h2></a>
+                {% capture vsoutliner %}{% include vsoutliner_excerpt.md %}{% endcapture %}
+                {{ vsoutliner | markdownify }}
+                <div>
+                    <a href='/posts/VSOutliner' class='btn btn-primary'>Read More</a>
+                    <a href='https://visualstudiogallery.msdn.microsoft.com/699ecb9d-bd8f-4f6b-b290-05c42407b43e' class='btn btn-primary'>Download</a>
+                </div>
+            </article>
+            <article id='GitExtensionsMod' class='anchor-target sep-at-bottom'>
+                <a href='/posts/GitExtensionsMod'><h2>
+                    <img alt='GitExtensions Icon' src='/images/EnhancedGitExtensions/gitextensions-logo.png' width='85' />
+                    GitExtensions Mod
+                </h2></a>
+                {% capture gitextensions_excerpt %}{% include gitextensions_excerpt.md %}{% endcapture %}
+                {{ gitextensions_excerpt | markdownify }}
+                <div>
+                    <a href='/posts/GitExtensionsMod' class='btn btn-primary'>Read More</a>
+                    <a href='https://github.com/EbenZhang/gitextensions/releases/latest' class='btn btn-primary'>Download</a>
+                </div>
+            </article>
+            <article id='PReviewer' class='anchor-target sep-at-bottom'>
+                <a href='/posts/PReviewer'><h2>
+                    <img alt='PReviewer Icon' src='http://raw.githubusercontent.com/EbenZhang/PReviewer/master/PReviewer/PReviewer.png' width='85' />
+                    PReviewer
+                </h2></a>
+                {% capture previewer_excerpt %}{% include PReviewer_excerpt.md %}{% endcapture %}
+                {{ previewer_excerpt | markdownify }}
+                <div>
+                    <a href='/posts/PReviewer' class='btn btn-primary'>Read More</a>
+                    <a href='https://raw.github.com/EbenZhang/PReviewer/master/dist/setup.exe' class='btn btn-primary'>Download</a>
+                </div>
+            </article>
+            <article id='DBRestorer' class='anchor-target sep-at-bottom'>
+                <a href='/posts/DBRestorer'><h2>
+                    <img alt='DBRestorer Icon' src='http://raw.githubusercontent.com/EbenZhang/DbRestorer/master/DBRestorer/dbrestorer.ico' width='85' />
+                    DBRestorer
+                </h2></a>
+                {% capture dbrestorer_excerpt %}{% include dbrestorer_excerpt.md %}{% endcapture %}
+                {{ dbrestorer_excerpt | markdownify }}
+                <div>
+                    <a href='/posts/DBRestorer' class='btn btn-primary'>Read More</a>
+                    <a href='https://raw.github.com/EbenZhang/DbRestorer/master/dist/setup.exe' class='btn btn-primary'>Download</a>
+                </div>
+            </article>
+        </section>
+        <section id='Others' class='anchor-target'>
+            <article id='KumoVideo' class='anchor-target sep-at-bottom'>
+                <a href='/posts/KumoVideo'><h2>
+                    <img alt='KumoVideo Icon' src='http://lh4.ggpht.com/adgiks6ftVFmLS3IAP7K1D7VoSS_2D3-zU2gjJ5EJbfWTjSKlfEfzYQfCin-XRb0wdc=w100' width='85' />
+                    KumoVideo
+                </h2></a>
+                {% capture kumovideo_excerpt %}{% include kumovideo_excerpt.md %}{% endcapture %}
+                {{ kumovideo_excerpt | markdownify }}
+                <div>
+                    <a href='/posts/KumoVideo' class='btn btn-primary'>Read More</a>
+                    <a href='https://play.google.com/store/apps/details?id=com.ezhang.kumovid' class='btn btn-primary'>Install from Google Play</a>
+                </div>
+            </article>
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %} <em>{{ page }}</em>
-  {% elsif page == 1 %}
-  <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-  {% else %}
-  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-  {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-  <span>Next &raquo;</span>
-  {% endif %}
-</ul>
-{% endif %}
+             <article id='WaFuelFuel' class='anchor-target sep-at-bottom'>
+                <a href='/posts/WaFuelFuel'><h2>
+                    <img alt='WaFuelFuel Icon' src='http://lh6.ggpht.com/RAL8BFnHYHOuAgG5tdOwRRbCc7H5XEpjzS7xNGo9fUgTS603cydjfbTArsZrnI47cg=w100' width='85' />
+                    WaFuelFuel
+                </h2></a>
+                {% capture wafuelfuel_excerpt %}{% include wafuelfuel_excerpt.md %}{% endcapture %}
+                {{ wafuelfuel_excerpt | markdownify }}
+                <div>
+                    <a href='/posts/WaFuelFuel' class='btn btn-primary'>Read More</a>
+                    <a href='https://play.google.com/store/apps/details?id=com.ezhang.pop' class='btn btn-primary'>Install from Google Play</a>
+                </div>
+            </article>
+        </section>
+    </section>
+</section>

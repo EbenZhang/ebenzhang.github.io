@@ -6,11 +6,9 @@ tags : [Products, Git, GitHub]
 Category : Products
 ---
 
-I am pleased to annouce that **PReviewer** is ready. 
+{% capture previewer_excerpt %}{% include PReviewer_excerpt.md %}{% endcapture %}
+{{ previewer_excerpt | markdownify }}
 
-# Introduction
-
-**PReviewer** is a desktop application designed to review github pull requests. The key feature is the ability to view differences in external diff tools such as [Beyond Compare](http://www.scootersoftware.com), [KDiff](http://kdiff3.sourceforge.net/), [WinMerge](http://winmerge.org) or whatever you like.
 
 # Features
 

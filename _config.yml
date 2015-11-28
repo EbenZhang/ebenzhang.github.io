@@ -1,11 +1,10 @@
-title: EbenZhang's Tech Blog
-name: EbenZhang
+title: Nicologies' Website
+name: Nicologies
 markdown: kramdown
 
 exclude: [vendor]
 
 github: https://github.com/EbenZhang
-weibo: http://weibo.com/fingerpro
 twitter: https://twitter.com/EbenZhang
 facebook: https://www.facebook.com/EbenZhang
 
@@ -14,6 +13,7 @@ excerpt_separator: "<!--more-->"
 
 #分页
 paginate: 5
+paginate_path: /blog/page:num 
 
 #url格式
 #permalink: /:year/:month/:day/:title
