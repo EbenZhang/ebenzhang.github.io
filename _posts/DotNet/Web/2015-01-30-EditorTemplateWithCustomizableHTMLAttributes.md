@@ -79,3 +79,29 @@ The implementation is straightforward, it just enumerates and merges all the par
     }
 
 Note: the `if (htmlAttribute != null)` statement is for the case that the htmlAttributes is not in the ViewData.
+
+### The Extend Extension Method to Merge RouteValueDictionary
+
+    public static class RouteValueDictionaryExtension{
+        /// <summary>
+        /// The extend method takes values from the source and add them into the destination.
+        /// You do not need to use the return value because the destination object 
+        /// will already have the element of the source.
+        /// </summary>
+        /// <param name="destination"></param>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static RouteValueDictionary Extend(this RouteValueDictionary destination,
+            IEnumerable<KeyValuePair<string, object>> source){
+
+            foreach (var srcElement in source.ToList()){
+                if (destination.ContainsKey(srcElement.Key)){
+                    destination[srcElement.Key] += " " + srcElement.Value;
+                }
+                else{
+                    destination[srcElement.Key] = srcElement.Value;
+                }
+            }
+            return destination;
+        }
+    }
