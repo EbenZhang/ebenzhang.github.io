@@ -5,7 +5,7 @@ description: "About Nicologies"
 ---
 ##**Nicole Du**##
 See [Linkedin](https://www.linkedin.com/in/nicole-du-2b709028)
-
+{% comment %} 
 ##**Eben Zhang**##
 ----
 
@@ -41,6 +41,7 @@ Proven capabilities of solving problems like memory leaking, crashing, handlers 
 ###Specialties
 
 C# WPF MVVM ASP.NETMVC4 WebFrontEnd Git SQL WinDbg  C++
+{% endcomment %}
 
 ##**Donate**##
 
