@@ -14,6 +14,7 @@ title: Products
             <ul class='nav navbar-stack sidebar-module sidebar-module-inset smaller-font' id='products-side-bar'>
                 <li><a href='#developer_tools'>Developer Tools</a>
                     <ul class='no-bullet'>
+                        <li><a href='#GitHubBuddy'>GitHubBuddy</a></li>
                         <li><a href='#VSOutliner'>VB and C# outlining Extension</a></li>
                         <li><a href='#GitExtensionsMod'>Enhanced GitExtensions</a></li>
                         <li><a href='#PReviewer'>PReviewer(GitHub Review Tool)</a></li>
@@ -33,6 +34,20 @@ title: Products
     <section class='col-sm-12 col-md-9'>
         <section id='developer_tools' class='anchor-target'>
             <h2>Developer Tools</h2>
+            <article id='GitHubBuddy' class='anchor-target sep-at-bottom'>
+                <a href='/posts/GitHubBuddy'><h2>
+                    <img alt='GitHubBuddy Icon' src='http://raw.githubusercontent.com/EbenZhang/PReviewer/master/PReviewer/PReviewer.png' width='85'/>
+                    GitHubBuddy
+                </h2></a>
+                {% capture githubbuddy %}{% include githubbuddy_excerpt.md %}{% endcapture %}
+                {{ githubbuddy | markdownify }}
+                <div>
+                    <a href='/posts/GitHubBuddy' class='btn btn-primary'>Read More</a>
+                    <a href='https://visualstudiogallery.msdn.microsoft.com/699ecb9d-bd8f-4f6b-b290-05c42407b43e' class='btn btn-primary'>Download for FireFox</a>
+                    <a href='https://visualstudiogallery.msdn.microsoft.com/699ecb9d-bd8f-4f6b-b290-05c42407b43e' class='btn btn-primary'>Download for Chrome</a>
+                    <a href='https://github.com/Nicologies/GitHubBuddyHost#how-to-install-and-configure' class='btn btn-primary'>How to install and configure</a>
+                </div>
+            </article>
             <article id='VSOutliner' class='anchor-target sep-at-bottom'>
                 <a href='/posts/VSOutliner'><h2>
                     <img alt='VSOutliner Icon' src='https://raw.githubusercontent.com/EbenZhang/VbSharpOutliner/master/VBSharpOutliner/vsoutliner.png?v=1' width='85'/>
