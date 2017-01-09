@@ -19,7 +19,7 @@ Currently, it only supports FireFox and Chrome on a Windows system. You can foll
 
 ### Install
 
-- Install the free [FireFox Extension](https://addons.mozilla.org/en-US/firefox/addon/githubbuddy) or the [Chrome Extension](https://chrome.google.com/webstore/detail/githubbuddy/lbnnpglihcnokkjnmidginaihnojkfoo)($2.99/year)
+- Install the free [FireFox Extension](https://addons.mozilla.org/en-US/firefox/addon/githubbuddy) or the [Chrome Extension](https://chrome.google.com/webstore/detail/githubbuddy/lbnnpglihcnokkjnmidginaihnojkfoo)
 - [Install a native app](https://github.com/Nicologies/GitHubBuddyHost/wiki/Installing-GitHubBuddyHost) to help launch the difftool
 
 ### Configure
