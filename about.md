@@ -3,10 +3,22 @@ layout: page-about
 title: "About"
 description: "About Nicologies"
 ---
-##**Nicole Du**##
-See [Linkedin](https://www.linkedin.com/in/nicole-du-2b709028)
+## **Eben Zhang** [Linkedin](https://www.linkedin.com/in/eben-zhang-28507528/) [GitHub](https://github.com/ebenzhang) ##
+
+Worked as a software engineer over the past <span class='js-years-of-exp'></span> years, I have got exposure to multiple technologies and all aspects of software development and been respected as an expert in various areas such as performance profiling, troubleshooting, Git, GitExtensions, Continuous Integration/TeamCity, TDD. 
+ 
+I’m a lazy and passionate developer who utilizes the machine time as much as possible. I write tools/scripts to automate the release process, simplify the daily development tasks, gather diagnostic information for troubleshooting 
+ 
+I do my best to ensure high quality/clean code that has no duplication, no magic numbers, well named, decoupled, unit tested. 
+ 
+I'm exceptionally good at tackling the most difficult technical issues such ascrashing,memoryleak, infinite loop, performance, and intermittent bugs. My toolbox includes but not limited to WinDBG, Fiddler/Postman, Wireshark, telnet, TCP Viewer, ProcessExplorer, ProcessMonitor, Handle, DotPeek and most importantly an analytical brain and breadth/depth of knowledge. 
+ 
+I'm also keen to share my knowledge with the rest of the team and mentor less experienced developers as much as possible. 
+ 
+
 {% comment %} 
-##**Eben Zhang**##
+## **Nicole Du** ##
+See [Linkedin](https://www.linkedin.com/in/nicole-du-2b709028)
 ----
 
 ### Summary
@@ -43,6 +55,6 @@ Proven capabilities of solving problems like memory leaking, crashing, handlers 
 C# WPF MVVM ASP.NETMVC4 WebFrontEnd Git SQL WinDbg  C++
 {% endcomment %}
 
-##**Donate**##
+## **Donate** ##
 
 {% include donate.md %}
